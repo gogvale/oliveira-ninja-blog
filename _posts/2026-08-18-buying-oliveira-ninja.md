@@ -1,5 +1,5 @@
 ---
-title: "oliveira.ninja: The Domain Hunt"
+title: "oliveira.🥷: The Domain Hunt"
 date: 2026-08-18 00:10:00 -0600
 categories: [Personal Site, Domain]
 tags: [domain, dns, email, weekend-project]

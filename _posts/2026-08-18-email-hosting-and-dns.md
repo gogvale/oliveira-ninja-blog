@@ -1,5 +1,5 @@
 ---
-title: "oliveira.ninja: Mail, Plans, and DNS"
+title: "oliveira.🥷: Mail, Plans, and DNS"
 date: 2026-08-18 00:20:00 -0600
 categories: [Personal Site, Email]
 tags: [domain, dns, email, zoho, proton, weekend-project]
