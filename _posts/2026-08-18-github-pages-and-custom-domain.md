@@ -89,7 +89,7 @@ DNS records need time to propagate. GitHub Pages also needs time to verify the c
 
 This was another place where `dig` helped. Instead of clicking refresh and hoping, I could check what DNS was actually returning:
 
-```console
+```bash
 dig www.oliveira.ninja
 dig blog.oliveira.ninja
 ```
