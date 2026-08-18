@@ -1,5 +1,5 @@
 ---
-title: "Setting up oliveira.ninja, part 3: GitHub Pages"
+title: "oliveira.ninja: Pages Go Live"
 date: 2026-08-18 01:30:00 -0600
 categories: [Personal Site, GitHub Pages]
 tags: [github-pages, dns, astro, jekyll, chirpy, weekend-project]
@@ -109,3 +109,7 @@ By the end, the setup looked like this:
 None of this is extremely advanced, but doing the full loop yourself is educational. You touch registrars, DNS, email authentication, static hosting, GitHub Actions, and HTTPS certificates in one small project.
 
 That is a pretty good weekend.
+
+---
+
+[<- Back to part 2: Mail, Plans, and DNS]({% post_url 2026-08-18-email-hosting-and-dns %})

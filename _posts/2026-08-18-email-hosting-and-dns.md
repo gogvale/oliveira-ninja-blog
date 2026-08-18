@@ -1,5 +1,5 @@
 ---
-title: "Setting up oliveira.ninja, part 2: email, tradeoffs, and DNS"
+title: "oliveira.ninja: Mail, Plans, and DNS"
 date: 2026-08-18 01:20:00 -0600
 categories: [Personal Site, Email]
 tags: [domain, dns, email, zoho, proton, weekend-project]
@@ -76,3 +76,9 @@ At that point I had:
 The next step was making the domain point to actual web pages.
 
 That is part 3.
+
+---
+
+[<- Back to part 1: The Domain Hunt]({% post_url 2026-08-18-buying-oliveira-ninja %})
+
+[Continue to part 3: Pages Go Live ->]({% post_url 2026-08-18-github-pages-and-custom-domain %})

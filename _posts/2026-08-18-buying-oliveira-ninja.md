@@ -1,5 +1,5 @@
 ---
-title: "Setting up oliveira.ninja, part 1: finding the domain"
+title: "oliveira.ninja: The Domain Hunt"
 date: 2026-08-18 01:10:00 -0600
 categories: [Personal Site, Domain]
 tags: [domain, dns, email, weekend-project]
@@ -55,3 +55,7 @@ At that point I had the domain, but not much else. The next obvious step was ema
 So I bought Proton and started setting up the mail domain.
 
 That is where part 2 begins.
+
+---
+
+[Continue to part 2: Mail, Plans, and DNS ->]({% post_url 2026-08-18-email-hosting-and-dns %})
