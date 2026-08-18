@@ -1,6 +1,6 @@
 ---
 title: "oliveira.ninja: The Domain Hunt"
-date: 2026-08-18 01:10:00 -0600
+date: 2026-08-18 00:10:00 -0600
 categories: [Personal Site, Domain]
 tags: [domain, dns, email, weekend-project]
 description: "How I picked oliveira.ninja, compared registrars, and started turning a domain idea into a small web home."

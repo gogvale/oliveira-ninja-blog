@@ -1,6 +1,6 @@
 ---
 title: "oliveira.ninja: Mail, Plans, and DNS"
-date: 2026-08-18 01:20:00 -0600
+date: 2026-08-18 00:20:00 -0600
 categories: [Personal Site, Email]
 tags: [domain, dns, email, zoho, proton, weekend-project]
 description: "Why I moved from Proton to Zoho for email, and what I learned while wiring the DNS records."
