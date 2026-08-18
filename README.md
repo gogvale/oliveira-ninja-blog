@@ -5,6 +5,9 @@ Jekyll + Chirpy source for [blog.oliveira.ninja](https://blog.oliveira.ninja).
 This repository was created from
 [cotes2020/chirpy-starter](https://github.com/cotes2020/chirpy-starter).
 
+The public project portfolio is intentionally marked as under construction while
+older proof-of-concept repositories are replaced with current writeups.
+
 ## Development
 
 ```bash

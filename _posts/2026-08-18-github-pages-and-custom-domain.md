@@ -38,7 +38,7 @@ For the landing page, I adapted the Gothsec Astro portfolio template. I liked th
 The page became a compact personal front door:
 
 - A short hero section.
-- A few selected projects.
+- An under-construction project section.
 - A small "Now / Lab" section.
 - A writing section pointing to the blog.
 - A concise about section.
