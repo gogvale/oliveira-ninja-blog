@@ -1,6 +1,6 @@
 ---
 title: "Hermes on a Droplet: My AI Coworker Moved In"
-date: 2026-08-20 01:45:00 -0600
+date: 2026-08-19 19:45:00 -0600
 categories: [Self-Hosting, AI]
 tags: [ai-lab, self-hosting, linux, devops, digitalocean, deepseek, ssh, bitwarden, hermes, weekend-project, project-writeup]
 description: "How I set up Hermes, my personal AI agent, on a DigitalOcean droplet — and the good, the weird, and the slightly annoying parts of wiring it together."
