@@ -67,24 +67,3 @@ With keys in 1Password, there is no key file to steal. The key is encrypted in t
 The old way of offboarding someone: find every platform, find every key, delete them, hope you did not miss one.
 
 The new way: remove the item from the vault, or rotate it in place. One place, one action, done. When a contractor leaves, when a client project ends, when a machine is retired — the key stops existing in seconds instead of after a scavenger hunt across five dashboards.
-
-## What got weird
-
-The first few days, my muscle memory kept reaching for `~/.ssh`. Old scripts with hardcoded key paths still bypass the agent and need updating. And the agent only works while 1Password is running and unlocked — headless servers still want a real key file, so this workflow is for workstations, not CI runners.
-
-None of that is a real downside. It is just a reminder that you are trading scattered files for a single, better-guarded place, and a few old habits have to follow.
-
-## What I learned
-
-- SSH keys are credentials, and credentials belong in the vault, not in a folder.
-- The ssh-agent model already existed; putting a password manager behind it makes it practical.
-- Multi-account life gets a lot simpler when the machine stops being the source of truth.
-- People should know this workflow exists, especially now that companies are pushing passkeys and better login practices. This is the same idea for the developer toolchain: fewer secrets on disk, more control in one place.
-
-## What comes next
-
-I still have a few stragglers: old scripts referencing key paths, and a server or two that predate the vault. The next pass is auditing those and moving the last holdouts.
-
-If you juggle keys for work and personal accounts, try it. Start with one key, see how it feels, and watch how fast the config file shrinks.
-
-That is a pretty good weekend project.
