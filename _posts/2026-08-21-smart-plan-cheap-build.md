@@ -7,6 +7,12 @@ description: "How I discovered that a cheap model with a good plan beats a smart
 image: /assets/img/posts/2026-08-21-smart-plan-cheap-build.png
 ---
 
+> **TL;DR** — My Claude credits ran out, so I fell back to the free tier's small model and discovered it executes automation tasks *better* than the smart one.
+>
+> - Smart model = plan (structure, scripts, skills). Cheap model = execute (fast, predictable, cheap).
+> - This split is a documented pattern: Anthropic's orchestrator-workers workflow.
+> - Result: cheaper by an order of magnitude, fewer headaches. If the plan exists, the cheap model flies.
+
 My Claude credits ran out this week. The good model was locked until the next billing cycle, so I poked around the free tier and found Haiku 4.6 sitting there, waiting.
 
 I expected a downgrade. What I got was a surprise: for the automation work I do most days, the "dumb" model executed tasks better than the smart one, with less headache.
@@ -30,6 +36,15 @@ The realization was simple: the models are good at different things, and the spl
 
 One does the thinking so the other does not have to. The result is faster, more predictable, and cheaper by an order of magnitude. I spend the expensive tokens on the small part that needs judgment, and the cheap tokens on the large part that needs execution.
 
+| Model | Role | Best at | Cost |
+|-------|------|---------|------|
+| Smart | Planner | Shaping intention into a plan | Expensive tokens |
+| Cheap | Worker | Executing an existing plan | Cheap tokens |
+
+The split is not about intelligence. It is about the shape of the work.
+
+> "The plan is the missing ingredient. Without one, the cheap model flails. With one, it flies."
+
 ## This is a documented pattern
 
 This split has a name and a body of practice behind it. Anthropic's own guidance on [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) describes an **orchestrator-workers workflow**: a central model breaks the task down, delegates the pieces to worker models, and synthesizes the results. That is exactly the shape of what I stumbled into — one model planning, cheaper models executing.
@@ -43,7 +58,7 @@ The numbers back the instinct. [Qodo benchmarked Haiku 4.5 against Sonnet 4.5 on
 
 The model-routing crowd has been making the same argument for years: [cascade cheap models first](https://tianpan.co/blog/2025-11-03-llm-routing-model-cascades), escalate to the expensive one only when the task actually needs it. That pattern keeps most of the quality while cutting most of the bill — 45 to 85 percent savings, with 95 percent of the quality retained.
 
-Even the community noticed the same thing I did. There is a popular [thread in the Claude Code subreddit](https://www.reddit.com/r/ClaudeCode/comments/1o9to45/haiku_45_is_surprisingly_good_at_writing_code_if/) titled, essentially, "Haiku is surprisingly good at writing code — if there is a plan." The plan is the missing ingredient. Without one, the cheap model flails. With one, it flies.
+Even the community noticed the same thing I did. There is a popular [thread in the Claude Code subreddit](https://www.reddit.com/r/ClaudeCode/comments/1o9to45/haiku_45_is_surprisingly_good_at_writing_code_if/) titled, essentially, "Haiku is surprisingly good at writing code — if there is a plan."
 
 ## What changed
 
