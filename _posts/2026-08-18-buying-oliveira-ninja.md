@@ -1,5 +1,5 @@
 ---
-title: "oliveira.🥷: The Domain Hunt"
+title: "oliveira.🥷: The Domain Hunt (Part 1/3)"
 date: 2026-08-18 00:10:00 -0600
 categories: [Personal Site, Domain]
 tags: [domain, dns, email, weekend-project, project-writeup]

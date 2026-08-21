@@ -1,5 +1,5 @@
 ---
-title: "oliveira.🥷: Mail, Plans, and DNS"
+title: "oliveira.🥷: Mail, Plans, and DNS (Part 2/3)"
 date: 2026-08-18 00:20:00 -0600
 categories: [Personal Site, Email]
 tags: [domain, dns, email, zoho, proton, weekend-project, project-writeup]

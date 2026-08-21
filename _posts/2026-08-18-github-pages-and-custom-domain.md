@@ -1,5 +1,5 @@
 ---
-title: "oliveira.🥷: Pages Go Live"
+title: "oliveira.🥷: Pages Go Live (Part 3/3)"
 date: 2026-08-18 00:30:00 -0600
 categories: [Personal Site, GitHub Pages]
 tags: [github-pages, dns, astro, jekyll, chirpy, weekend-project, project-writeup]
