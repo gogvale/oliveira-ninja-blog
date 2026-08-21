@@ -6,7 +6,7 @@ tags: [domain, dns, email, weekend-project, project-writeup]
 description: "How I picked oliveira.ninja, compared registrars, and started turning a domain idea into a small web home."
 ---
 
-I spent part of the weekend setting up something I had wanted for a while: a personal domain, email, and a small web presence. Nothing too fancy at first. Just the kind of project where you start with "I'll buy a domain real quick" and somehow end up comparing TLDs, reading DNS docs, and refreshing `dig` like it owes you money.
+I spent part of the weekend setting up something I had wanted for a while: a personal domain, email, and a small web presence. Nothing too fancy at first. The kind of project where you start with "I'll buy a domain real quick" and somehow end up comparing TLDs, reading DNS docs, and refreshing `dig` like it owes you money.
 
 The flow was roughly: find a domain, buy it somewhere reasonably priced, set up email, configure DNS, wait for things to propagate, then point GitHub Pages at it. Simple list. Surprisingly fun rabbit hole.
 

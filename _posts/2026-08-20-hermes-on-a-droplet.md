@@ -9,9 +9,9 @@ image: /assets/img/posts/2026-08-20-hermes-on-a-droplet.png
 
 This week I did something I had been meaning to do for a while: gave my AI assistant a permanent home.
 
-Not in the sense of installing another chatbot. I mean an agent that lives on a server, answers me from anywhere, and actually does things — reads my repositories, touches my playlists, keeps notes between conversations, and can even help write posts for this blog. A coworker, not a search box.
+Not in the sense of installing another chatbot. I mean an agent that lives on a server, answers me from anywhere, and does things — reads my repositories, touches my playlists, keeps notes between conversations, and can even help write posts for this blog. A coworker, not a search box.
 
-The tool is called Hermes. It is an open-source AI agent framework from Nous Research: it runs in a terminal or on a messaging platform, has tools for the filesystem, the web, GitHub, Spotify, and a bunch of other things, and keeps a persistent memory across sessions. It is the kind of project where the README says "autonomous agent" and you immediately start thinking of things you want it to do.
+The tool is called Hermes. It is an open-source AI agent framework from Nous Research: it runs in a terminal or on a messaging platform, has tools for the filesystem, the web, GitHub, Spotify, and a bunch of other things, and keeps a persistent memory across sessions. It is the kind of project where the README says "autonomous agent" and you start thinking of things you want it to do.
 
 This post is the story of that setup. The smooth parts, the weird parts, and the one that made me roll my eyes.
 
@@ -29,7 +29,7 @@ The "always-on" part was the key. I had tried running agents on my workstation, 
 
 ### DigitalOcean
 
-I spun up a droplet on DigitalOcean. The image even ships with Hermes pre-included, which made the first part almost embarrassingly easy: create the droplet, wait for it to boot, log in, and the agent is already there waiting for configuration.
+I spun up a droplet on DigitalOcean. The image even ships with Hermes pre-included, which made the first part embarrassingly easy: create the droplet, wait for it to boot, log in, and the agent is already there waiting for configuration.
 
 No dependency hell, no compiling from source, no "well actually you need Node 22 and Rust and a prayer." It was the kind of setup that used to take me an afternoon and now takes the time it takes to order a pizza.
 
@@ -37,7 +37,7 @@ No dependency hell, no compiling from source, no "well actually you need Node 22
 
 For access, I did the slightly unusual thing: generated a fresh SSH key, stored it in Bitwarden, and used the SSH agent to authenticate from my PC.
 
-The point of that flow is you never have to manually create or copy keys on each machine you use. The key lives in your password manager, the agent loads it when needed, and your laptop is not holding on to another secret it should not be holding. This deserves its own post later, because it is genuinely a nicer workflow than the classic `ssh-keygen` + `ssh-copy-id` dance — and it is one of those habits that is hard to unlearn once you try it.
+The point of that flow is you never have to manually create or copy keys on each machine you use. The key lives in your password manager, the agent loads it when needed, and your laptop is not holding on to another secret it should not be holding. This deserves its own post later, because it is a nicer workflow than the classic `ssh-keygen` + `ssh-copy-id` dance — and it is one of those habits that is hard to unlearn once you try it.
 
 ### DeepSeek API
 
@@ -45,7 +45,7 @@ For the model provider, I went with DeepSeek. The API setup itself was painless:
 
 The annoying part is their payment model. DeepSeek is prepaid — you buy credits first, then use them. When you run out of tokens (or whatever unit they measure consumption in), you stop working until you pay again. There is no invoice, no "we will bill you next month," no graceful credit line. Just a balance that drains and a wall at the end of it.
 
-It is not a huge deal, and the prices are honestly good. But the first time the agent stopped mid-task because the balance hit zero, I had a "seriously?" moment. It is a small operational tax you do not pay with postpaid providers, and worth knowing about before you build anything on top of it.
+It is not a huge deal, and the prices are good. But the first time the agent stopped mid-task because the balance hit zero, I had a "seriously?" moment. It is a small operational tax you do not pay with postpaid providers, and worth knowing about before you build anything on top of it.
 
 ### Profiles, Spotify, and the blog
 
@@ -85,7 +85,7 @@ Also: it wrote this post. I gave it the outline and the tone notes, and it did t
 
 ## What Comes Next
 
-I plan to clone this server's configuration onto my NAS later, so the agent setup is reproducible instead of living on one box. That will probably get its own post too — NAS homelab people love a good reproducible-config story, and I am one of them.
+I plan to clone this server's configuration onto my NAS later, so the agent setup is reproducible instead of living on one box. That will get its own post too — NAS homelab people love a good reproducible-config story, and I am one of them.
 
 For now, the droplet is home, the agent is answering from Telegram, and this post got written with a lot less staring at a blank page than usual.
 
