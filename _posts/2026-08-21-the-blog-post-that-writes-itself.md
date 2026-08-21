@@ -1,6 +1,6 @@
 ---
 title: "The Blog Post That Writes Itself"
-date: 2026-08-21 13:30:00 -0600
+date: 2026-08-21 13:25:00 -0600
 categories: [AI, Writing]
 tags: [ai-lab, writing, blog, attention, llm, workflow, hermes, project-writeup, weekend-project]
 description: "How I built a blog-writing pipeline with an AI agent — the rules, the research, and the part only a human can do."
