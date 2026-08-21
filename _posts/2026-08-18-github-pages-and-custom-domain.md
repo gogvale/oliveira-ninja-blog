@@ -6,6 +6,13 @@ tags: [github-pages, dns, astro, jekyll, chirpy, weekend-project, project-writeu
 description: "How I connected oliveira.ninja and blog.oliveira.ninja to GitHub Pages without turning it into a giant infrastructure project."
 ---
 
+> **TL;DR** — Connected `oliveira.ninja` to GitHub Pages: `www` for a landing page, `blog` for longer notes. No complicated hosting.
+>
+> - Two repos: `gogvale` (profile README + Astro landing source on `gh-pages`) and `oliveira-ninja-blog` (Jekyll).
+> - GitHub Actions builds the Astro site; custom domains live in Pages settings, not a CNAME file.
+> - The hard part was waiting for DNS and HTTPS certificates. `dig` makes it bearable.
+> - Part 3 of 3.
+
 Once the domain and email were working, I wanted the web side to exist too.
 
 The goal was simple: `www.oliveira.ninja` for a small personal landing page, and `blog.oliveira.ninja` for longer notes like this one.

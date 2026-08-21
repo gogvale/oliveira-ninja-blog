@@ -7,6 +7,13 @@ description: "How I set up Hermes, my personal AI agent, on a DigitalOcean dropl
 image: /assets/img/posts/2026-08-20-hermes-on-a-droplet.png
 ---
 
+> **TL;DR** — I gave my AI assistant a permanent home on a DigitalOcean droplet this week.
+>
+> - The image ships with Hermes pre-included — setup took less time than ordering a pizza.
+> - SSH key lives in Bitwarden, served by the agent: no manual key creation per machine.
+> - Profiles for me and my wife, Spotify connected, and it helps write this blog.
+> - The one annoyance: DeepSeek's prepaid credits ran dry mid-task.
+
 This week I did something I had been meaning to do for a while: gave my AI assistant a permanent home.
 
 Not in the sense of installing another chatbot. I mean an agent that lives on a server, answers me from anywhere, and does things — reads my repositories, touches my playlists, keeps notes between conversations, and can even help write posts for this blog. A coworker, not a search box.
@@ -24,6 +31,8 @@ I wanted three things out of this:
 - One that remembers context between conversations, so I do not have to re-explain who I am every time.
 
 The "always-on" part was the key. I had tried running agents on my workstation, but a laptop is a bad home for something that should be reachable at 9pm from the couch. A small server was the obvious answer.
+
+> "A coworker, not a search box."
 
 ## The Setup
 

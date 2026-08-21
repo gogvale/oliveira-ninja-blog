@@ -6,6 +6,12 @@ tags: [domain, dns, email, zoho, proton, weekend-project, project-writeup]
 description: "Why I moved from Proton to Zoho for email, and what I learned while wiring the DNS records."
 ---
 
+> **TL;DR** — Bought Proton Duo for domain email, then realized the bundle overlapped with tools I already had. Refunded it and switched to Zoho's free tier.
+>
+> - Bundles are tempting, but replacement cost is migration time and mental overhead, not just money.
+> - DNS records (MX, SPF, DKIM, DMARC): simple in principle, annoying while you wait for propagation.
+> - Part 2 of 3 — pages come next.
+
 After buying `oliveira.ninja`, I wanted email on the domain. That felt like the next natural milestone: owning the domain is nice, but sending and receiving mail from it makes it feel much more real.
 
 My first stop was Proton.

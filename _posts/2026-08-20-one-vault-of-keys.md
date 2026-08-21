@@ -7,6 +7,12 @@ description: "How I stopped juggling six SSH keys and six ssh/config aliases and
 image: /assets/img/posts/2026-08-20-one-vault-of-keys.png
 ---
 
+> **TL;DR** — Six SSH keys for six platforms, held together by `ssh/config` glue. Deleted them all and put every key in one 1Password vault, served by the agent.
+>
+> - No key files sitting on disk — the vault holds the key, the agent negotiates with your approval.
+> - Revoking access when someone leaves: one click, not a scavenger hunt.
+> - Setup took an afternoon. The alias matrix I used to maintain is gone.
+
 I used to keep a small spreadsheet in my head: which SSH key belongs to which GitHub, which config alias talks to which remote, and which company account was on which laptop. It worked, right up until it did not.
 
 This post is about the day I deleted all my SSH keys and put them in one place.
@@ -67,3 +73,11 @@ With keys in 1Password, there is no key file to steal. The key is encrypted in t
 The old way of offboarding someone: find every platform, find every key, delete them, hope you did not miss one.
 
 The new way: remove the item from the vault, or rotate it in place. One place, one action, done. When a contractor leaves, when a client project ends, when a machine is retired — the key stops existing in seconds instead of after a scavenger hunt across five dashboards.
+
+| | Old way | New way |
+|---|---|---|
+| Where keys live | Files on every laptop | Encrypted in the vault |
+| Machine compromise | Key file can be copied | Nothing to copy, approval required |
+| Offboarding | Hunt across 5 dashboards | One action in the vault |
+
+> "The keys did not have to live on the machine at all."
