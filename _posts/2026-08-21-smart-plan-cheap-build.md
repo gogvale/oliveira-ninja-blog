@@ -36,13 +36,15 @@ This split has a name and a body of practice behind it. Anthropic's own guidance
 
 Anthropic also positioned Haiku for agentic work from the start. The [launch post for Haiku 4.5](https://www.anthropic.com/news/claude-haiku-4-5) called out sub-agent orchestration and tool-heavy tasks as its home turf, which matches the free-model experience I had.
 
-The numbers back the instinct. [Qodo benchmarked Haiku 4.5 against Sonnet 4.5 on 400 real pull requests](https://www.qodo.ai/blog/thinking-vs-thinking-benchmarking-claude-haiku-4-5-and-sonnet-4-5-on-400-real-prs/) and found the small model competitive on the mechanical parts of code review at a fraction of the cost. The model-routing crowd has been making the same argument for years: [cascade cheap models first](https://tianpan.co/blog/2025-11-03-llm-routing-model-cascades), escalate to the expensive one only when the task actually needs it, and keep most of the quality while cutting most of the bill. That analysis puts the savings at 45 to 85 percent with 95 percent of the quality retained.
+The numbers back the instinct. [Qodo benchmarked Haiku 4.5 against Sonnet 4.5 on 400 real pull requests](https://www.qodo.ai/blog/thinking-vs-thinking-benchmarking-claude-haiku-4-5-and-sonnet-4-5-on-400-real-prs/) and found the small model competitive on the mechanical parts of code review at a fraction of the cost.
+
+The model-routing crowd has been making the same argument for years: [cascade cheap models first](https://tianpan.co/blog/2025-11-03-llm-routing-model-cascades), escalate to the expensive one only when the task actually needs it. That pattern keeps most of the quality while cutting most of the bill — 45 to 85 percent savings, with 95 percent of the quality retained.
 
 Even the community noticed the same thing I did. There is a popular [thread in the Claude Code subreddit](https://www.reddit.com/r/ClaudeCode/comments/1o9to45/haiku_45_is_surprisingly_good_at_writing_code_if/) titled, essentially, "Haiku is surprisingly good at writing code — if there is a plan." The plan is the missing ingredient. Without one, the cheap model flails. With one, it flies.
 
 ## What changed
 
-I no longer default everything to the biggest model. The workflow is now: use the smart model to shape the plan, then hand the execution to the cheap one and let it run. The expensive model does less, the cheap model does more, and the overall result is faster and cheaper than either alone.
+I no longer default everything to the biggest model. The workflow is now: **use the smart model to shape the plan, then hand the execution to the cheap one**. The expensive model does less, the cheap model does more, and the overall result is faster and cheaper than either alone.
 
 The funny part is my own setup already worked this way. The agent that helps with this blog, the skills that encode the structure, the scripts that do the repetitive work — those are the plan. The model executing them is the worker. I just did not see the pattern until the credit wall made me look.
 
