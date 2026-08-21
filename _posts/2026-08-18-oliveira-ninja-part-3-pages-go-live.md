@@ -4,6 +4,7 @@ date: 2026-08-18 00:30:00 -0600
 categories: [Personal Site, GitHub Pages]
 tags: [github-pages, dns, astro, jekyll, chirpy, weekend-project, project-writeup]
 description: "How I connected oliveira.ninja and blog.oliveira.ninja to GitHub Pages without turning it into a giant infrastructure project."
+image: /assets/img/posts/2026-08-18-part-3-pages.png
 ---
 
 > **TL;DR** — Connected `oliveira.ninja` to GitHub Pages: `www` for a landing page, `blog` for longer notes. No complicated hosting.
@@ -119,4 +120,4 @@ That is a pretty good weekend.
 
 ---
 
-[<- Back to part 2: Mail, Plans, and DNS]({% post_url 2026-08-18-email-hosting-and-dns %})
+[<- Back to part 2: Mail, Plans, and DNS]({% post_url 2026-08-18-oliveira-ninja-part-2-mail-plans-and-dns %})

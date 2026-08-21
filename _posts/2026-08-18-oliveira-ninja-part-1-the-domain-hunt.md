@@ -4,6 +4,7 @@ date: 2026-08-18 00:10:00 -0600
 categories: [Personal Site, Domain]
 tags: [domain, dns, email, weekend-project, project-writeup]
 description: "How I picked oliveira.ninja, compared registrars, and started turning a domain idea into a small web home."
+image: /assets/img/posts/2026-08-18-part-1-domain.png
 ---
 
 > **TL;DR** — I wanted a personal domain, email, and a small web presence. The clean options were taken or expensive, so I went playful: `oliveira.ninja`.
@@ -64,4 +65,4 @@ That is where part 2 begins.
 
 ---
 
-[Continue to part 2: Mail, Plans, and DNS ->]({% post_url 2026-08-18-email-hosting-and-dns %})
+[Continue to part 2: Mail, Plans, and DNS ->]({% post_url 2026-08-18-oliveira-ninja-part-2-mail-plans-and-dns %})

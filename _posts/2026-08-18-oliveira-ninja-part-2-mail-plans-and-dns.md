@@ -4,6 +4,7 @@ date: 2026-08-18 00:20:00 -0600
 categories: [Personal Site, Email]
 tags: [domain, dns, email, zoho, proton, weekend-project, project-writeup]
 description: "Why I moved from Proton to Zoho for email, and what I learned while wiring the DNS records."
+image: /assets/img/posts/2026-08-18-part-2-mail.png
 ---
 
 > **TL;DR** — Bought Proton Duo for domain email, then realized the bundle overlapped with tools I already had. Refunded it and switched to Zoho's free tier.
@@ -85,6 +86,6 @@ That is part 3.
 
 ---
 
-[<- Back to part 1: The Domain Hunt]({% post_url 2026-08-18-buying-oliveira-ninja %})
+[<- Back to part 1: The Domain Hunt]({% post_url 2026-08-18-oliveira-ninja-part-1-the-domain-hunt %})
 
-[Continue to part 3: Pages Go Live ->]({% post_url 2026-08-18-github-pages-and-custom-domain %})
+[Continue to part 3: Pages Go Live ->]({% post_url 2026-08-18-oliveira-ninja-part-3-pages-go-live %})
