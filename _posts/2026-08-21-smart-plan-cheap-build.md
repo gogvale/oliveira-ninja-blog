@@ -34,6 +34,9 @@ One does the thinking so the other does not have to. The result is faster, more 
 
 This split has a name and a body of practice behind it. Anthropic's own guidance on [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) describes an **orchestrator-workers workflow**: a central model breaks the task down, delegates the pieces to worker models, and synthesizes the results. That is exactly the shape of what I stumbled into — one model planning, cheaper models executing.
 
+![Anthropic's orchestrator-workers workflow: one orchestrator LLM splits the task, worker LLMs run the pieces, a synthesizer merges the output](/assets/img/posts/2026-08-21-orchestrator-workers.png){: width="972" }
+*Orchestrator-workers workflow — source: [Anthropic, Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)*
+
 Anthropic also positioned Haiku for agentic work from the start. The [launch post for Haiku 4.5](https://www.anthropic.com/news/claude-haiku-4-5) called out sub-agent orchestration and tool-heavy tasks as its home turf, which matches the free-model experience I had.
 
 The numbers back the instinct. [Qodo benchmarked Haiku 4.5 against Sonnet 4.5 on 400 real pull requests](https://www.qodo.ai/blog/thinking-vs-thinking-benchmarking-claude-haiku-4-5-and-sonnet-4-5-on-400-real-prs/) and found the small model competitive on the mechanical parts of code review at a fraction of the cost.
