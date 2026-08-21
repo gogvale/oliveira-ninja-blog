@@ -39,12 +39,31 @@ Use these recurring tracks and tags when appropriate:
 - Prefer concrete stories over generic tutorials.
 - Start with what triggered the experiment and why it seemed worth doing.
 - Include a light step-by-step when it helps readers follow the path.
-- Mention tradeoffs, dead ends, and decisions honestly.
+- Mention tradeoffs, dead ends, and decisions honestly — but only real ones.
 - Use screenshots sparingly and only when they help. Avoid exposing secrets,
   tokens, private hostnames, or sensitive personal details.
 - Avoid publishing security scans, pentests, or exploit details for systems the
   user does not own or have authorization to test.
-- End with what changed, what was learned, and what might come next.
+
+### Keep posts short (Gabriel's explicit preference, 2026-08-20)
+
+- Default shape: problem → discovery → setup → what changed (the win). Then stop.
+- Do NOT add "What Got Weird", "What I Learned", or "What Comes Next" sections
+  unless Gabriel asks for depth. Do NOT invent downsides.
+- No closing flourish unless it earns its place. Target ~700–1100 words.
+
+### Anti-slop rules (from hardikpandya/stop-slop, adapted)
+
+- No throat-clearing openers ("Here's the thing", "It turns out").
+- No emphasis crutches ("Let that sink in", "Full stop").
+- No business jargon (navigate, unpack, lean into, game-changer, deep dive).
+- No adverbs (-ly words; really, just, literally, genuinely, actually).
+- No binary contrasts ("Not because X. Because Y."), negative listings,
+  dramatic fragmentation, rhetorical setups ("What if...?").
+- No false agency (inanimate things doing human verbs). Name the actor.
+- Active voice. No vague declaratives ("The implications are significant").
+- No Wh- sentence openers where a direct subject works better.
+- Exception: em dashes are FINE and match Gabriel's voice — do not strip them.
 
 ## Post Template
 
