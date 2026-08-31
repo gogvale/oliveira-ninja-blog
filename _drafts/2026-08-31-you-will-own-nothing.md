@@ -3,17 +3,28 @@ title: "You Will Own Nothing and You Will Be Happy"
 date: 2030-01-01 00:00:00 -0600
 categories: [AI, Workflow]
 tags: [ai-lab, vibe-coding, astro, dashboard, automation, llm, devops, project-writeup]
-description: "A rant about slop: the dashboard I vibe-coded for executives, the rules that were supposed to fix it, and the code nobody comprehends."
+description: "A rant about slop: the dashboard I vibe-coded for executives, the rules that were supposed to fix it, the burnout it caused, and the line between renting code and owning it."
 draft: true
+image: /assets/img/posts/2026-08-31-you-will-own-nothing.png
 ---
 
 > **TL;DR** — I maintain an executive dashboard where the hard data is clean and the subjective parts are a mess. The fix was supposed to be rules. The rules became markdown widgets. The widgets became code nobody comprehends — not me, not the AI that wrote it.
 >
 > - Cold data is easy. Subjective judgment is not, even with detailed rules.
-> - Migrating to Astro + markdown per widget made the slop *auditable*, not *fixable*.
-> - Vibe-coded software is rented, not owned. When the model cannot fix it, you own nothing.
+> - Vibe-coded software is rented, not owned. The rent comes due when requirements change.
+> - The expectation gap — AI speed demanded, traditional quality expected — is what burns people out.
+> - The line is the lifecycle: vibe the things nobody will depend on in six months; engineer the rest.
 
 There is a meme that says you will own nothing and you will be happy. I have a new interpretation: vibe-code a dashboard, then try to maintain it. That is what owning nothing feels like.
+
+## The tweet that started it
+
+The term "vibe coding" comes from a [single tweet by Andrej Karpathy on February 2, 2025](https://x.com/karpathy/status/1886192184808149383) — four and a half million views, and within a year [Collins Dictionary's Word of the Year](https://www.questera.ai/blogs/history-of-vibe-coding-karpathy-tweet). His description was inviting: fully give in to the vibes, embrace exponentials, forget that the code even exists.
+
+![Tweet by Andrej Karpathy: "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It's possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good."](/assets/img/posts/2026-08-31-karpathy-vibe-coding-tweet.png){: width="520" }
+*Andrej Karpathy's original tweet — source: [x.com/karpathy/status/1886192184808149383](https://x.com/karpathy/status/1886192184808149383)*
+
+The invitation works. The fine print does not. "Forget that the code even exists" is the promise and the trap — because someone eventually has to *remember* it.
 
 ## The dashboard that ate my week
 
@@ -37,13 +48,30 @@ The AI that generated it cannot fix it either. It tries, confidently, and produc
 
 > "Vibe-coded software is rented, not owned. The model forgets, and you are left with the mortgage."
 
-## What I actually learned
+This is not a personal failure. It has a name — **comprehension debt**: the code outpaces the human's ability to internalize it, and unlike old messy code, [AI-generated code looks brand new, with no signal that comprehension has lagged](https://diptendud.medium.com/comprehension-debt-and-if-youre-shipping-ai-generated-code-in-2026-and-haven-t-heard-the-term-a9b33d2f4b66). The data agrees. [GitClear's analysis of 211 million changed lines](https://www.gitclear.com/blog/gitclear_ai_code_quality_research_pre_release) found roughly 41% of new code is AI-generated, near-term rework doubled from ~3% to ~5.7%, and copy-paste code grows about eight times faster than refactored code. Every fix I make that introduces a new inconsistency is the pattern, not the exception.
 
-The lesson is not "AI is bad at dashboards." The lesson is about comprehension as ownership.
+## The psychology of the deadline
 
-A script I write, I own. I can debug it, extend it, explain it. A script the AI writes and I nod along to — I am renting it. The rent comes due the first time the requirements change. The requirements changed. The rent came due.
+Here is the part nobody puts in the tweet. The executives do not care about comprehension debt. They see a tool that writes code at the speed of conversation, and they expect results at that speed — with the same quality as the old, slow, human-written way. They are not unreasonable. They are following [the logic Wharton calls the AI efficiency trap](https://knowledge.wharton.upenn.edu/article/the-ai-efficiency-trap-when-productivity-tools-create-perpetual-pressure/): if technology delivers more in less time, the rational response is to ask for more deliverables.
 
-The markdown-per-widget migration was the right instinct. Auditing is a prerequisite for ownership. But auditing after the fact is archaeology. The comprehension has to happen *while* the code is being written, not after. The human has to read each generated widget, understand it, and reshape it — the same way I review a pull request from a junior developer, except this junior developer has infinite confidence and no memory.
+The problem is that the speed they see is the *generation* speed. The quality they demand is the *maintenance* quality. Those run on different clocks. [A randomized trial by METR found experienced developers were 19% slower with AI tools on real tasks — while believing they were 20% faster](https://letsdatascience.com/blog/developers-thought-ai-made-them-faster-the-data-said-otherwise). The gap between perception and reality gets absorbed by the developer: feel fast, get told to go faster, carry higher [cognitive load reviewing unfamiliar AI patterns](https://www.askflux.ai/blog/under-pressure-engineering-in-the-age-of-ai), and deliver quality in a system nobody comprehends.
+
+That is the burnout recipe. [Bloomberg reported in 2026 that AI anxiety is fueling burnout across Silicon Valley](https://www.bloomberg.com/news/articles/2026-06-26/ai-anxiety-is-fueling-burnout-across-silicon-valley-s-tech-workers) — "Claude Code is cutting into sleep time." [A UC Berkeley Labor Center study found 67% of workers who adopted AI in 2025 reported working more hours, not fewer, by year end](https://www.aimagicx.com/blog/ai-productivity-paradox-exhaustion-burnout-2026). The tool of liberation became the tool of extension. The human becomes the buffer between the AI's promises and the organization's demands. The buffer wears out.
+
+## The line: lifecycle, not tool
+
+So what is the honest conclusion? It is not "never use AI." It is not "AI is fine, stop complaining." The line is the lifecycle — and the industry has converged on it:
+
+- Vibe coding wins where [the cost of failure is low](https://techvedhas.com/is-vibe-coding-enough-for-production-software/): prototypes, demos, throwaway scripts, exploration.
+- It breaks on [code someone else will maintain](https://sureprompts.com/blog/vibe-coding-the-complete-guide-2026): production, anything touching money or auth, anything with a lifecycle beyond next month.
+- The decision framework is simple: [spec-driven when the system is complex, has many stakeholders, or will be maintained long-term](https://particle41.com/insights/is-vibe-coding-the-future-or-dangerous/); vibe when the cost of specs exceeds the cost of rework.
+
+One question decides it: **will anyone still depend on this in six months?**
+
+- No → vibe it. Prototype, demo, abandonware. Rent it freely, throw it away. That is what the tool is for.
+- Yes → engineer it. Someone will consume it periodically, which means someone will maintain it, which means comprehension debt accrues. The [three-month wall](https://www.augmentcode.com/guides/vibe-coding-vs-spec-driven-development) arrives whether you believe in it or not.
+
+My dashboard crossed the line without asking me. It started as a tool and became an obligation — the moment executives started consuming it periodically, the rental agreement changed. The rent came due the day the requirements moved.
 
 ## The grain of salt, applied to my own process
 
@@ -53,8 +81,8 @@ The cold data was never the problem. The judgment layer was — because judgment
 
 I do not know if this dashboard gets fixed. The most honest outcome might be to rebuild the subjective widgets from scratch, by hand, slowly, and let the AI write only the boring parts — the structured fetch, the formatted table, the thing that never changes. The thing I can actually own.
 
-You will own nothing and you will be happy. The meme was about consumer goods. I did not expect it to be about my own code.
+You will own nothing and you will be happy — unless you build something people keep. Then you own everything, including the debt. And you will be the one who has to understand it.
 
 ---
 
-*Draft — saved for later. Not for publication yet. Needs: a banner, a sharper ending, and possibly a rewrite of the closing section if I am still angry when I publish it.*
+*Draft — saved for later. Not for publication yet. To do at publish time: verify the tweet screenshot renders, generate the banner, and check the LinkedIn caption lands the meme twist.*
