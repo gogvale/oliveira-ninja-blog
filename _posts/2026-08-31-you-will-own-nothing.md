@@ -1,10 +1,9 @@
 ---
 title: "You Will Own Nothing and You Will Be Happy"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-08-31 11:20:00 -0600
 categories: [AI, Workflow]
 tags: [ai-lab, vibe-coding, astro, dashboard, automation, llm, devops, project-writeup]
 description: "The dashboard I vibe-coded for executives, the rent that came due, and the line between renting code and owning it."
-draft: true
 image: /assets/img/posts/2026-08-31-you-will-own-nothing.png
 ---
 
@@ -41,7 +40,12 @@ The new rules do not stick. Every fix introduces a new inconsistency somewhere e
 
 > "Vibe-coded software is rented, not owned. The model forgets, and you are left with the mortgage."
 
-This has a name — [comprehension debt](https://diptendud.medium.com/comprehension-debt-and-if-youre-shipping-ai-generated-code-in-2026-and-haven-t-heard-the-term-a9b33d2f4b66): the code outpaces the human's ability to internalize it, and unlike old messy code, AI-generated code *looks* brand new. [GitClear's analysis of 211 million changed lines](https://www.gitclear.com/blog/gitclear_ai_code_quality_research_pre_release) found near-term rework roughly doubled as AI assistance spread, and copy-paste code growing about eight times faster than refactored code. My inconsistent fixes are the pattern, not the exception.
+This has a name — [comprehension debt](https://diptendud.medium.com/comprehension-debt-and-if-youre-shipping-ai-generated-code-in-2026-and-haven-t-heard-the-term-a9b33d2f4b66): the code outpaces the human's ability to internalize it, and unlike old messy code, AI-generated code *looks* brand new.
+
+![Three stages of comprehension debt: day 1 mostly human code, day 100 mostly AI code, day 1000 almost entirely AI code with comprehension lost](/assets/img/posts/2026-08-31-comprehension-debt-stages.png){: width="600" }
+*Stages of comprehension debt — source: [Allstacks, Comprehension Debt: The Hidden Cost of AI-Generated Code](https://www.allstacks.com/blog/comprehension-debt-the-hidden-cost-of-ai-generated-code)*
+
+[GitClear's analysis of 211 million changed lines](https://www.gitclear.com/blog/gitclear_ai_code_quality_research_pre_release) found near-term rework roughly doubled as AI assistance spread, and copy-paste code growing about eight times faster than refactored code. My inconsistent fixes are the pattern, not the exception.
 
 ## The psychology of the deadline
 
@@ -61,7 +65,3 @@ One question decides it: **will anyone still depend on this in six months?**
 My dashboard crossed the line without asking me. The rent came due the day the requirements moved.
 
 You will own nothing and you will be happy — unless you build something people keep. Then you own everything, including the debt.
-
----
-
-*Draft — saved for later. To do at publish time: generate the banner, verify the tweet screenshot, and check the LinkedIn caption lands the meme twist.*
