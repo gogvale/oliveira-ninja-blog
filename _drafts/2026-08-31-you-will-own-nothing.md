@@ -19,12 +19,12 @@ There is a meme that says you will own nothing and you will be happy. I have a n
 
 ## The tweet that started it
 
-The term "vibe coding" comes from a [single tweet by Andrej Karpathy on February 2, 2025](https://x.com/karpathy/status/1886192184808149383) — four and a half million views, and within a year [Collins Dictionary's Word of the Year](https://www.questera.ai/blogs/history-of-vibe-coding-karpathy-tweet). His description was inviting: fully give in to the vibes, embrace exponentials, forget that the code even exists.
+The term "vibe coding" comes from a [single tweet by Andrej Karpathy on February 2, 2025](https://x.com/karpathy/status/1886192184808149383) — millions of views, and within a year [Collins Dictionary's Word of the Year](https://www.questera.ai/blogs/history-of-vibe-coding-karpathy-tweet). His description was inviting: fully give in to the vibes, embrace exponentials, forget that the code even exists.
 
-![Tweet by Andrej Karpathy: "There's a new kind of coding I call 'vibe coding', where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It's possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good."](/assets/img/posts/2026-08-31-karpathy-vibe-coding-tweet.png){: width="520" }
+![Tweet by Andrej Karpathy coining "vibe coding"](/assets/img/posts/2026-08-31-karpathy-vibe-coding-tweet.png){: width="520" }
 *Andrej Karpathy's original tweet — source: [x.com/karpathy/status/1886192184808149383](https://x.com/karpathy/status/1886192184808149383)*
 
-The invitation works. The fine print does not. "Forget that the code even exists" is the promise and the trap — because someone eventually has to *remember* it.
+The invitation works. The fine print does not. "Forget that the code even exists" is the promise and the trap — because someone eventually has to *remember* it. And note what Karpathy himself said about it in that same tweet: *"It's not too bad for throwaway weekend projects."* He knew. The caveat was in the original announcement — the people who adopted it as a methodology skipped the caveat.
 
 ## The dashboard that ate my week
 
