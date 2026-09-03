@@ -25,6 +25,8 @@ The FiletOfFish story took six years because he wrote the automation himself. Vi
 
 The dangerous part is not that the code is wrong. The dangerous part is that it is often right enough — for months, for years — while the skill quietly evaporates underneath you. Then one day the tool cannot do your exact domain, or the subscription lapses mid-sprint, and the difference between you and FiletOfFish is that he still had his six years of paychecks.
 
+The most public test of that arc ran in the open. ThePrimeagen — ex-Netflix, [a streamer whose reach in the developer world is hard to overstate](https://www.youtube.com/@ThePrimeagen) — spent three months heavy on vibe coding and [quit in February 2026](https://x.com/i/trending/2026795234840162434): the output felt subtly off, and it was robbing him of the craft. He went back to writing code by hand.
+
 ## The market still pays for the skill
 
 The vibe coding discourse assumes every buyer wants shippable speed. A lot of them do. The ones paying the most do not.
