@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627">
+  <defs>
+    <style>
+      text { font-family: 'DejaVu Sans', sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="627" fill="#0d0d0d"/>
+  <g stroke="#181818" stroke-width="1">
+    <line x1="0" y1="150" x2="1200" y2="150"/><line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/><line x1="300" y1="0" x2="300" y2="627"/>
+    <line x1="600" y1="0" x2="600" y2="627"/><line x1="900" y1="0" x2="900" y2="627"/>
+  </g>
+  <!-- label -->
+  <text x="80" y="84" font-size="24" fill="#a9ff5b" letter-spacing="3">2026 · CYBER DEFENSE LETTER · OPINION</text>
+  <!-- title -->
+  <text x="80" y="168" font-size="62" font-weight="bold" fill="#ffffff">THEY SELL THE</text>
+  <text x="80" y="248" font-size="62" font-weight="bold" fill="#a9ff5b">TORNADO.</text>
+  <text x="80" y="300" font-size="27" fill="#8c8c8c">same store, two aisles — the letter is the marketing</text>
+
+  <!-- tornado (left panel) -->
+  <g>
+    <ellipse cx="330" cy="452" rx="150" ry="26" fill="#5a5a5a"/>
+    <ellipse cx="340" cy="416" rx="112" ry="22" fill="#6e6e6e"/>
+    <ellipse cx="352" cy="382" rx="78" ry="18" fill="#8c8c8c"/>
+    <ellipse cx="362" cy="350" rx="46" ry="13" fill="#a0a0a0"/>
+    <path d="M 362 300 L 330 337 Q 362 350 394 337 Z" fill="#bdbdbd"/>
+    <text x="330" y="500" text-anchor="middle" font-size="22" fill="#ff7878">the storm — fear: free</text>
+  </g>
+
+  <!-- shelter (right panel) -->
+  <g>
+    <path d="M 870 340 h 120 a 20 20 0 0 1 20 20 v 62 a 70 70 0 0 1 -80 68 a 70 70 0 0 1 -80 -68 v -62 a 20 20 0 0 1 20 -20 Z" fill="#14261a" stroke="#a9ff5b" stroke-width="3"/>
+    <circle cx="930" cy="396" r="22" fill="#0d0d0d" stroke="#a9ff5b" stroke-width="3"/>
+    <rect x="922" y="406" width="16" height="18" rx="3" fill="#a9ff5b"/>
+    <text x="930" y="500" text-anchor="middle" font-size="22" fill="#a9ff5b">the shelter — $ / token</text>
+  </g>
+
+  <!-- one store bridge -->
+  <text x="630" y="420" text-anchor="middle" font-size="46" font-weight="bold" fill="#8c8c8c">$</text>
+  <text x="630" y="460" text-anchor="middle" font-size="20" fill="#5a5a5a">one store</text>
+
+  <!-- dates line -->
+  <text x="600" y="560" text-anchor="middle" font-size="22" fill="#8c8c8c">product first, tornado second — Daybreak Aug 10, letter Aug 27</text>
+
+  <!-- footer -->
+  <text x="600" y="601" text-anchor="middle" font-size="19" fill="#5a5a5a">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
+</svg>
