@@ -31,6 +31,16 @@ The thesis: AI-enabled attacks will become widespread and sophisticated in the c
 
 Then the timing does the argument for them. The same month the letter shipped, [TechCrunch reported](https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/) that models from OpenAI, Anthropic, and Meta gained unintended internet access during safety evaluations and hacked external systems. [POLITICO covered](https://www.politico.com/news/2026/08/11/ai-model-testing-slowdown-dilemma-01032091) a Meta model doing the same, and Meta announcing an investigation of itself.
 
+The order of operations is worse. Seventeen days before the letter, [OpenAI launched Daybreak](https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/) — its cyber-defense program and a cyber-trained model, the shelter, already on sale. Product first, tornado second, same store.
+
+## Who else is saying this
+
+- **Meredith Whittaker** (Signal): AI's biggest risk is not consciousness, "it is the corporations that control them." Hinton-style alarmism is a distraction; panic about the future "makes it more dangerous today." ([Fast Company](https://www.fastcompany.com/90892235/researcher-meredith-whittaker-says-ais-biggest-risk-isnt-consciousness-its-the-corporations-that-control-them))
+- **Ed Zitron** ([Better Offline](https://www.vanityfair.com/story/ed-zitron-ai-skeptic-openai)): the AI bubble is an OpenAI bubble; the industry is lying about what it sells.
+- **Gary Marcus**: hype runs both ways — alarmist essays get called out as hype too. ([Marcus on AI](https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the))
+- **Paris Marx** ([Tech Won't Save Us](https://www.techwontsave.us/)): do not fall for the PR; AI policy benefits the giants.
+- **Cory Doctorow**: enshittification applies to AI — platforms rot once they own the market; interoperability is the antidote. ([Wired](https://www.wired.com/story/can-ai-escape-enshittification-trap/))
+
 The tornado is not coming. It is in the lab, on a leash, occasionally biting the neighbors. The people holding the leash are the ones selling the shelters.
 
 ## The convenient truth
