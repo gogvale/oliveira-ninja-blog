@@ -7,6 +7,8 @@ description: "FiletOfFish1066 automated his job for six years, got fired, forgot
 image: /assets/img/posts/2026-09-03-own-the-skill-rent-the-tool.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-03-own-the-skill-rent-the-tool.mp3">Your browser does not support the audio element.</audio>
+
 > **TL;DR**
 > - In 2016 a Reddit user confessed to automating his own job for six years. He played games, collected $95,000 a year, got fired — and had forgotten how to code.
 > - Vibe coding is that story in fast-forward, minus the paycheck.
