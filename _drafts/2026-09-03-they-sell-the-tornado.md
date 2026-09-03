@@ -40,7 +40,6 @@ The order of operations is worse. Seventeen days before the letter, [OpenAI laun
 - **Gary Marcus**: hype runs both ways — alarmist essays get called out as hype too. ([Marcus on AI](https://garymarcus.substack.com/p/dario-amodei-hype-ai-safety-and-the))
 - **Paris Marx** ([Tech Won't Save Us](https://www.techwontsave.us/)): do not fall for the PR; AI policy benefits the giants.
 - **Cory Doctorow**: enshittification applies to AI — platforms rot once they own the market; interoperability is the antidote. ([Wired](https://www.wired.com/story/can-ai-escape-enshittification-trap/))
-- **ThePrimeagen** (ex-Netflix, one of the biggest developer streamers): quit vibe coding in February 2026 — output felt subtly off and it robbed him of the craft. ([announcement](https://x.com/i/trending/2026795234840162434))
 
 The tornado is not coming. It is in the lab, on a leash, occasionally biting the neighbors. The people holding the leash are the ones selling the shelters.
 
