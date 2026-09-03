@@ -66,3 +66,7 @@ The loop has two sides now. One side sells the storm: models capable of harm, ja
 The dependency side is quieter but heavier. Every defender that outsources judgment to the shelter loses a little of the skill the shelter was supposed to protect. The industry that sells the fear also sells the convenience that erases the competence. If the shelter is a subscription, the storm is job security — for the shelter vendor.
 
 What would cyber defense look like if the people selling it did not also own the threat? I am still thinking about that part.
+
+## Status
+
+**PERMANENT DRAFT — never publish** (Gabriel's call 2026-09-03; IBM is a signatory of the letter this post critiques). Safe economics cousin lives at `_drafts/2026-09-03-how-big-ai-gets-its-money-back.md` — reuse research there if the pricing/ROI angle ever goes live. This file stays archived as-is.
