@@ -31,7 +31,13 @@ The vibe coding discourse assumes every buyer wants shippable speed. A lot of th
 
 The signal split is public now. **Stripe and Jane Street still ban AI in their interview loops.** Google's standard rounds do too, even while it pilots Gemini inside CoderPad; Meta added an AI-allowed round and measures candidates on it. Two philosophies, live in 2026 — [the firms paying senior money test what you can do with no tool in the browser](https://www.interviewcoder.co/blog/using-ai-for-coding-interviews).
 
-The data side explains why. [GitClear's maintainability research](https://www.gitclear.com/the_ai_code_quality_maintainability_gap) tracks hundreds of millions of changed lines: code reuse is down 35%, duplicate blocks are up, short-term churn is up. AI-assisted codebases rot faster — and the people paid to clean them up are the ones who can still read code. [SonarSource's 2026 report](https://www.joberty.com/blog/why-companies-are-quietly-rehiring-software-engineers-in-2026-ai-reality-check/) puts 96% of developers as distrusting AI code without manual review. Hiring noticed: companies that over-hired vibe output are quietly rehiring engineers who can do the work.
+The data side explains why. [GitClear's maintainability research](https://www.gitclear.com/the_ai_code_quality_maintainability_gap) tracks hundreds of millions of changed lines: code reuse is down 35%, duplicate blocks are up, short-term churn is up. AI-assisted codebases rot faster.
+
+![GitClear maintainability chart: reuse signals eroding while duplication, copy/paste, and churn climb, indexed to 2023-2026](/assets/img/posts/2026-09-03-gitclear-maintainability-gap.png)
+
+*Reuse signals (left) eroding as risk signals (right) climb with AI authorship — source: [GitClear](https://www.gitclear.com/the_ai_code_quality_maintainability_gap)*
+
+The people paid to clean up rotting codebases are the ones who can still read code. [SonarSource's 2026 report](https://www.joberty.com/blog/why-companies-are-quietly-rehiring-software-engineers-in-2026-ai-reality-check/) puts 96% of developers as distrusting AI code without manual review. Hiring noticed: companies that over-hired vibe output are quietly rehiring engineers who can do the work.
 
 | Vibe-coder assumption | What the market does |
 |---|---|
