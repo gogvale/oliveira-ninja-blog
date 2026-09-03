@@ -1,10 +1,10 @@
 ---
 title: "Own the Skill. Rent the Tool."
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-03 06:40:00 -0600
 categories: [Opinion, AI]
 tags: [ai-lab, vibe-coding]
 description: "FiletOfFish1066 automated his job for six years, got fired, forgot how to code. Vibe coding is that story in fast-forward — and the market still pays for the skill, not the tool."
-draft: true
+image: /assets/img/posts/2026-09-03-gitclear-maintainability-gap.png
 ---
 
 > **TL;DR**
