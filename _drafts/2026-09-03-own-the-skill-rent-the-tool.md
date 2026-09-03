@@ -1,5 +1,5 @@
 ---
-title: "Pay2Work"
+title: "Own the Skill. Rent the Tool."
 date: 2030-01-01 00:00:00 -0600
 categories: [Opinion, AI]
 tags: [ai-lab, vibe-coding]
