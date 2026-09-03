@@ -7,6 +7,7 @@ description: "How I stopped juggling six SSH keys and six ssh/config aliases and
 image: /assets/img/posts/2026-08-20-one-vault-of-keys.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-20-one-vault-of-keys.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — Six SSH keys for six platforms, held together by `ssh/config` glue. Deleted them all and put every key in one 1Password vault, served by the agent.
 >
 > - No key files sitting on disk — the vault holds the key, the agent negotiates with your approval.

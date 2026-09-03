@@ -7,6 +7,7 @@ description: "How I picked oliveira.ninja, compared registrars, and started turn
 image: /assets/img/posts/2026-08-18-part-1-domain.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-18-oliveira-ninja-part-1-the-domain-hunt.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — I wanted a personal domain, email, and a small web presence. The clean options were taken or expensive, so I went playful: `oliveira.ninja`.
 >
 > - AI flopped at creative domain ideas; manual searching won.

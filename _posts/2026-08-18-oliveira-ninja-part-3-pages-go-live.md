@@ -7,6 +7,7 @@ description: "How I connected oliveira.ninja and blog.oliveira.ninja to GitHub P
 image: /assets/img/posts/2026-08-18-part-3-pages.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-18-oliveira-ninja-part-3-pages-go-live.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — Connected `oliveira.ninja` to GitHub Pages: `www` for a landing page, `blog` for longer notes. No complicated hosting.
 >
 > - Two repos: `gogvale` (profile README + Astro landing source on `gh-pages`) and `oliveira-ninja-blog` (Jekyll).

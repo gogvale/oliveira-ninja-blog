@@ -7,6 +7,7 @@ description: "Why I moved from Proton to Zoho for email, and what I learned whil
 image: /assets/img/posts/2026-08-18-part-2-mail.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-18-oliveira-ninja-part-2-mail-plans-and-dns.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — Bought Proton Duo for domain email, then realized the bundle overlapped with tools I already had. Refunded it and switched to Zoho's free tier.
 >
 > - Bundles are tempting, but replacement cost is migration time and mental overhead, not just money.

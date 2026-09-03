@@ -7,6 +7,7 @@ description: "How I built a blog-writing pipeline with an AI agent — the rules
 image: /assets/img/posts/2026-08-21-the-blog-post-that-writes-itself.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-21-the-blog-post-that-writes-itself.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — This blog now runs on a writing pipeline: an AI agent drafts, I shape. It works because we agreed on rules first.
 >
 > - Good posts are structure plus voice: hook, TL;DR, scannable sections, one idea per paragraph, real visuals.

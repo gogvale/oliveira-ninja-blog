@@ -7,6 +7,7 @@ description: "The rise and quiet fall of spec-driven development — and why the
 image: /assets/img/posts/2026-09-01-sdd-is-dead.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-01-sdd-is-dead.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — A year ago, spec-driven development was the answer to hallucinated code: write the whole app as markdown specs, then let the agent implement. Tools like GitHub's spec-kit bet on it. Now nobody mentions it.
 >
 > - SDD became markdown theater — 1,300 lines of spec for a date display.

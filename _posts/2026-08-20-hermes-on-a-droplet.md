@@ -7,6 +7,7 @@ description: "How I set up Hermes, my personal AI agent, on a DigitalOcean dropl
 image: /assets/img/posts/2026-08-20-hermes-on-a-droplet.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-20-hermes-on-a-droplet.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — I gave my AI assistant a permanent home on a DigitalOcean droplet this week.
 >
 > - The image ships with Hermes pre-included — setup took less time than ordering a pizza.

@@ -7,6 +7,7 @@ description: "How I tried moving my AI automation from scripts to skills, watche
 image: /assets/img/posts/2026-08-26-skills-suck-scripts-dont.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-26-skills-suck-scripts-dont.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — I moved my AI automation from stable scripts to agent "skills" for unstructured tasks (dashboards, Monday updates, Airtable reads, reports). It hallucinated exactly where the work was unstructured — stale data, renamed columns, missing meeting context. The fix was old-school: a Makefile, audited sources, and me running the commands.
 >
 > - Skills are great for guided, repeated work. They are a bad fit for human-like judgment tasks.

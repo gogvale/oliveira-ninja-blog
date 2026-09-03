@@ -7,6 +7,7 @@ description: "How I discovered that a cheap model with a good plan beats a smart
 image: /assets/img/posts/2026-08-21-smart-plan-cheap-build.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-21-smart-plan-cheap-build.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — My Claude credits ran out, so I fell back to the free tier's small model and discovered it executes automation tasks *better* than the smart one.
 >
 > - Smart model = plan (structure, scripts, skills). Cheap model = execute (fast, predictable, cheap).

@@ -7,6 +7,7 @@ description: "The dashboard I vibe-coded for executives, the rent that came due,
 image: /assets/img/posts/2026-08-31-you-will-own-nothing.png
 ---
 
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-08-31-you-will-own-nothing.mp3">Your browser does not support the audio element.</audio>
 > **TL;DR** — I moved my AI automation to agent skills, then watched it hallucinate exactly where the work was unstructured — renamed columns, stale data, missing meeting context. The fix was old-school: a Makefile, audited sources, me running the commands.
 >
 > - Vibe-coded software is rented, not owned. The rent comes due when requirements change.
