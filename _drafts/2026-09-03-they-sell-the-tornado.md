@@ -49,6 +49,16 @@ Strip the packaging and the letter says something true. Small hospitals cannot d
 
 The convenient part is the solution. The fix proposed is buying more from the industry that scaled the problem. Fear opens the budget, and the budget flows to the fear's source. That is not a conspiracy. It is a revenue loop, printed in a press release.
 
+## The boring counterpoint
+
+Here is where the data undercuts the marketing. Ransomware is now 48% of all breaches, and [small organizations account for 96% of ransomware victims](https://cyberreadinessinstitute.org/news-and-events/verizon-dbir-2026-small-businesses-face-escalating-cyber-threats/). The attacks that land on them are the boring ones: phishing, stolen credentials, unpatched exploits. No frontier model required to stop those — patching, MFA, tested backups do it.
+
+The money is already moving toward that tier. SMB cybersecurity spending is heading to [$109 billion in 2026, a 10% CAGR](https://www.analysysmason.com/research/content/articles/smb-cyber-spending-rsmb1-ren04/), and small businesses now put 14.8% of IT budgets into security — the fastest-growing budget category. Insurers are forcing the purchase: [88% of organizations report insurers mandating stricter access controls at renewal](https://stats.conversationalgeek.com/blog/cyber-insurance-statistics-2025), and Mexico's market is compounding at double digits on the way to its own cyber law.
+
+Advisory-only consulting grows at 16% a year. [Recurring, hands-on services grow faster and carry the valuation premium](https://corporatefinance.kpmg.com/us/en/insights/2026/professional-services-industry-update-spring-2026.html). The market is not paying for more reports. It is paying for someone who shows up and fixes the boring 80% — at a tier the shelter vendors will not serve.
+
+The tornado sells shelters to organizations that are not the ones getting hit. The 96% need a different answer.
+
 ## Where this is heading
 
 The loop has two sides now. One side sells the storm: models capable of harm, jailbreaks, the letter's own "coming months" timeline. The other side sells the shelter: defense stacks, red teams, frontier access for defenders. Same store, two aisles.
