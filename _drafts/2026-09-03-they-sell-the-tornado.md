@@ -1,9 +1,9 @@
 ---
-title: "They Sell the Tornado"
+title: "Frontier Labs Make the Storm. Sell the Shelter."
 date: 2030-01-01 00:00:00 -0600
 categories: [Opinion, AI]
 tags: [ai-lab]
-description: "Rant draft — the frontier labs sell the fear of the storm and the shelters for it, from the same store."
+description: "Rant draft — the frontier labs make the storm their models escape and sell the shelters for it, from the same store."
 draft: true
 ---
 
