@@ -1,16 +1,18 @@
 ---
 title: "Cheapest Tokens Ever, Biggest Buildout Ever"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-03 20:30:00 -0600
 categories: [AI]
 tags: [ai-lab, opinion]
 description: "Who actually gets paid when token prices collapse and AI capex explodes."
-draft: true
+image: /assets/img/posts/2026-09-03-cheapest-tokens-biggest-buildout.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-03-cheapest-tokens-biggest-buildout.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 > - Token prices hit record lows while AI infrastructure spending hits record highs — same quarter.
 > - Three ways the money comes back: volume, shovels, or moving up the stack.
-> - I do not know which one wins. I am keeping score.
+> - I do not know which one wins. I will find out which one is right.
 
 ## The discussion that started it
 
@@ -54,20 +56,3 @@ Three theories. I do not know which one wins, and I trust anyone who tells you t
 But each theory predicts something I can check. If volume wins, token usage curves keep climbing and the labs keep growing revenue. If shovels win, the infrastructure names stay rich while the labs fight over scraps. If the stack moves up, the labs quietly stop selling tokens and start invoicing for outcomes.
 
 I will find out which one is right.
-
-## Research bank (not for the post body)
-
-**Capex anchors (verified 2026-09-03):** $600B+ 2026 (+36% YoY, ~75% AI-tied — MUFG); $630B (Morgan Stanley via Reuters Breakingviews); $775-800B top range (AL Capital); per-company: Amazon ~$200B, Alphabet $175-185B, Meta $115-135B (Futurum). One number stays in the hook; the rest live here until needed.
-
-**Discarded theories (cut for density):** cost deflation outrunning price cuts · data centers as financialized real estate · subsidize-now-price-later · sovereign/defense backstop. Revive only as counterweights.
-
-**Provenance:** idea seeded from a /g/ thread debate on token economics. NEVER cite 4chan. Re-verify numbers at write time. Employer-safe: no IBM, no letter commentary.
-
-**Theory anchors (TODO at write time):**
-- Bakery: Jevons paradox link → https://en.wikipedia.org/wiki/Jevons_paradox (safe canonical)
-- Gold rush: reuse AL Capital link (alcapitaladvisory.com/research/intelligence/ai-infrastructure.html) on the value-chain phrase
-- Streaming: **SOURCE FOUND** → [PNC Economics Research (Aug 2026, PDF)](https://www.pnc.com/content/dam/pnc-com/pdf/aboutpnc/EconomicReports/EconomicUpdates/2026/PNC_Economics_Research_Who_Wins_When_AI_Models_Up_7_August_2026.pdf): "open-weight models rapidly closing the performance gap... risk of model-layer commoditization... weaken pricing power, harder to earn returns on rising investment." Institutional, on-thesis. Optional bonus datapoint for Bakery: [Axios (Aug 2026)](https://www.axios.com/2026/08/01/deepseek-model-cheap-ai-price-war): DeepSeek ~$0.28 vs $25 on Opus 4.8 for same output — 99% discount.
-
-## Status
-
-Full prose draft 2026-09-03. ~700 words. Fill-in-at-write-time: one concrete datapoint per theory section (a real price-cut, an infrastructure earnings line, a lab pivot) — keep them light.
