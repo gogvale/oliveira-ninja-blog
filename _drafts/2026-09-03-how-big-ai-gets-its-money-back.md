@@ -20,6 +20,9 @@ Nobody could answer the obvious follow-up. Token prices at record lows, while th
 
 To make that number real: even at the low end it is more than the entire economy of Sweden. It works out to close to a hundred dollars for every person on the planet. The money is moving at somewhere between seventy and ninety million dollars an hour, every hour, all year.
 
+![Hyperscalers' capex above $600 Bn in 2026 — MUFG](/assets/img/posts/2026-09-03-hyperscaler-capex-2026.png)
+*Source: [MUFG Capital Markets Strategy](https://www.mufgamericas.com/sites/default/files/document/2025-12/AI_Chart_Weekly_12_19_Financing_the_AI_Supercycle.pdf) — top-5 hyperscaler capex, 2015-2026E. Forecast $602 Bn for 2026, +36% over 2025.*
+
 Cheapest intelligence ever sold. Biggest bet ever placed. Same quarter.
 
 That math does not work unless somebody has a plan. So I started thinking about who gets paid.
