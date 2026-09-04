@@ -63,6 +63,11 @@ I will find out which one is right.
 
 **Provenance:** idea seeded from a /g/ thread debate on token economics. NEVER cite 4chan. Re-verify numbers at write time. Employer-safe: no IBM, no letter commentary.
 
+**Theory anchors (TODO at write time):**
+- Bakery: Jevons paradox link → https://en.wikipedia.org/wiki/Jevons_paradox (safe canonical)
+- Gold rush: reuse AL Capital link (alcapitaladvisory.com/research/intelligence/ai-infrastructure.html) on the value-chain phrase
+- Streaming: **SOURCE FOUND** → [PNC Economics Research (Aug 2026, PDF)](https://www.pnc.com/content/dam/pnc-com/pdf/aboutpnc/EconomicReports/EconomicUpdates/2026/PNC_Economics_Research_Who_Wins_When_AI_Models_Up_7_August_2026.pdf): "open-weight models rapidly closing the performance gap... risk of model-layer commoditization... weaken pricing power, harder to earn returns on rising investment." Institutional, on-thesis. Optional bonus datapoint for Bakery: [Axios (Aug 2026)](https://www.axios.com/2026/08/01/deepseek-model-cheap-ai-price-war): DeepSeek ~$0.28 vs $25 on Opus 4.8 for same output — 99% discount.
+
 ## Status
 
 Full prose draft 2026-09-03. ~700 words. Fill-in-at-write-time: one concrete datapoint per theory section (a real price-cut, an infrastructure earnings line, a lab pivot) — keep them light.
