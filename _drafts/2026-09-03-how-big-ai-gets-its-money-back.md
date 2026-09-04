@@ -14,11 +14,11 @@ draft: true
 
 ## The discussion that started it
 
-I was watching a discussion about AI token prices hitting record lows. The usual camps showed up: the ones who said it proves AI is a commodity now, the ones who said it proves the whole thing is a bubble, and the ones arguing about whether anyone is actually making money.
+I was watching a discussion about AI token prices hitting [record lows](https://artificialanalysis.ai/). The usual camps showed up: the ones who said it proves AI is a commodity now, the ones who said it proves the whole thing is a bubble, and the ones arguing about whether anyone is actually making money.
 
-Nobody could answer the obvious follow-up. Token prices at record lows, while the big cloud providers are on track to spend somewhere between $600 billion and $800 billion this year on AI infrastructure — the physical stuff: server buildings, chips, power plants.
+Nobody could answer the obvious follow-up. Token prices at record lows, while the big cloud providers are on track to spend somewhere between [$600 billion](https://www.mufgamericas.com/sites/default/files/document/2025-12/AI_Chart_Weekly_12_19_Financing_the_AI_Supercycle.pdf) and [$800 billion](https://alcapitaladvisory.com/research/intelligence/ai-infrastructure.html) this year on AI infrastructure — the physical stuff: server buildings, chips, power plants.
 
-To make that number real: even at the low end it is more than the entire economy of Sweden. It works out to close to a hundred dollars for every person on the planet. The money is moving at somewhere between seventy and ninety million dollars an hour, every hour, all year.
+To make that number real: even at the low end it is more than the [entire economy of Sweden](https://www.imf.org/en/Publications/WEO). It works out to close to a hundred dollars for every person on the planet. The money is moving at somewhere between seventy and ninety million dollars an hour, every hour, all year.
 
 ![Hyperscalers' capex above $600 Bn in 2026 — MUFG](/assets/img/posts/2026-09-03-hyperscaler-capex-2026.png)
 *Source: [MUFG Capital Markets Strategy](https://www.mufgamericas.com/sites/default/files/document/2025-12/AI_Chart_Weekly_12_19_Financing_the_AI_Supercycle.pdf) — top-5 hyperscaler capex, 2015-2026E. Forecast $602 Bn for 2026, +36% over 2025.*
@@ -45,7 +45,7 @@ The capex is not a bet on AI. It is the product.
 
 When every service had the same movies, the money stopped following the movie and started following the bundle. Tokens are becoming the same movie. Frontier models converge, open weights undercut the rest, and raw intelligence turns into a commodity nobody makes a margin on.
 
-The survivors will be the ones selling the outcome — agents, workflows, subscriptions that do a job — not the raw intelligence underneath. I have written about the buyer side of this before. This is the seller side.
+The survivors will be the ones selling the outcome — agents, workflows, subscriptions that do a job — not the raw intelligence underneath. I have written about the buyer side of this [before](https://blog.oliveira.ninja/posts/own-the-skill-rent-the-tool/). This is the seller side.
 
 ## Keeping score
 
