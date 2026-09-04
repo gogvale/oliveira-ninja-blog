@@ -12,15 +12,13 @@ draft: true
 > - Three ways the money comes back: volume, shovels, or moving up the stack.
 > - I do not know which one wins. I am keeping score.
 
-## The receipt and the headline
+## The discussion that started it
 
-I went to cancel an AI subscription last month. The renewal price made me stop: half of what I paid in January, for a model that did not exist in January. Better model, cheaper. Good deal for me.
+I was watching a discussion about AI token prices hitting record lows. The usual camps showed up: the ones who said it proves AI is a commodity now, the ones who said it proves the whole thing is a bubble, and the ones arguing about whether anyone is actually making money.
 
-Same week, an earnings headline crossed my feed. The big cloud providers are on track to spend somewhere between $600 billion and $800 billion on AI infrastructure this year. That is more than the GDP of most countries. Combined, the biggest players are spending more than the entire economy of everywhere except the top twenty nations.
+Nobody could answer the obvious follow-up. Token prices at record lows, while the big cloud providers are on track to spend somewhere between $600 billion and $800 billion on AI infrastructure this year — more than the GDP of most countries. Cheapest intelligence ever sold, biggest bet ever placed, same quarter.
 
-Cheapest intelligence ever sold. Biggest bet ever placed. In the same quarter.
-
-That math does not work unless somebody has a plan. So I started asking who.
+That math does not work unless somebody has a plan. So I started thinking about who gets paid.
 
 ## The bakery
 
