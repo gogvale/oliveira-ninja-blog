@@ -31,7 +31,7 @@ The machine I *do* control is the [DigitalOcean server that runs my assistant](h
 A reverse tunnel flips the connection. The NAS dials out to my server, and the server gets a door back:
 
 ```bash
-ssh -N -R 2222:localhost:22 hermes@159.223.148.236
+ssh -N -R 2222:localhost:22 hermes@vps.example.com
 ```
 
 That one command makes `localhost:2222` *on the server* behave like port 22 *on the NAS*. Outbound-only, so CGNAT never notices. This is stock [OpenSSH remote forwarding](https://man.openbsd.org/ssh_config#R) — no new software on the NAS, no Tailscale install on a locked firmware, no Cloudflare daemon to babysit. The NAS stays an appliance. It just happens to dial home once.
@@ -65,7 +65,7 @@ A foreground tunnel dies with the terminal. The NAS needed something that surviv
 #!/bin/sh
 while true; do
   ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
-      -o ExitOnForwardFailure=yes -N -R 2222:localhost:22 hermes@159.223.148.236
+      -o ExitOnForwardFailure=yes -N -R 2222:localhost:22 hermes@vps.example.com
   sleep 10
 done
 ```
