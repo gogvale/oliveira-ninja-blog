@@ -102,7 +102,18 @@ Fifty megabytes per second of AES on a weak ARM core. Not the CPU. And a modern 
 
 ## Fix
 
-_Conclusion pending the raw-TCP measurement. If the plain transfer is fast, the wall is SSH-specific and the fix follows; if it is equally slow, the wall is the uplink and transfers get scheduled, not optimized._
+The wall turned out to be the ISP's per-flow QoS, not the NAS. The measurements that proved it: a laptop on the same Starlink link peaks at 8.3 Mbps upload; the NAS pulls 0.64 MB/s with one connection and 1.85 MB/s with four parallel ones. Per-flow ceiling of ~5 Mbps, aggregate ceiling of roughly 10-15 Mbps. No software change moves it.
+
+The fix is therefore procedural, not technical:
+
+**1. Parallelize transfers.** One connection wastes the link. Four to eight parallel pulls saturate it:
+
+```bash
+# from the server, push with N parallel streams
+seq 1 8 | xargs -P8 -I{} sftp -P 2222 root@localhost <<< "put ..."   # or use aria2c/wget -c per file
+```
+
+**2. Accept the streaming ceiling.** One stream = one flow = ~5 Mbps. Lean 1080p encodes (~2-4 Mbps) stream fine from the NAS; the 15-45 Mbps remuxes in a typical library do not. Keep hot titles cached on the server's local disk; let the NAS hold the archive.
 
 ## Closing note
 
