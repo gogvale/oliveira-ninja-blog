@@ -72,9 +72,11 @@ done
 
 `ServerAliveInterval` keeps the connection honest; `ExitOnForwardFailure` refuses to sit there pretending if the forward fails. Run it with `nohup`, register it with `crontab -e` under `@reboot`, done. If the tunnel drops, the loop reconnects in ten seconds. If you want the industrial version, [autossh](https://www.harding.motd.ca/autossh/) does the same with supervision.
 
-## The one thing still open
+## The one thing that stayed slow
 
-Raw throughput over the tunnel is capped at roughly 0.7 MB/s. That is not the link — Starlink gives me plenty of upload. It is the math of [bandwidth-delay product](https://en.wikipedia.org/wiki/Bandwidth-delay_product): a 64 KB TCP window across ~70 ms of satellite latency moves about one megabyte per second, no matter how fat the pipe is. The NAS kernel predates window scaling defaults I take for granted. The fix is sysctl tuning on the NAS side — [larger receive and send buffers](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/net.html), which I am testing now. For one-off archive downloads at a couple of gigabytes, even 0.7 MB/s is tolerable. For streaming the library later, it is not. That is the next fight.
+Raw throughput is capped at roughly 0.6 MB/s — direct or through the tunnel, upload or download. It is not the link, not the CPU (the box benches AES at 50 MB/s), not the TCP window (sysctl scaling changed nothing). It is the SSH *channel* window in the NAS's ancient OpenSSH — the protocol-level buffer grows too slowly on a high-latency link, and WD ships a version from before that got fixed.
+
+I left it. The rips never touch this path, streaming stays on the server's local disk, and the occasional archive download lands on the NAS while I sleep. At 0.6 MB/s, a two-gigabyte file is an overnight job. That is a trade worth making rather than jailbreaking a locked appliance.
 
 ## Why not the obvious alternatives
 
