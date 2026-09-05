@@ -9,13 +9,14 @@ draft: true
 
 > **TL;DR**
 > - My WD My Cloud NAS sits behind Starlink CGNAT. No public IP, no port forwarding, ever.
-> - I enabled SSH on the NAS and opened one **outbound reverse tunnel** to a DigitalOcean server I control.
-> - The server now pushes my DVD rips to the NAS over SFTP through `localhost:2222` — nothing inbound, no router touched, no VPN client on the NAS.
+> - I enabled SSH from the OS5 dashboard and opened one **outbound reverse tunnel** to a DigitalOcean server I control.
+> - Legal downloads I grab on that server (Internet Archive and similar) land on the NAS over SFTP through `localhost:2222` — no inbound port, no router touched, no VPN client on the NAS.
+> - My DVD rips never leave the house: those go NAS-ward over the local network, the boring way.
 > - The firmware fought back in two weird ways. Both were fun to solve.
 
 The first login told me everything: `AllowUsers sshd`.
 
-My brand-new SSH access to the NAS — enabled through a hidden URL in the firmware, because Western Digital does not put an SSH toggle in the OS5 dashboard — was useless for automation. The sshd config only permitted the user `sshd`. Not root. Not me. The box was telling me, politely, that it is an appliance, not a server.
+My brand-new SSH access to the NAS — flipped on from the OS5 dashboard — was useless for automation. The sshd config only permitted the user `sshd`. Not root. Not me. The box was telling me, politely, that it is an appliance, not a server.
 
 I needed that appliance to accept files from the internet. Not the other way around.
 
@@ -23,7 +24,7 @@ I needed that appliance to accept files from the internet. Not the other way aro
 
 The NAS is a WD My Cloud EX2 Ultra. Armada 385, 1 GB of RAM, a 2015-era kernel, and a firmware that treats third-party packages like a security risk. It is a great disk with a mediocre computer bolted on. It also lives behind [Starlink's CGNAT](https://www.cloudflare.com/learning/network-layer/what-is-cgnat/), which means it has no public IPv4 address at all. Port forwarding is not difficult. It is impossible.
 
-The machine I *do* control is the [DigitalOcean server that runs my assistant](https://blog.oliveira.ninja/posts/hermes-on-a-droplet/). Hardened, key-only login, sitting on the public internet. I wanted that server to push freshly ripped DVDs to the NAS. The classic answer — port forward, DynDNS, pray — was off the table.
+The machine I *do* control is the [DigitalOcean server that runs my assistant](https://blog.oliveira.ninja/posts/hermes-on-a-droplet/). Hardened, key-only login, sitting on the public internet. I wanted it to deliver the occasional legal download — an [Internet Archive](https://archive.org) title, an open-license short — into the same library where my DVD rips live. The rips themselves never need the cloud: those stay on my network, NAS-ward over SMB, the boring way. The classic answer for the cloud side — port forward, DynDNS, pray — was off the table.
 
 ## The move: reverse the direction
 
@@ -73,7 +74,7 @@ done
 
 ## The one thing still open
 
-Raw throughput over the tunnel is capped at roughly 0.7 MB/s. That is not the link — Starlink gives me plenty of upload. It is the math of [bandwidth-delay product](https://en.wikipedia.org/wiki/Bandwidth-delay_product): a 64 KB TCP window across ~70 ms of satellite latency moves about one megabyte per second, no matter how fat the pipe is. The NAS kernel predates window scaling defaults I take for granted. The fix is sysctl tuning on the NAS side — [larger receive and send buffers](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/net.html), which I am testing now. For one-off DVD rips at 2 GB each, even 0.7 MB/s is tolerable. For streaming the library later, it is not. That is the next fight.
+Raw throughput over the tunnel is capped at roughly 0.7 MB/s. That is not the link — Starlink gives me plenty of upload. It is the math of [bandwidth-delay product](https://en.wikipedia.org/wiki/Bandwidth-delay_product): a 64 KB TCP window across ~70 ms of satellite latency moves about one megabyte per second, no matter how fat the pipe is. The NAS kernel predates window scaling defaults I take for granted. The fix is sysctl tuning on the NAS side — [larger receive and send buffers](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/net.html), which I am testing now. For one-off archive downloads at a couple of gigabytes, even 0.7 MB/s is tolerable. For streaming the library later, it is not. That is the next fight.
 
 ## Why not the obvious alternatives
 
@@ -81,4 +82,4 @@ Tailscale is the honest answer for most people: mesh VPN, no config, works throu
 
 ## What changed
 
-My DVD rips — the ones from discs we actually own — now flow from the server to the NAS over an encrypted channel that leaves no inbound ports open anywhere. The NAS still thinks it is a local appliance. The server treats it like a remote disk. And the whole thing cost nothing but two config lines and a firewall rule I did not have to write.
+The occasional legal download — an open film from the Internet Archive, a CC-licensed short — now lands on the NAS from my server over an encrypted channel that leaves no inbound ports open anywhere. My DVD rips still travel the local network they never should have left. The NAS still thinks it is a local appliance. My server treats it like a remote disk. And the whole thing cost nothing but two config lines and a firewall rule I did not have to write.
