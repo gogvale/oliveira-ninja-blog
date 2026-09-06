@@ -17,9 +17,9 @@ draft: true
 **Research question:** how has opportunistic internet attack automation changed now that AI tooling is cheap and universal (2026), vs the pre-AI baselines (2022-2025 studies)?
 
 **Pre-registered hypotheses:**
-- **H1 — volume/credential patterns unchanged.** Bots scale, they do not think. Expect to replicate ambientnode (2025): ~1,900 attempts/day, ~20% default credentials, >80-90% automated, only ~1.6% of sessions >1 min.
-- **H2 — AI-era signals appear in the tail.** Context-aware credentials (passwords matching the lure business), fewer classic defaults among *interactive* sessions, more staged/ordered recon instead of uname-spam, novel tool downloads.
-- **H3 — detection-check pass rate rises.** A measurable share of sessions now run tiered anti-honeypot checks (cpu cores → env integrity → /proc entropy). Making the decoy pass those checks is a validity requirement: without it, sophisticated actors silently self-select out and the sample is biased toward naive bots.
+- **H1 — Opportunistic attacks are lure-blind.** Volume and pre-auth behavior do not key on the domain, the vertical, or how the storefront looks: bots attack services, not storefronts. Prediction: the pre-auth profile on a fresh, zero-reputation boutique domain replicates ambientnode (2025) within noise — ~1,900 attempts/day, ~20% default credentials, >80-90% automated, <2% sessions >1 min, comparable top-10 password list. Falsifiable marker: pre-auth payloads that reference the lure (domain, product names, business name) or volume significantly off baseline.
+- **H2 — If AI-era targeting exists, it lives in the tail — and the prior is low.** "Si tenemos suerte de que nos ataquen": targeted/interactive sessions are expected to be a small minority even in 2026; the null outcome (zero targeted sessions in 30 days) is the EXPECTED result and still publishable — it strengthens H1. Evidence that would confirm targeting: context-aware credentials (business-name passwords, domain-based emails), fewer classic defaults among interactive sessions, staged/ordered recon instead of uname-spam, catalog-browsing before attacking (shopper-like or agentic pacing), natural-language input, novel tool downloads.
+- **H3 — Detection-check pass rate rises.** A measurable share of sessions now run tiered anti-honeypot checks (cpu cores → env integrity → /proc entropy). Making the decoy pass those checks is a validity requirement: without it, sophisticated actors silently self-select out and the sample is biased toward naive bots.
 
 **Limitations (state in write-up):** single host = anecdote; 30 days; confounds = region, provider reputation, DNS presence vs bare IP, uneven AI adoption across actors. One slice of opportunistic noise, not the whole internet.
 
@@ -86,9 +86,10 @@ Countermeasure stance: target **Tier 2 pass minimum, Tier 3 stretch**. Build a s
 ## Metrics (log these, compare at the end)
 
 - Baseline-replicable: attempts/day, unique IPs, % default creds, top-10 passwords/usernames, % sessions >1 min, top commands (rank-order vs ambientnode's uname-heavy list), peak-hour profile
+- Lure-reference rate (H1/H2 discriminator): share of payloads/creds mentioning the lure (domain, product names, business name) — measured separately PRE-auth vs POST-auth. H1 predicts ~0 pre-auth; H2 predicts references concentrate in the interactive tail.
 - AI-era probes: context-aware credential attempts, detection-check attempts by tier, post-auth command clusters (kit similarity), download-hash diversity, natural-language/agentic session patterns, discovery-to-first-attack timing per subdomain (CT-log timestamp → first hit)
 - Funnel rates: login success → enumeration → detect-check → file download → persistence attempt
 
 ## Status
 
-Pinned + protocol drafted 2026-09-03. Next step when Gabriel has time: kickoff meeting on D1-D12, then Day 0.
+Pinned + protocol drafted 2026-09-03. Hypotheses refined 2026-09-06 (H1 reframed as lure-blindness; H2 made conditional with low prior and explicit null). Next step: kickoff meeting on D1-D12, then Day 0.
