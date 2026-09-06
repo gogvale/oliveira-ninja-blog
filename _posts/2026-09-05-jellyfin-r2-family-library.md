@@ -15,9 +15,11 @@ image: /assets/img/posts/2026-09-05-jellyfin-r2-family-library.png
 
 ## The problem with distance
 
-My family does not watch from one couch. The library serves four households — three in Mexico, one in Europe — and the busiest night means two streams at once. That changes the architecture in a way most "home media server" guides ignore.
+The NAS that was supposed to run the family's movie library crashes before it boots. Four households are waiting on this box — three in Mexico, one in Europe — and it will not even start.
 
-The obvious host, a NAS at a relative's house, fails twice: its ARM chip cannot run a modern Jellyfin (the last 32-bit builds died in 2021, and the newest one that still exists crashes on that kernel before boot), and its internet plan throttles sustained transfers. A server at my own house would work, but my upload is the bottleneck for everyone else, and I did not want an always-on machine to babysit.
+The box is a NAS at a relative's house, and it fails twice. Its ARM chip cannot run a modern Jellyfin: the last 32-bit builds died in 2021, and the newest one that still exists crashes on that kernel before boot. Its internet plan throttles sustained transfers. On the busiest night, two households press play at once — and most "home media server" guides never account for that.
+
+A server at my own house would work, but my upload is the bottleneck for everyone else, and I did not want an always-on machine to babysit.
 
 The machine I already pay for, a small [DigitalOcean droplet](https://blog.oliveira.ninja/posts/hermes-on-a-droplet/) that runs my assistant, had the CPU, the memory, the public address, and the uptime. It had one problem: 77 GB of disk, most of it already spoken for.
 
@@ -31,7 +33,7 @@ Object storage is built for this. I compared the usual suspects:
 - [Backblaze B2](https://www.backblaze.com/cloud-storage/pricing): cheapest storage, but egress is free only up to three times what you store.
 - **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/): $0.015 per GB stored, and egress is free. Forever.** When four households stream from the same library, the egress line is the one that would grow. R2 makes it zero.
 
-That last number decided it. A library of 300 GB costs about $4.50 a month, and nobody ever pays to read it back.
+That last number decided it. Egress is the one cost that grows with a family — every stream, every household, every month — and R2 sets it to zero. A library of 300 GB costs about $4.50 a month, and nobody ever pays to read it back.
 
 ## The mount that makes Jellyfin see infinity
 

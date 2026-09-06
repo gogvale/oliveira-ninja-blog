@@ -14,11 +14,15 @@ image: /assets/img/posts/2026-09-05-cgnat-meet-ssh-nas-tunnel.png
 
 ## Why
 
-My NAS sits behind [CGNAT](https://www.cloudflare.com/learning/network-layer/what-is-cgnat/), the thing ISPs use when they ran out of IPv4 addresses. No public IP, ever. Port forwarding is not difficult on that box — it is impossible. Meanwhile my [cloud server](https://blog.oliveira.ninja/posts/hermes-on-a-droplet/) sits on the public internet with a real address and needs to drop files into the NAS: an open film from the Internet Archive, a CC-licensed short, the occasional download that does not belong on my laptop.
+Port forwarding is not difficult on my NAS. It is impossible.
 
-The classic answers all annoyed me. VPN clients on a firmware-locked NAS: fragile. DynDNS: does not fix CGNAT. Carrier-grade NAT means the port does not exist, so forwarding to it is theater.
+The box sits behind [CGNAT](https://www.cloudflare.com/learning/network-layer/what-is-cgnat/), the thing ISPs use when they ran out of IPv4 addresses. No public IP, ever. Carrier-grade NAT means the port does not exist, so forwarding to it is theater — nothing on the internet can knock on a door this box does not have.
 
-SSH already ships everywhere. The trick is to stop trying to reach the NAS and let the NAS reach you.
+And I needed files to land on it. My [cloud server](https://blog.oliveira.ninja/posts/hermes-on-a-droplet/) sits on the public internet with a real address and a pile of things that belong on the NAS, not on my laptop: an open film from the Internet Archive, a CC-licensed short, the occasional download.
+
+The classic answers all annoyed me. VPN clients on a firmware-locked NAS: fragile. DynDNS: does not fix CGNAT.
+
+Then I stopped trying to reach the NAS. I let the NAS reach me. That one reversal is the whole trick.
 
 ## What you need
 
