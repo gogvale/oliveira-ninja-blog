@@ -30,7 +30,7 @@ SSH already ships everywhere. The trick is to stop trying to reach the NAS and l
 
 Enable SSH from the NAS dashboard and log in. Then the firmware shows its personality.
 
-**Quirk one: root's home is `/home/root`, not `/root`.** SSH looks for keys in `$HOME/.ssh`. Put them where the box actually looks:
+**Quirk one: root's home is `/home/root`, not `/root`.** SSH looks for keys in `$HOME/.ssh`. Put them in the place the box checks:
 
 ```bash
 mkdir -p /home/root/.ssh && chmod 700 /home/root/.ssh
