@@ -1,21 +1,21 @@
 ---
 title: "The Family Netflix That Lives on R2"
-date: 2030-01-01 10:00:00 -0600
+date: 2026-09-05 19:40:00 -0600
 categories: [Self-Hosting, Linux]
 tags: [self-hosting, media, jellyfin, cloudflare, r2, project-writeup]
 description: "How the family library got its own streaming service: Jellyfin on a small droplet, the movie and series files on Cloudflare R2, and four households across two countries watching for a few dollars a month."
-draft: true
+image: /assets/img/posts/2026-09-05-jellyfin-r2-family-library.png
 ---
 
 > **TL;DR**
-> - Goal: one media library that four households stream — three in Mexico, one in Norway — with at most two watching at once.
+> - Goal: one media library that four households stream — three in Mexico, one in Europe — with at most two watching at once.
 > - Constraint: the droplet that runs Jellyfin has a 77 GB disk. The NAS in the family is too weak to host a server. Cost matters.
 > - Answer: keep Jellyfin on the droplet, mount Cloudflare R2 as an unlimited disk with rclone, and encode everything to h264 so nothing ever needs transcoding.
 > - Result: about 30 GB on R2 today costs less than a dollar a month. Egress is free, so every stream from every household costs nothing.
 
-## The problem with three cities and a fjord
+## The problem with distance
 
-My family does not watch from one couch. The library serves four households — three in Mexico, one in Norway — and the busiest night means two streams at once. That changes the architecture in a way most "home media server" guides ignore.
+My family does not watch from one couch. The library serves four households — three in Mexico, one in Europe — and the busiest night means two streams at once. That changes the architecture in a way most "home media server" guides ignore.
 
 The obvious host, a NAS at a relative's house, fails twice: its ARM chip cannot run a modern Jellyfin (the last 32-bit builds died in 2021, and the newest one that still exists crashes on that kernel before boot), and its internet plan throttles sustained transfers. A server at my own house would work, but my upload is the bottleneck for everyone else, and I did not want an always-on machine to babysit.
 
@@ -76,6 +76,6 @@ The kids' user account is locked to the two kids' libraries, no admin rights, no
 
 Today the library sits at roughly 30 GB: a few movies, a complete series, the kids' cartoons. That is about $0.45 a month — less than eight pesos. When the DVD digitization project fills it to 300 GB, the bill becomes about $4.50. The droplet was already paid for. The NAS at the relative's house, reachable through the [reverse tunnel from the previous post](https://blog.oliveira.ninja/posts/cgnat-meet-ssh-nas-tunnel/), now serves as the offsite mirror instead of a struggling server.
 
-The Norway household streams over a transatlantic hop from the droplet and never notices. Video does not care about latency; it cares about throughput, and there is plenty.
+The European household streams across the Atlantic from the droplet and never notices. Video does not care about latency; it cares about throughput, and there is plenty.
 
 Four households, two countries, one library, single-digit dollars. That is a subscription I am happy to pay — the catalog is mine, and it never rotates.
