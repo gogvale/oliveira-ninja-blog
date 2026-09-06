@@ -27,9 +27,9 @@ The droplet's disk can be grown, but the math is ugly: block storage costs about
 
 Object storage is built for this. I compared the usual suspects:
 
-- DigitalOcean Spaces: $5/month for 250 GB, then per-GB — plus egress fees on everything streamed.
-- Backblaze B2: cheapest storage, but egress is free only up to three times what you store.
-- **Cloudflare R2: $0.015 per GB stored, and egress is free. Forever.** When four households stream from the same library, the egress line is the one that would grow. R2 makes it zero.
+- [DigitalOcean Spaces](https://www.digitalocean.com/pricing/spaces-object-storage): $5/month for 250 GB, then per-GB — plus egress fees on everything streamed.
+- [Backblaze B2](https://www.backblaze.com/cloud-storage/pricing): cheapest storage, but egress is free only up to three times what you store.
+- **[Cloudflare R2](https://developers.cloudflare.com/r2/pricing/): $0.015 per GB stored, and egress is free. Forever.** When four households stream from the same library, the egress line is the one that would grow. R2 makes it zero.
 
 That last number decided it. A library of 300 GB costs about $4.50 a month, and nobody ever pays to read it back.
 
@@ -76,6 +76,6 @@ The kids' user account is locked to the two kids' libraries, no admin rights, no
 
 Today the library sits at roughly 30 GB: a few movies, a complete series, the kids' cartoons. That is about $0.45 a month — less than eight pesos. When the DVD digitization project fills it to 300 GB, the bill becomes about $4.50. The droplet was already paid for. The NAS at the relative's house, reachable through the [reverse tunnel from the previous post](https://blog.oliveira.ninja/posts/cgnat-meet-ssh-nas-tunnel/), now serves as the offsite mirror instead of a struggling server.
 
-The European household streams across the Atlantic from the droplet and never notices. Video does not care about latency; it cares about throughput, and there is plenty.
+The European household streams across the Atlantic from the droplet and never notices. Playback does not care about latency — it cares about throughput, and there is plenty. Seeking cares a little: with the VFS cache off, a jump forward re-fetches from R2 and lands a beat slower than a local disk. That is the trade for keeping the 77 GB disk empty, and nobody has complained yet.
 
 Four households, two countries, one library, single-digit dollars. That is a subscription I am happy to pay — the catalog is mine, and it never rotates.
