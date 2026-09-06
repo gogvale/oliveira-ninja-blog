@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <defs>
+    <style>
+      text { font-family: 'DejaVu Sans', sans-serif; }
+      .mono { font-family: 'DejaVu Sans Mono', monospace; }
+    </style>
+  </defs>
+  <rect width="1200" height="627" fill="#0d0d0d"/>
+  <!-- subtle grid -->
+  <g stroke="#181818" stroke-width="1">
+    <line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="627"/><line x1="600" y1="0" x2="600" y2="627"/><line x1="900" y1="0" x2="900" y2="627"/>
+  </g>
+  <!-- title block (top region) -->
+  <text x="80" y="90" font-size="26" fill="#a9ff5b" font-weight="bold" letter-spacing="3">TUTORIAL · SELF-HOSTING</text>
+  <text x="80" y="175" font-size="64" fill="#ffffff" font-weight="bold">Reach Your CGNAT NAS</text>
+  <text x="80" y="252" font-size="64" fill="#7dd3fc" font-weight="bold">From a Cloud Server</text>
+  <text x="84" y="310" font-size="26" fill="#8c8c8c">No public IP. No port forwarding. The NAS calls home — and gets a door back.</text>
+
+  <!-- art band (bottom region, separate from text) -->
+  <!-- NAS box (left) -->
+  <rect x="90" y="380" width="230" height="130" rx="12" fill="#181818" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="205" y="425" font-size="24" fill="#7dd3fc" font-weight="bold" text-anchor="middle">NAS</text>
+  <text x="205" y="460" class="mono" font-size="17" fill="#8c8c8c" text-anchor="middle">192.168.68.107</text>
+  <text x="205" y="488" class="mono" font-size="15" fill="#5a5a5a" text-anchor="middle">behind CGNAT</text>
+
+  <!-- cloud server box (right) -->
+  <rect x="880" y="380" width="230" height="130" rx="12" fill="#181818" stroke="#a9ff5b" stroke-width="2"/>
+  <text x="995" y="425" font-size="24" fill="#a9ff5b" font-weight="bold" text-anchor="middle">SERVER</text>
+  <text x="995" y="460" class="mono" font-size="17" fill="#8c8c8c" text-anchor="middle">public internet</text>
+  <text x="995" y="488" class="mono" font-size="15" fill="#5a5a5a" text-anchor="middle">vps.example.com</text>
+
+  <!-- outbound arrow NAS -> server (solid, green) -->
+  <path d="M 320 420 C 560 320, 640 320, 880 420" fill="none" stroke="#a9ff5b" stroke-width="5"/>
+  <polygon points="880,420 868,412 868,428" fill="#a9ff5b"/>
+  <text x="600" y="350" class="mono" font-size="20" fill="#a9ff5b" text-anchor="middle">ssh -R 2222:localhost:22 (outbound)</text>
+
+  <!-- return door NAS <- server (dashed, sky) -->
+  <path d="M 880 470 C 640 570, 560 570, 320 470" fill="none" stroke="#7dd3fc" stroke-width="4" stroke-dasharray="10 8"/>
+  <polygon points="320,470 332,462 332,478" fill="#7dd3fc"/>
+  <text x="600" y="590" class="mono" font-size="18" fill="#7dd3fc" text-anchor="middle">sftp -P 2222 root@localhost</text>
+
+  <!-- footer -->
+  <text x="1200" y="620" font-size="14" fill="#5a5a5a" text-anchor="end">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
+</svg>

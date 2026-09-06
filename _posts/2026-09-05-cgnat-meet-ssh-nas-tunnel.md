@@ -1,10 +1,10 @@
 ---
 title: "Reach Your CGNAT NAS From a Cloud Server"
-date: 2030-01-01 10:00:00 -0600
+date: 2026-09-05 19:25:00 -0600
 categories: [Self-Hosting, Linux]
 tags: [self-hosting, linux, tutorial, ssh, cgnat, nas]
 description: "A step-by-step tutorial: outbound reverse SSH tunnel from a NAS behind CGNAT to a cloud server, with keys both directions and a tunnel that survives reboots."
-draft: true
+image: /assets/img/posts/2026-09-05-cgnat-meet-ssh-nas-tunnel.png
 ---
 
 > **TL;DR**
