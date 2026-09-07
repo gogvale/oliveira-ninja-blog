@@ -1,12 +1,13 @@
 ---
 title: "This Is the 7th Time We've Reached AGI This Year Alone"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-07 12:50:00 -0600
 categories: [Lab, AI]
 tags: [ai-lab, agi, hype-cycle, ai-gossip]
 description: "Seven AGI announcements in nine months, a Fireship video that almost got me, and the independent benchmark that did not."
-draft: true
+image: /assets/img/posts/2026-09-07-agi-arrival-scoreboard.png
 ---
-<!-- PROVENANCE (strip at publish): idea seeded from a /g/ (vcg) thread, 2026-09-07. 4chan is NEVER a source; the anonymous quote is used as color only. Real claims re-grounded in the Fireship video (youtu.be/FluKUJyeYD8, GPT-6 Astra launch week) + Artificial Analysis independent score — verify the exact AA benchmark page URL at publish. Calendar entries other than September are archetypal satire, not specific-lab claims. -->
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-07-agi-arrival-scoreboard.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR** — we have reached AGI seven times this year. I did not bother checking the latest one — it will be debunked by the weekend. A YouTube video made me look anyway, and an independent benchmark deflated the whole thing. This is the scoreboard, and the cycle underneath it.
 
