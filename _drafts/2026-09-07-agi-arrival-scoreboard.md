@@ -14,7 +14,7 @@ I did not watch the seventh announcement. I do not watch them anymore. I have be
 
 Then a [Fireship video](https://youtu.be/FluKUJyeYD8) about OpenAI's GPT-6 Astra landed in my feed, and I clicked, because that is what the algorithm and I have agreed to do to each other. The claims were absurd. OpenAI said AGI, straight up: a 99% on ARC AGI 3, a first at its own "critical cyber threshold" — a model that can find and exploit zero-day vulnerabilities on its own. For ten minutes I felt the old pull: maybe this one is different.
 
-Independent testing by Artificial Analysis ran the numbers a week later and scored Astra a 61 — tied with GPT-5.6 Soul, five points behind Anthropic's Fable 5.1. The model announced as AGI benchmarked like the flagship it replaced.
+Independent testing by Artificial Analysis ran the numbers a week later and scored Astra a 61 — tied with GPT-5.6 Sol, five points behind Anthropic's Fable 5.1. The model announced as AGI benchmarked like the flagship it replaced.
 
 Not worse. Same. The gap between what the launch reported and what a stranger with a benchmark measured is the entire story of this industry in 2026. The launch is a magic show. The measurement is the cleanup crew.
 
