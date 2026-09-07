@@ -40,7 +40,7 @@ The design goal was a store that looks like what a real attacker actually finds 
 - Recent WordPress core. Auto-updates off — the story is the owner disabled them after a plugin broke the site.
 - WooCommerce with a real catalog: ten products, home textiles, prices that look right. A pillow cover at $28 and a duvet at $96.
 - One deliberate weak point. Not an ancient core — a neglected plugin and a weak admin password. The guides want me to build a museum; I want to build a shop.
-- No real data anywhere on the box. No keys, no credentials I care about, no customer list. The checkout does not accept cards — if a carder tests stolen cards against it, the attempt gets logged and nothing else happens. I do not want real card numbers in my logs.
+- A database full of fake customers — that is the real bait. The store carries a customer list, order history, reviews, and addresses, all generated the way a factory library seeds fixtures. The one thing a thief wants most is the one thing I invented. If an attacker enumerates the orders table or dumps the user list, they are not stealing anyone: they are showing me exactly which tables, which endpoints, and which tools they reach for. The checkout still does not accept cards — a carder testing stolen numbers gets logged and nothing else — so no real card number ever lands in my logs and no real person's data sits anywhere on the box.
 
 The build had its moments. The domain registrar rejected both my credit cards — twice — so the store temporarily answers at a dynamic-DNS hostname that no real boutique would ever use. It stays up on that until the card problem dies, then it moves to a proper domain before launch. (A real business would not live on a free dynamic DNS name, and the decoy should not either — that is exactly the kind of tell the interesting attackers check.)
 
@@ -60,5 +60,15 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 The store opens. It waits thirty days. I expect the commodity noise — thousands of attempts, default credentials, the usual uname-spam — and I expect it to look indistinguishable from what any random public IP receives. That is claim 1, confirmed or denied with my own controlled lure instead of industry proxies.
 
 And if, in the tail of those thirty days, one session shows up that read the store first — browsed the catalog, tried a password that fits the business, ran the check for whether I am lying about being a shop — then the tail hypothesis has its first datapoint. That is what "if we are lucky" means in this experiment, and it is the part I am building the trap for.
+
+## Still to do
+
+The build is not finished. What remains before the store truly opens:
+
+- **Fill the database with fake customers.** Faker-style generated customers, orders, and reviews — enough to read as a real shop's history, so anyone who enumerates or dumps it reveals their tooling instead of stealing anyone.
+- **Cowrie on port 22.** A fake SSH shell to catch the credential brute-force that every public IP receives.
+- **Egress lockdown.** The box should not be able to reach outward — every attempt gets logged, none succeeds.
+- **A real domain.** The dynamic-DNS placeholder disappears once the card works; a real boutique lives on a real domain.
+- **Thirty days of watching.**
 
 *Draft note: this is the build post of a two-post series; the results post (thirty days of data) is planned under a separate draft.*
