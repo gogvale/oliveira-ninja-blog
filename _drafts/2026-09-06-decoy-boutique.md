@@ -71,4 +71,4 @@ The build is not finished. What remains before the store truly opens:
 - **A real domain.** The dynamic-DNS placeholder disappears once the card works; a real boutique lives on a real domain.
 - **Thirty days of watching.**
 
-*Draft note: this is the build post of a two-post series; the results post (thirty days of data) is planned under a separate draft.*
+*Draft note: hold until the 30-day run completes, then merge with the protocol/results into ONE start-to-finish post — not a two-part series.*

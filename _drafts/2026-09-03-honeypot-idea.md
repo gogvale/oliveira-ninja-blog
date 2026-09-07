@@ -97,4 +97,4 @@ Countermeasure stance: target **Tier 2 pass minimum, Tier 3 stretch**. Build a s
 
 ## Status
 
-Pinned + protocol drafted 2026-09-03. Hypotheses refined 2026-09-06 (H1 reframed as lure-blindness; H2 made conditional with low prior and explicit null; H4 archetype added with completed 15-source bank). Next step: kickoff meeting on D1-D12, then Day 0.
+Pinned + protocol drafted 2026-09-03. Hypotheses refined 2026-09-06 (H1 reframed as lure-blindness; H2 made conditional with low prior and explicit null; H4 archetype added with completed 15-source bank). Single-post decision (2026-09-07): publish ONE start-to-finish post after the 30-day run, NOT two parts — this idea + the build post (`2026-09-06-decoy-boutique.md`) merge into it at write-up time. Next step: kickoff meeting on D1-D12, then Day 0.
