@@ -1,11 +1,13 @@
 ---
 title: "BBVA Hung Up on Me. That Is the Design."
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-06 19:10:00 -0600
 categories: [Tech, Culture]
 tags: [enshittification, customer-service, banking, ai, bbva]
 description: "Two rejected cards, one AI phone tree, and the realization that the hang-up was the point."
-draft: true
+image: /assets/img/posts/2026-09-06-bbva-hung-up-on-me.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-06-bbva-hung-up-on-me.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 > - Both my cards got blocked buying a $2 domain. The bank's help line was an AI bot, a 12-minute hold, then a re-authentication bot that hung up on me.

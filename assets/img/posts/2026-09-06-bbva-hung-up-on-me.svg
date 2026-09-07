@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 627" width="1200" height="627">
+  <defs>
+    <style>
+      .bg { fill: #0d0d0d; }
+      .box { fill: #181818; stroke: #333333; stroke-width: 1.5; }
+      .boxred { fill: #1e1212; stroke: #ff7878; stroke-width: 2; }
+      .lbl { font-family: 'DejaVu Sans', sans-serif; font-size: 21px; fill: #8c8c8c; letter-spacing: 1px; }
+      .num { font-family: 'DejaVu Sans', sans-serif; font-size: 13px; fill: #666666; letter-spacing: 2px; }
+      .main { font-family: 'DejaVu Sans', sans-serif; font-size: 21px; font-weight: bold; fill: #ffffff; }
+      .mainred { font-family: 'DejaVu Sans', sans-serif; font-size: 21px; font-weight: bold; fill: #ff7878; }
+      .sub { font-family: 'DejaVu Sans', sans-serif; font-size: 13px; fill: #8c8c8c; }
+      .arrow { font-family: 'DejaVu Sans', sans-serif; font-size: 24px; fill: #555555; }
+      .stat { font-family: 'DejaVu Sans', sans-serif; font-size: 22px; fill: #8c8c8c; }
+      .gold { font-family: 'DejaVu Sans', sans-serif; font-size: 22px; font-weight: bold; fill: #ffc857; }
+      .foot { font-family: 'DejaVu Sans', sans-serif; font-size: 15px; fill: #4a4a4a; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="627"/>
+  <g opacity="0.35">
+    <line x1="0" y1="270" x2="1200" y2="270" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- title block -->
+  <text class="lbl" x="80" y="78">SUPPORT AS TRIAGE &#183; RATIONING BY WAITING</text>
+  <text class="main" x="80" y="148" font-size="57">BBVA Hung Up on Me.</text>
+  <text class="main" x="80" y="213" font-size="57" fill="#a9ff5b">That Is the Design.</text>
+
+  <!-- call-flow band -->
+  <rect class="box" x="80" y="320" width="190" height="104" rx="10"/>
+  <rect class="box" x="292" y="320" width="190" height="104" rx="10"/>
+  <rect class="box" x="504" y="320" width="190" height="104" rx="10"/>
+  <rect class="box" x="716" y="320" width="190" height="104" rx="10"/>
+  <rect class="boxred" x="928" y="320" width="190" height="104" rx="10"/>
+
+  <text class="num" x="175" y="348" text-anchor="middle">01</text>
+  <text class="main" x="175" y="382" text-anchor="middle">YOU CALL</text>
+
+  <text class="num" x="387" y="348" text-anchor="middle">02</text>
+  <text class="main" x="387" y="382" text-anchor="middle">AI BOT</text>
+  <text class="sub" x="387" y="404" text-anchor="middle">birth year + PIN</text>
+
+  <text class="num" x="599" y="348" text-anchor="middle">03</text>
+  <text class="main" x="599" y="382" text-anchor="middle">12-MIN HOLD</text>
+
+  <text class="num" x="811" y="348" text-anchor="middle">04</text>
+  <text class="main" x="811" y="382" text-anchor="middle">RE-AUTH BOT</text>
+  <text class="sub" x="811" y="404" text-anchor="middle">digits not printed</text>
+
+  <text class="num" x="1023" y="348" text-anchor="middle" fill="#ff7878">05</text>
+  <text class="mainred" x="1023" y="382" text-anchor="middle">HUNG UP</text>
+  <text class="sub" x="1023" y="404" text-anchor="middle">wait limit exceeded</text>
+
+  <text class="arrow" x="276" y="377" text-anchor="middle">&#8594;</text>
+  <text class="arrow" x="488" y="377" text-anchor="middle">&#8594;</text>
+  <text class="arrow" x="700" y="377" text-anchor="middle">&#8594;</text>
+  <text class="arrow" x="912" y="377" text-anchor="middle">&#8594;</text>
+
+  <!-- stat -->
+  <text class="stat" x="80" y="480"><tspan class="gold">74%</tspan> of customers leave after one bad experience</text>
+  <text class="stat" x="80" y="512">without ever complaining &#8212; the queue is the filter.</text>
+
+  <!-- footer -->
+  <text class="foot" x="600" y="600" text-anchor="middle">www.oliveira.ninja  &#183;  blog.oliveira.ninja  &#183;  github.com/gogvale</text>
+</svg>
