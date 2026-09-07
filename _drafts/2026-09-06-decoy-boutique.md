@@ -55,6 +55,61 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 - Outbound connections are blocked — an attacker who gets in can attempt downloads and persistence, and every attempt is recorded, but the box cannot be used to attack anyone else.
 - Evidence ships off the box daily. The box is disposable; the data is not.
 
+## The noise, in numbers (interactive preview)
+
+Nineteen hours in, the commodity noise had a shape: 1,523 SSH connections from 125 IPs, 3,427 web requests from 189. The charts below are live — hover them. The data is from Day 1 as a preview of the post format; the numbers get replaced with the full 30-day run at publish.
+
+The volume arrived in waves, not as a tide — launch burst, then botnet sweeps, then a credential-stuffing run:
+
+<div class="chart-card" style="background:#0d0d0d;border-radius:10px;padding:14px;margin:16px 0"><canvas id="decoy-c1" style="height:380px"></canvas></div>
+
+*Web and SSH traffic, hour by hour (UTC) — first 19 hours after launch. Day-1 preview data.*
+
+And the SSH noise was not a crowd — it was six clusters with six different goals, from mass host-triage to a miner planting its persistence key:
+
+<div class="chart-card" style="background:#0d0d0d;border-radius:10px;padding:14px;margin:16px 0"><canvas id="decoy-c2" style="height:380px"></canvas></div>
+
+*SSH sessions by attacker cluster — the miner's key has been unchanged since 2018. Day-1 preview data.*
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<script>
+Chart.defaults.font.family = 'DejaVu Sans';
+Chart.defaults.color = '#8c8c8c';
+Chart.register(ChartDataLabels);
+
+var hours = ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19'];
+var web = [52,658,189,146,137,3,51,100,228,44,508,161,103,168,87,263,186,97,55];
+var ssh = [30,27,13,17,14,184,378,208,17,133,394,25,11,8,17,17,18,11,7];
+new Chart(document.getElementById('decoy-c1'), {
+  type: 'line',
+  data: { labels: hours, datasets: [
+    { label: 'web requests / hr', data: web, borderColor: '#7dd3fc', backgroundColor: 'rgba(125,211,252,0.12)', fill: true, tension: 0.25, pointRadius: 3, borderWidth: 2 },
+    { label: 'ssh connections / hr', data: ssh, borderColor: '#a9ff5b', backgroundColor: 'rgba(169,255,91,0.10)', fill: true, tension: 0.25, pointRadius: 3, borderWidth: 2 }]},
+  options: { plugins: { legend: { position: 'top', align: 'end', labels: { boxWidth: 14, font: { size: 12 } } } },
+    scales: { y: { min: 0, max: 700 } } }
+});
+
+var clusters = [["screener — Go uname triage — 1,200 (79%)", 1200, "#a9ff5b"],
+  ["scanners / other — 153 (10%)", 153, "#5a5a5a"],
+  ["mdrfckr miner — key plant — 63 (4%)", 63, "#ffc857"],
+  ["dictionary + shell verify — 48 (3%)", 48, "#7dd3fc"],
+  ["loader / exec-test — 43 (3%)", 43, "#ff7878"],
+  ["tunnel / proxy hunter — 15 (1%)", 15, "#8c8c8c"]];
+new Chart(document.getElementById('decoy-c2'), {
+  type: 'doughnut',
+  data: { labels: clusters.map(function(r){return r[0];}),
+          datasets: [{ data: clusters.map(function(r){return r[1];}),
+                       backgroundColor: clusters.map(function(r){return r[2];}),
+                       borderColor: '#0d0d0d', borderWidth: 2 }]},
+  options: { cutout: '56%',
+    plugins: { legend: { position: 'top', align: 'start', labels: { boxWidth: 13, padding: 8, font: { size: 12 }, color: '#e5e5e5' }},
+               datalabels: { color: '#0d0d0d', font: { size: 12, weight: 'bold' },
+                 formatter: function(v, c) { var t = c.chart.data.datasets[0].data.reduce(function(a,b){return a+b;}, 0);
+                                             var p = v/t*100; return p >= 7 ? p.toFixed(0) + '%' : ''; } } } }
+});
+</script>
+
 ## What happens next
 
 The store opens. It waits thirty days. I expect the commodity noise — thousands of attempts, default credentials, the usual uname-spam — and I expect it to look indistinguishable from what any random public IP receives. That is claim 1, confirmed or denied with my own controlled lure instead of industry proxies.
