@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script src="file:///home/hermes/.hermes/scripts/honeypot-charts/chart.umd.min.js"></script>
+<script src="file:///home/hermes/.hermes/scripts/honeypot-charts/datalabels.min.js"></script>
+<style>body{margin:0;background:#0d0d0d}canvas{display:block}</style></head>
+<body>
+<div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
+  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">THE PASSWORDS THEY GUESSED</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Top usernames tried on SSH</div>
+</div>
+<canvas id="c" width="1200" height="432"></canvas>
+<script>
+Chart.defaults.font.family = 'DejaVu Sans';
+Chart.defaults.color = '#8c8c8c';
+Chart.register(ChartDataLabels);
+const cfg = {type:'doughnut',data:{labels:["root \u2014 1,087 (90%)", "admin \u2014 69 (6%)", "345gs5662d34 \u2014 random string \u2014 20 (2%)", "centos \u2014 17 (1%)", "nobody \u2014 13 (1%)"],datasets:[{data:[1087, 69, 20, 17, 13],backgroundColor:["#ff7878", "#ffc857", "#7dd3fc", "#a9ff5b", "#8c8c8c"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=7?p.toFixed(0)+'%':'';}}}}};
+new Chart(document.getElementById('c'), cfg);
+</script></body></html>
