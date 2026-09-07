@@ -10,7 +10,7 @@ draft: true
 
 > **TL;DR** — we have reached AGI seven times this year. I did not bother checking the latest one — it will be debunked by the weekend. A YouTube video made me look anyway, and an independent benchmark deflated the whole thing. This is the scoreboard, and the cycle underneath it.
 
-I did not bother to even check the seventh announcement. It will probably be debunked by the end of the week, and the press release reads like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
+I did not bother to even check the announcement. It will probably be debunked by the end of the week, and the press release reads like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
 
 Then a [Fireship video](https://youtu.be/FluKUJyeYD8) landed in my feed about OpenAI's GPT-6 Astra. [OpenAI said AGI](https://openai.com/index/gpt-6-astra/), straight up: 99% on ARC AGI 3, a first at its own "critical cyber threshold" — a model that finds and exploits zero-day vulnerabilities on its own. For ten minutes I felt the old pull: maybe this one is different.
 
@@ -20,7 +20,6 @@ Not worse. Same. The gap between what the launch reported and what a stranger wi
 
 Somebody on a tech forum put it in one line: "This is the 7th time we've reached AGI this year alone." He was not wrong.
 
-So here is the record. Somebody should keep it.
 
 ## The 2026 arrivals calendar
 
@@ -42,7 +41,7 @@ Each arrival follows the same liturgy: a demo video, a benchmark chart with the 
 
 Every time, someone with a podcast announces that everything has changed. Every time, the AGI from the previous arrival is quietly reclassified as "a stepping stone," which is the industry term for a thing we were very sure about last quarter and now prefer not to discuss.
 
-> "We do not reach AGI. We rebrand the ceiling."
+> "We do not reach AGI. We raise the ceiling."
 
 ## Nothing arrives
 
