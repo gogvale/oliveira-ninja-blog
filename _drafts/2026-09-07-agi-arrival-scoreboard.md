@@ -6,15 +6,15 @@ tags: [ai-lab, agi, hype-cycle, ai-gossip]
 description: "Seven AGI announcements in nine months, a Fireship video that almost got me, and the independent benchmark that did not."
 draft: true
 ---
-<!-- PROVENANCE (strip at publish): idea seeded from a /g/ (vcg) thread, 2026-09-07. 4chan is NEVER a source; the quote is presented as anonymous board chatter and the AGI-calendar claims are archetypal satire, not assertions about specific labs. Re-ground any factual claim before publish. -->
+<!-- PROVENANCE (strip at publish): idea seeded from a /g/ (vcg) thread, 2026-09-07. 4chan is NEVER a source; the anonymous quote is used as color only. Real claims re-grounded in the Fireship video (youtu.be/FluKUJyeYD8, GPT-6 Astra launch week) + Artificial Analysis independent score — verify the exact AA benchmark page URL at publish. Calendar entries other than September are archetypal satire, not specific-lab claims. -->
 
 > **TL;DR** — we have reached AGI seven times this year. I stopped watching the announcements, a YouTube video made me look anyway, and an independent comparison deflated the whole thing. This is the scoreboard, and the cycle underneath it.
 
 I did not watch the seventh announcement. I do not watch them anymore. I have been burned by enough "reasoning breakthroughs" that the press release now reads to me like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
 
-Then a Fireship video landed in my feed, and I clicked, because that is what the algorithm and I have agreed to do to each other. The reported numbers were absurd. Real gains, real charts, a demo that did the thing. For ten minutes I felt the old pull: maybe this one is different.
+Then a [Fireship video](https://youtu.be/FluKUJyeYD8) about OpenAI's GPT-6 Astra landed in my feed, and I clicked, because that is what the algorithm and I have agreed to do to each other. The claims were absurd. OpenAI said AGI, straight up: a 99% on ARC AGI 3, a first at its own "critical cyber threshold" — a model that can find and exploit zero-day vulnerabilities on its own. For ten minutes I felt the old pull: maybe this one is different.
 
-An independent comparison ran the numbers a week later. Same as the model it replaced.
+Independent testing by Artificial Analysis ran the numbers a week later and scored Astra a 61 — tied with GPT-5.6 Soul, five points behind Anthropic's Fable 5.1. The model announced as AGI benchmarked like the flagship it replaced.
 
 Not worse. Same. The gap between what the launch reported and what a stranger with a benchmark measured is the entire story of this industry in 2026. The launch is a magic show. The measurement is the cleanup crew.
 
@@ -34,7 +34,7 @@ So here is the record. Somebody should keep it.
 
 **July.** AGI that codes. It writes code at a speed that terrified half the internet and with a test-coverage habit that reassured the other half. Both halves were right, which the commit history will eventually confirm.
 
-**September.** Quiet AGI. The seventh arrival generated the least hype of all seven, which tells you everything about the other six.
+**September.** The AGI that could not decide it was launching. OpenAI posted the GPT-6 Astra page, deleted it, and posted it again while ChatGPT, Claude, Grok, and Cursor all sat down in a simultaneous outage that everyone joked was the model eliminating its competition. The seventh arrival was the messiest and the most confident yet.
 
 Each arrival follows the same liturgy: a demo video, a benchmark chart with the axis bent until the line looks vertical, the word "first" in the headline, the word "safety" in the second paragraph, and a waitlist in the third.
 
