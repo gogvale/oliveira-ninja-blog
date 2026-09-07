@@ -8,17 +8,17 @@ draft: true
 ---
 <!-- PROVENANCE (strip at publish): idea seeded from a /g/ (vcg) thread, 2026-09-07. 4chan is NEVER a source; the anonymous quote is used as color only. Real claims re-grounded in the Fireship video (youtu.be/FluKUJyeYD8, GPT-6 Astra launch week) + Artificial Analysis independent score — verify the exact AA benchmark page URL at publish. Calendar entries other than September are archetypal satire, not specific-lab claims. -->
 
-> **TL;DR** — we have reached AGI seven times this year. I skipped the latest announcement — the story never changes — a YouTube video made me look anyway, and an independent benchmark deflated the whole thing. This is the scoreboard, and the cycle underneath it.
+> **TL;DR** — we have reached AGI seven times this year. I did not bother checking the latest one — it will be debunked by the weekend. A YouTube video made me look anyway, and an independent benchmark deflated the whole thing. This is the scoreboard, and the cycle underneath it.
 
-I skipped the seventh announcement. Not out of protest — out of repetition. I have watched enough of these to know the script, and I have stopped treating them like a series: there is no continuity to follow, no plot that carries from one release to the next. Every one is the same movie, re-shot with a bigger budget. The press release reads like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
+I did not bother to even check the seventh announcement. It will probably be debunked by the end of the week, and the press release reads like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
 
-Then a [Fireship video](https://youtu.be/FluKUJyeYD8) landed in my feed, and I clicked, because that is what the algorithm and I have agreed to do to each other. It was about OpenAI's GPT-6 Astra. The claims were absurd. [OpenAI said AGI](https://openai.com/index/gpt-6-astra/), straight up: a 99% on ARC AGI 3, a first at its own "critical cyber threshold" — a model that can find and exploit zero-day vulnerabilities on its own. For ten minutes I felt the old pull: maybe this one is different.
+Then a [Fireship video](https://youtu.be/FluKUJyeYD8) landed in my feed about OpenAI's GPT-6 Astra. [OpenAI said AGI](https://openai.com/index/gpt-6-astra/), straight up: 99% on ARC AGI 3, a first at its own "critical cyber threshold" — a model that finds and exploits zero-day vulnerabilities on its own. For ten minutes I felt the old pull: maybe this one is different.
 
 Independent testing by Artificial Analysis ran the numbers a week later and scored Astra a 61 — tied with GPT-5.6 Sol, five points behind [Anthropic's Fable 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1). The model announced as AGI benchmarked like the flagship it replaced.
 
 Not worse. Same. The gap between what the launch reported and what a stranger with a benchmark measured is the entire story of this industry in 2026. The launch is a magic show. The measurement is the cleanup crew.
 
-Somebody on a tech forum put it in one line: "This is the 7th time we've reached AGI this year alone." I checked the calendar. He was not wrong.
+Somebody on a tech forum put it in one line: "This is the 7th time we've reached AGI this year alone." He was not wrong.
 
 So here is the record. Somebody should keep it.
 
@@ -40,9 +40,9 @@ Each arrival follows the same liturgy: a demo video, a benchmark chart with the 
 
 ## The arrival ceremony
 
-Every time, someone with a podcast announces that everything has changed. Every time, my calendar does not care and double-books me anyway. Every time, the AGI from the previous arrival is quietly reclassified as "a stepping stone," which is the industry term for a thing we were very sure about last quarter and now prefer not to discuss.
+Every time, someone with a podcast announces that everything has changed. Every time, the AGI from the previous arrival is quietly reclassified as "a stepping stone," which is the industry term for a thing we were very sure about last quarter and now prefer not to discuss.
 
-We do not reach AGI. We rebrand the ceiling.
+> "We do not reach AGI. We rebrand the ceiling."
 
 ## Nothing arrives
 
@@ -65,5 +65,3 @@ What I am sure about is the model I actually use. My daily work runs on DeepSeek
 The eighth arrival is due any week now. Do not miss it — they are the only product launches left that still sell out.
 
 I will be watching from the cheap seats.
-
-<!-- Provenance: seeded from anonymous board chatter — never cite. Strips with the top comment at publish. -->
