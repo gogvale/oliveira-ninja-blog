@@ -71,4 +71,4 @@ The build is not finished. What remains before the store truly opens:
 - **A real domain.** The dynamic-DNS placeholder disappears once the card works; a real boutique lives on a real domain.
 - **Thirty days of watching.**
 
-*Draft note: hold until the 30-day run completes, then merge with the protocol/results into ONE start-to-finish post — not a two-part series.*
+*Draft note: THE single honeypot post — one start-to-finish story. NON-technical (keep MySQL/PHP-FPM/Caddy/Falco/auditd internals OUT unless Gabriel changes his mind). The pre-registered protocol + hypotheses + metrics live in the honeypot-ops skill (`references/honeypot-protocol.md`), not in this post. Hold until the 30-day run completes.*
