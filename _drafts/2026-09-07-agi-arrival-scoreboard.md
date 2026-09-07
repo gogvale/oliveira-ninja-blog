@@ -3,14 +3,22 @@ title: "This Is the 7th Time We've Reached AGI This Year Alone"
 date: 2030-01-01 00:00:00 -0600
 categories: [Lab, AI]
 tags: [ai-lab, agi, hype-cycle, ai-gossip]
-description: "A scoreboard of the seven AGIs we reached this year, and why nothing arrives."
+description: "Seven AGI announcements in nine months, a Fireship video that almost got me, and the independent benchmark that did not."
 draft: true
 ---
 <!-- PROVENANCE (strip at publish): idea seeded from a /g/ (vcg) thread, 2026-09-07. 4chan is NEVER a source; the quote is presented as anonymous board chatter and the AGI-calendar claims are archetypal satire, not assertions about specific labs. Re-ground any factual claim before publish. -->
 
-> **TL;DR** — a comment on a tech forum this week: "This is the 7th time we've reached AGI this year alone." I checked the calendar. He was not wrong. This is the logbook of an industry that keeps arriving and keeps getting asked for ID.
+> **TL;DR** — we have reached AGI seven times this year. I stopped watching the announcements, a YouTube video made me look anyway, and an independent comparison deflated the whole thing. This is the scoreboard, and the cycle underneath it.
 
-I laughed at the line, then I counted. Seven. In nine months. We have reached AGI more times this year than I have shipped stable releases in my entire career, and I have been doing this since before the first one of those seven arrivals could beat a grandmaster at chess, which it could not, because it was a search tree with marketing.
+I did not watch the seventh announcement. I do not watch them anymore. I have been burned by enough "reasoning breakthroughs" that the press release now reads to me like a horoscope: specific enough to feel true, vague enough to survive contact with reality.
+
+Then a Fireship video landed in my feed, and I clicked, because that is what the algorithm and I have agreed to do to each other. The reported numbers were absurd. Real gains, real charts, a demo that did the thing. For ten minutes I felt the old pull: maybe this one is different.
+
+An independent comparison ran the numbers a week later. Same as the model it replaced.
+
+Not worse. Same. The gap between what the launch reported and what a stranger with a benchmark measured is the entire story of this industry in 2026. The launch is a magic show. The measurement is the cleanup crew.
+
+Somebody on a tech forum put it in one line: "This is the 7th time we've reached AGI this year alone." I checked the calendar. He was not wrong.
 
 So here is the record. Somebody should keep it.
 
@@ -44,7 +52,9 @@ The seventh arrival had the same observable effect as the first six: a pricing p
 
 ## The economics of repeated arrivals
 
-Reaching AGI stopped being an event and became a business model. It is the growth strategy: each arrival resets the benchmark arms race, justifies the next datacenter, and hands the earnings call its verb. The models improve — they genuinely do — but the *arrival* is inventory. Seven this year, and every one of them sold out before the demo finished buffering.
+Watch the cycle closely enough and you can set your watch by it. New model, and the benchmarks look like a miracle. A week of coverage, a week of believers, a demo that does the thing. Then the ration gets cut — the settings settle, the fancy serving config goes away, somebody independent actually runs it — and it measures the same as the model it replaced. The previous model, meanwhile, gets quietly retired, which is how a company announces progress and a sunset in the same sentence.
+
+Reaching AGI stopped being an event and became a business model. Each arrival resets the benchmark arms race, justifies the next datacenter, and hands the earnings call its verb. The models improve — they genuinely do — but the *arrival* is inventory. Seven this year, and every one of them sold out before the demo finished buffering.
 
 ## The scoreboard
 
