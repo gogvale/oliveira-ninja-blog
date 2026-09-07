@@ -60,6 +60,10 @@ Reaching AGI stopped being an event and became a business model. Each arrival re
 
 At the current rate we will reach AGI roughly seventy more times before the decade ends. At some point the word has to mean something again, or we admit it never did. I am not sure which outcome I am rooting for.
 
-The eighth arrival is due any week now. Do not miss it. They are the only product launches left that still sell out.
+What I am sure about is the model I actually use. My daily work runs on DeepSeek — excellent results at a modest price, no announcement required, [the same bet I made in September](https://blog.oliveira.ninja/posts/cheapest-tokens-biggest-buildout/). It has never claimed to be conscious. It has also never given me a reason to switch.
+
+The eighth arrival is due any week now. Do not miss it — they are the only product launches left that still sell out.
+
+I will be watching from the cheap seats.
 
 <!-- Provenance: seeded from anonymous board chatter — never cite. Strips with the top comment at publish. -->
