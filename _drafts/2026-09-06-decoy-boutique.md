@@ -55,7 +55,7 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 - Outbound connections are blocked — an attacker who gets in can attempt downloads and persistence, and every attempt is recorded, but the box cannot be used to attack anyone else.
 - Evidence ships off the box daily. The box is disposable; the data is not.
 
-<!-- DRAFT NOTE (Gabriel, 2026-09-07): charts in this section are native mermaid pies (theme-rendered, no CDN — Chirpy renders ```mermaid blocks automatically). A full interactive Chart.js version of the same data was built and validated (sources: assets/img/posts/chart1..4 .html + .png, libs in ~/.hermes/scripts/honeypot-charts) — BEFORE publishing, compare mermaid vs Chart.js rendering on the live post and pick the final one; that choice also affects the LinkedIn card if we screenshot a ChartJS chart. Replace the Day-1 preview numbers with the full 30-day run at publish. -->
+<!-- DRAFT NOTE (Gabriel, 2026-09-07): charts in this section are native mermaid pies (theme-rendered, no CDN — Chirpy renders ```mermaid blocks automatically). A full interactive Chart.js version of the same data was built and validated (sources: assets/img/posts/chart1..4 .png; the .html sources were moved out of the repo 2026-09-08 because their local file:// lib refs broke the CI HTML-Proofer — backup at ~/honeypot-evidence/chart-html-backup/, libs in ~/.hermes/scripts/honeypot-charts, regenerable). BEFORE publishing, compare mermaid vs Chart.js rendering on the live post and pick the final one; that choice also affects the LinkedIn card if we screenshot a ChartJS chart. Replace the Day-1 preview numbers with the full 30-day run at publish. -->
 
 ## The noise, in numbers
 
