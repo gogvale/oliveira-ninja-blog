@@ -39,7 +39,7 @@ This is not a post about a bad security team. The security team was right, and t
 
 An MCP server is a standing channel into your context — the vendor's tooling, the client's data, your prompts, your code. Approving one without a policy means approving it without review, and review exists because vendors differ. Some are careful. Some are not. You can not tell from the marketing page.
 
-The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The problem is the employee receiving the no never hears that distinction.
+The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The problem is that the employee receiving the no never hears that distinction.
 
 ## A no without a path is a friction machine
 
