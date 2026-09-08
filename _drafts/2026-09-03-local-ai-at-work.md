@@ -27,7 +27,7 @@ A few months ago, our team wanted to use an MCP server from one of our clients' 
 
 They were right. An unreviewed third-party tool gets access to whatever context you feed it. Saying yes without a policy is how client data leaves the building through a chat window. The call was correct, and I would defend it.
 
-The part I keep thinking about is what happened next. We wanted the tool. The approved path did not exist, and nobody offered an alternative. For one honest moment, the shortest path looked like running our own AI for the demo. No approval. No policy. No governance. Just a model and a task.
+What I keep thinking about is what happened next. We wanted the tool. The approved path did not exist, and nobody offered an alternative. For one honest moment, the shortest path looked like running our own AI for the demo. No approval. No policy. No governance. Just a model and a task.
 
 We did not do it. It is not the right thing, and we knew it. But that moment is the story — the exact moment shadow AI is born: a reasonable no, a blocked intention, and a team reaching for the least-friction path.
 
@@ -35,11 +35,11 @@ The same reflex plays out smaller every day. A developer asks to run a local mod
 
 ## The no was right
 
-This is not a post about a bad security team. The security team was correct, and the whole argument only works if we keep that on the table.
+This is not a post about a bad security team. The security team was right, and the whole argument only works if we keep that on the table.
 
 An MCP server is a standing channel into your context — the vendor's tooling, the client's data, your prompts, your code. Approving one without a policy means approving it without review, and review exists because vendors differ. Some are careful. Some are not. You can not tell from the marketing page.
 
-The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The problem is that the employees on the receiving end of the no never hear that distinction.
+The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The problem is the employee receiving the no never hears that distinction.
 
 ## A no without a path is a friction machine
 
@@ -72,15 +72,19 @@ Watch the governance math flip:
 | Review depth | deep, ongoing | a one-time checklist |
 | Capability | frontier | good enough, closing fast |
 
-A cloud tool is an approval. An offline model is a category you can approve once. The policy writes itself: local-model PoCs are permitted by default, with a security checklist — egress defined at the operating-system level, tool access constrained (no shell the model can invoke with your credentials), no secrets in context, and a data class it may see. Cloud tools keep the slow review, because they earn it. Offline tools get the fast lane, because physics earned it: the data can not leave unless someone makes it.
+A cloud tool is an approval. An offline model is a category you can approve once.
+
+The policy writes itself: **local-model PoCs are permitted by default**, with a security checklist — egress defined at the operating-system level, tool access constrained (no shell the model can invoke with your credentials), no secrets in context, and a data class it may see.
+
+Cloud tools keep the slow review, because they earn it. Offline tools get the fast lane, because physics earned it: the data can not leave unless someone makes it.
 
 ## The honest edges
 
-The checklist exists because the model is not the boundary — the tools are. A local model with agentic tool access can still exfiltrate through the terminal it is allowed to invoke, prompt injection or not. Zero network does not matter if the model can ask the shell to do the reaching. That is why the policy constrains tools, not just ports.
+The checklist exists because **the model is not the boundary — the tools are**. A local model with agentic tool access can still exfiltrate through the terminal it is allowed to invoke, prompt injection or not. Zero network does not matter if the model can ask the shell to do the reaching. That is why the policy constrains tools, not just ports.
 
 The audit silence is real. A cloud vendor gives you logs as part of the price; an offline model gives you nothing unless you build the logging yourself. That is a fair trade for a PoC with non-sensitive data, and a bad trade for production workloads with client data. Scope the fast lane accordingly.
 
-And "good enough" is task-dependent. For a demo, for a script, for a contained experiment — yes. For a large refactor against a ten-year codebase, sometimes not. A policy that names the tier instead of promising the world is a policy people trust.
+"Good enough" is task-dependent. For a demo, for a script, for a contained experiment — yes. For a large refactor against a ten-year codebase, sometimes not. A policy that names the tier instead of promising the world is a policy people trust.
 
 ## The no becomes a yes
 
