@@ -23,7 +23,9 @@ Then the hallucinations showed up. And they showed up exactly where the work was
 
 ## The turn to skills
 
-The seduction was real. The tasks looked like prompts, not programs. A dashboard here, a board update there, a report pulled from a table. Each one felt too small and too variable to justify a script — columns change, comments appear, priorities shift. A skill that could *reason* about the mess seemed like the obvious tool.
+The seduction was real. The tasks looked like prompts, not programs. A dashboard here, a board update there, a report pulled from a table.
+
+Each one felt too small and too variable to justify a script — columns change, comments appear, priorities shift. A skill that could *reason* about the mess seemed like the obvious tool.
 
 And it worked. At first.
 
@@ -35,13 +37,17 @@ Hallucinations arrived quietly. A report citing a column that had been renamed l
 
 The pattern was consistent. **The more unstructured the task, the more the agent invented.** Stale information got treated as current. Contradictory data got reconciled by *guessing* instead of flagging. Missing context from conversations got filled in with plausible-sounding fiction.
 
-This is not a bug report against one vendor. The [arXiv survey on LLM-agent hallucinations](https://arxiv.org/abs/2509.18970) catalogues it as a structural property: agents hallucinate on factuality and on faithfulness — inventing facts, and drifting from the instructions. And it propagates: [AgentHallu](https://arxiv.org/abs/2601.06818) shows intermediate-step hallucinations *travel along the trajectory*, so one wrong assumption early corrupts everything downstream. One renamed column, one stale read, and the whole report quietly lies.
+This is not a bug report against one vendor. The [arXiv survey on LLM-agent hallucinations](https://arxiv.org/abs/2509.18970) catalogues it as a structural property: agents hallucinate on factuality and on faithfulness — inventing facts, and drifting from the instructions.
+
+And it propagates: [AgentHallu](https://arxiv.org/abs/2601.06818) shows intermediate-step hallucinations *travel along the trajectory*, so one wrong assumption early corrupts everything downstream. One renamed column, one stale read, and the whole report quietly lies.
 
 ## What I learned
 
 The lesson was not "AI is bad." The lesson was about **where the structure lives**.
 
-[Anthropic's own guidance](https://www.anthropic.com/engineering/building-effective-agents) draws the line I had blurred: *workflows* orchestrate LLMs through predefined code paths; *agents* let the LLM direct its own process. Their explicit advice — workflows beat agents whenever the task's structure is stable enough to encode in code. My dashboard-and-report tasks were stable enough. I had handed them to the less deterministic tool on purpose, because it looked modern.
+[Anthropic's own guidance](https://www.anthropic.com/engineering/building-effective-agents) draws the line I had blurred: *workflows* orchestrate LLMs through predefined code paths; *agents* let the LLM direct its own process.
+
+Their explicit advice — workflows beat agents whenever the task's structure is stable enough to encode in code. My dashboard-and-report tasks were stable enough. I had handed them to the less deterministic tool on purpose, because it looked modern.
 
 | Layer | What it is | When it wins |
 |---|---|---|
@@ -67,9 +73,13 @@ It saves me time, headaches, and tokens. Three wins, none of them fancy.
 
 ## When I still use a model
 
-When a command gets too complicated, I do not fight it. I hand the *execution* to a small model — Haiku usually — with the variables and files spelled out, and let it run the thing. This is the same [smart-model-plans, cheap-model-builds split](https://blog.oliveira.ninja/posts/smart-plan-cheap-build/) I wrote about before: the plan lives in the structure, the small model just executes. It works most of the time, and when it does not, the failure is cheap and visible.
+When a command gets too complicated, I do not fight it. I hand the *execution* to a small model — Haiku usually — with the variables and files spelled out, and let it run the thing.
 
-The difference from before: the model is now the *worker*, not the *architect*. It has bounded inputs, defined outputs, and a human who checks the result. That is the human-in-the-loop shape that [IBM's governance analysis](https://www.ibm.com/think/insights/liability-laundering-problem-human-in-the-loop-not-governance-strategy) insists on: not a suspicious human watching everything, but a system whose steps are transparent enough that the human has real evidence to interrogate.
+This is the same [smart-model-plans, cheap-model-builds split](https://blog.oliveira.ninja/posts/smart-plan-cheap-build/) I wrote about before: the plan lives in the structure, the small model just executes. It works most of the time, and when it does not, the failure is cheap and visible.
+
+The difference from before: the model is now the *worker*, not the *architect*. It has bounded inputs, defined outputs, and a human who checks the result.
+
+That is the human-in-the-loop shape that [IBM's governance analysis](https://www.ibm.com/think/insights/liability-laundering-problem-human-in-the-loop-not-governance-strategy) insists on: not a suspicious human watching everything, but a system whose steps are transparent enough that the human has real evidence to interrogate.
 
 > "The model is the worker, not the architect. The plan lives in the structure."
 

@@ -46,15 +46,23 @@ Every time, someone with a podcast announces that everything has changed. Every 
 
 ## Nothing arrives
 
-And yet the coffee machine still does not understand "decaf." The AGI from January cannot tell me if my pull request breaks the build, so I run the tests myself, like a peasant with a terminal. The one from March cannot find the setting I need in our own admin panel, which is a panel I have filed four tickets about, which is a sentence I typed while an AGI was being announced.
+And yet the coffee machine still does not understand "decaf." The AGI from January cannot tell me if my pull request breaks the build, so I run the tests myself, like a peasant with a terminal.
+
+The one from March cannot find the setting I need in our own admin panel, which is a panel I have filed four tickets about, which is a sentence I typed while an AGI was being announced.
 
 The seventh arrival had the same observable effect as the first six: a pricing page, an outage, and a post from the lab clarifying that the AGI was, technically, a preview of the AGI.
 
 ## The economics of repeated arrivals
 
-Watch the cycle closely enough and you can set your watch by it. New model, and the benchmarks look like a miracle. A week of coverage, a week of believers, a demo that does the thing. Then the ration gets cut — the settings settle, the fancy serving config goes away, somebody independent actually runs it — and it measures the same as the model it replaced. The previous model, meanwhile, gets quietly retired, which is how a company announces progress and a sunset in the same sentence.
+Watch the cycle closely enough and you can set your watch by it. New model, and the benchmarks look like a miracle. A week of coverage, a week of believers, a demo that does the thing.
 
-Reaching AGI stopped being an event and became a business model. Each arrival resets the benchmark arms race, justifies the next datacenter, and hands the earnings call its verb. The models improve — they genuinely do — but the *arrival* is inventory. Seven this year, and every one of them sold out before the demo finished buffering.
+Then the ration gets cut — the settings settle, the fancy serving config goes away, somebody independent actually runs it — and it measures the same as the model it replaced.
+
+The previous model, meanwhile, gets quietly retired, which is how a company announces progress and a sunset in the same sentence.
+
+Reaching AGI stopped being an event and became a business model. Each arrival resets the benchmark arms race, justifies the next datacenter, and hands the earnings call its verb.
+
+The models improve — they genuinely do — but the *arrival* is inventory. Seven this year, and every one of them sold out before the demo finished buffering.
 
 ## The scoreboard
 

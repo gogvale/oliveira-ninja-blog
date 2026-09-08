@@ -46,7 +46,9 @@ Map it onto the weekend founder's app and it stops being a research paper. It be
 
 Every one of these is the digital equivalent of leaving the key in the door. Nobody needs a zero-day. They need you to skip the boring parts.
 
-The honest caveat: this is not a story about a malicious model. A competent review closes most of the gap — Copilot Chat fixed 55.5% of its own flagged issues in one study. The problem is the process, not the machine. The founder shipping in a weekend does not review. The 80% of developers who skip their security policies do not scan.
+The honest caveat: this is not a story about a malicious model. A competent review closes most of the gap — Copilot Chat fixed 55.5% of its own flagged issues in one study.
+
+The problem is the process, not the machine. The founder shipping in a weekend does not review. The 80% of developers who skip their security policies do not scan.
 
 > "The velocity is the vulnerability."
 

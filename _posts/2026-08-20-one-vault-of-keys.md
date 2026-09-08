@@ -39,7 +39,9 @@ GitHub Desktop helps at the edges, but it does not fix the core problem. The key
 
 About a month ago I was poking around 1Password and noticed it had an SSH key option. I had seen it before and never understood the point. A key in a password manager? SSH keys live in `~/.ssh`, right? That is what everyone says.
 
-I asked ChatGPT what it was actually for, and the answer changed how I think about keys: 1Password can generate, store, and serve SSH keys through an SSH agent. You never touch the private key file again. The agent hands it to whatever tool asks, and 1Password decides whether to allow it — with your approval, not just a filesystem check.
+I asked ChatGPT what it was actually for, and the answer changed how I think about keys: 1Password can generate, store, and serve SSH keys through an SSH agent. You never touch the private key file again.
+
+The agent hands it to whatever tool asks, and 1Password decides whether to allow it — with your approval, not just a filesystem check.
 
 That was the missing piece. The keys did not have to live on the machine at all.
 
@@ -65,7 +67,9 @@ But the real win is the security model, and that is the part worth telling peopl
 
 ### Keys that do not sit on disk
 
-A private key as a file on a laptop is a liability. If your machine is compromised, the attacker can copy that file and you may never notice until it is used. The [Shai Hulud supply-chain attacks](https://www.wiz.io/blog/shai-hulud-2-0-aftermath-ongoing-supply-chain-attack) are a good, recent reminder of how credential theft plays out at scale: malicious packages installed through normal workflows exfiltrate keys and tokens from developer machines, quietly and continuously.
+A private key as a file on a laptop is a liability. If your machine is compromised, the attacker can copy that file and you may never notice until it is used.
+
+The [Shai Hulud supply-chain attacks](https://www.wiz.io/blog/shai-hulud-2-0-aftermath-ongoing-supply-chain-attack) are a good, recent reminder of how credential theft plays out at scale: malicious packages installed through normal workflows exfiltrate keys and tokens from developer machines, quietly and continuously.
 
 With keys in 1Password, there is no key file to steal. The key is encrypted in the vault, and the agent only exposes it with an explicit approval from the unlocked app. A stolen laptop, a planted npm package, a curious coworker — none of them get a key file they can copy.
 

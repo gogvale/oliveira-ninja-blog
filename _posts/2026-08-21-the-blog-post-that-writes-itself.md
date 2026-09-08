@@ -17,7 +17,11 @@ image: /assets/img/posts/2026-08-21-the-blog-post-that-writes-itself.png
 
 Somewhere in the last week, this blog stopped being something I wrote and became something I direct. That sounds lazy. It is the opposite.
 
-I spent a session with my AI agent building the pipeline that now produces these posts. We studied attention spans, read the research on scannable writing, argued about em dashes, and turned it all into a rulebook the agent follows every time. This post is about what good blog posts are made of, and about the part that still needs a human.
+I spent a session with my AI agent building the pipeline that now produces these posts.
+
+We studied attention spans, read the research on scannable writing, argued about em dashes, and turned it all into a rulebook the agent follows every time.
+
+This post is about what good blog posts are made of, and about the part that still needs a human.
 
 ## What good posts are made of
 
@@ -31,21 +35,33 @@ The rules turned out to be simple. Almost boringly simple.
 
 ## The target group
 
-Every post starts with a question: who is reading this, and what will they scan for? This blog targets security and automation engineers — mostly millennials and older Gen Z. That shapes everything: they want concrete stories over generic advice, they skim for commands and numbers, and they will judge the post in the first two sentences. The TL;DR exists for exactly that reader.
+Every post starts with a question: who is reading this, and what will they scan for? This blog targets security and automation engineers — mostly millennials and older Gen Z.
+
+That shapes everything: they want concrete stories over generic advice, they skim for commands and numbers, and they will judge the post in the first two sentences. The TL;DR exists for exactly that reader.
 
 ## Where the agent helps
 
 The agent does the heavy lifting in three places:
 
-1. **Research.** It searches, reads, and pulls the actual sources. For the post about cheap models, it found Anthropic's official agent-patterns doc, a 400-PR benchmark, and the Reddit thread that confirmed the experience. The good sources get linked; the blog-level ones get woven into the argument.
-2. **Implementation.** It writes the draft, generates the banner images, validates the front matter, commits, pushes, and watches the deploy. The whole publish loop is scripted.
-3. **Consistency.** The rules live in a skill file, not in the agent's memory. Every post gets the same structure, the same gates, the same checks. That is the maintainability win: the blog does not drift post to post.
+1. **Research.** It searches, reads, and pulls the actual sources. For the post about cheap models, it found Anthropic's official agent-patterns doc, a 400-PR benchmark, and the Reddit thread that confirmed the experience.
+
+The good sources get linked; the blog-level ones get woven into the argument.
+2. **Implementation.** It writes the draft, generates the banner images, validates the front matter, commits, pushes, and watches the deploy.
+
+The whole publish loop is scripted.
+3. **Consistency.** The rules live in a skill file, not in the agent's memory. Every post gets the same structure, the same gates, the same checks.
+
+That is the maintainability win: the blog does not drift post to post.
 
 ## Where the human wins
 
 The agent is a great first draft. It is a terrible final judge.
 
-The ten-fold difference comes from the human in the loop. I decide what sounds like me. When the anti-slop gate flags a sentence as "AI writing" but it is actually my voice — the negative-listing joke, the "pretty good weekend" closer — I keep it. When the agent proposes a structure that reads like a whitepaper, I cut it. When it finds a perfect diagram from the source, I check it actually shows what we claim before it ships.
+The ten-fold difference comes from the human in the loop. I decide what sounds like me.
+
+When the anti-slop gate flags a sentence as "AI writing" but it is actually my voice — the negative-listing joke, the "pretty good weekend" closer — I keep it.
+
+When the agent proposes a structure that reads like a whitepaper, I cut it. When it finds a perfect diagram from the source, I check it actually shows what we claim before it ships.
 
 The agent optimizes for rules. I optimize for the reader I know. That combination is the whole trick: rules make the agent consistent, and the human makes the result sound like a person.
 

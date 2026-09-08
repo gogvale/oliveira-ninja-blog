@@ -48,7 +48,9 @@ The split is not about intelligence. It is about the shape of the work.
 
 ## This is a documented pattern
 
-This split has a name and a body of practice behind it. Anthropic's own guidance on [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) describes an **orchestrator-workers workflow**: a central model breaks the task down, delegates the pieces to worker models, and synthesizes the results. That is exactly the shape of what I stumbled into — one model planning, cheaper models executing.
+This split has a name and a body of practice behind it. Anthropic's own guidance on [building effective agents](https://www.anthropic.com/engineering/building-effective-agents) describes an **orchestrator-workers workflow**: a central model breaks the task down, delegates the pieces to worker models, and synthesizes the results.
+
+That is exactly the shape of what I stumbled into — one model planning, cheaper models executing.
 
 ![Anthropic's orchestrator-workers workflow: one orchestrator LLM splits the task, worker LLMs run the pieces, a synthesizer merges the output](/assets/img/posts/2026-08-21-orchestrator-workers.png){: width="972" }
 *Orchestrator-workers workflow — source: [Anthropic, Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)*
@@ -65,7 +67,9 @@ Even the community noticed the same thing I did. There is a popular [thread in t
 
 I no longer default everything to the biggest model. The workflow is now: **use the smart model to shape the plan, then hand the execution to the cheap one**. The expensive model does less, the cheap model does more, and the overall result is faster and cheaper than either alone.
 
-The funny part is my own setup already worked this way. The agent that helps with this blog, the skills that encode the structure, the scripts that do the repetitive work — those are the plan. The model executing them is the worker. I just did not see the pattern until the credit wall made me look.
+The funny part is my own setup already worked this way. The agent that helps with this blog, the skills that encode the structure, the scripts that do the repetitive work — those are the plan.
+
+The model executing them is the worker. I just did not see the pattern until the credit wall made me look.
 
 The lesson stuck: for automation, the model is not the bottleneck. The plan is. Spend the expensive tokens where judgment lives, and let the cheap tokens do the walking.
 

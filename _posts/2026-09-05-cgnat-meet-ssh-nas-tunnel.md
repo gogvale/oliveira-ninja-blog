@@ -94,4 +94,6 @@ First try: file lands, checksum matches, done. The NAS still thinks it is a loca
 
 A NAS that accepts files from the internet without a single inbound port being open anywhere. The appliance never learns it is reachable from outside — because it is not. It is the one who calls home, and home answers on the other side of a door only the NAS can open.
 
-The whole thing cost nothing but two config lines and a habit of reading `sshd_config` before blaming the router. If you want the industrial version of the keep-alive, [autossh](https://www.harding.motd.ca/autossh/) supervises the same loop. If your needs grow past one machine, [Tailscale](https://tailscale.com) is the mesh version of the same idea — I kept the tunnel because the NAS should not run more software than it already does.
+The whole thing cost nothing but two config lines and a habit of reading `sshd_config` before blaming the router. If you want the industrial version of the keep-alive, [autossh](https://www.harding.motd.ca/autossh/) supervises the same loop.
+
+If your needs grow past one machine, [Tailscale](https://tailscale.com) is the mesh version of the same idea — I kept the tunnel because the NAS should not run more software than it already does.

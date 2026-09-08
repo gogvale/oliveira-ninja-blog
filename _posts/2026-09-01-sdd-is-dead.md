@@ -29,7 +29,9 @@ The pattern was always the same. A tiny feature would spawn a miniature bureaucr
 
 That example is not the outlier. It is the genre.
 
-[The marmelab takedown](https://marmelab.com/blog/2025/11/12/spec-driven-development-waterfall-strikes-back.html) named the failure modes precisely: *markdown madness* (you spend your time reading specs, not thinking), *double code review* (the spec contains code, then the implementation contains code — you review both), and *faux agile* (the toolkits generate "user stories" that are not user stories). The verdict: **"Spending 80% of your time reading instead of thinking is, in my opinion, not worth it."**
+[The marmelab takedown](https://marmelab.com/blog/2025/11/12/spec-driven-development-waterfall-strikes-back.html) named the failure modes precisely: *markdown madness* (you spend your time reading specs, not thinking), *double code review* (the spec contains code, then the implementation contains code — you review both), and *faux agile* (the toolkits generate "user stories" that are not user stories).
+
+The verdict: **"Spending 80% of your time reading instead of thinking is, in my opinion, not worth it."**
 
 For someone coming from Agile, SDD felt like discovering waterfall by accident. We spent two decades escaping the idea that you can fully specify software before writing it. SDD smuggled it back in through the AI door, wearing a markdown trench coat.
 
@@ -45,7 +47,11 @@ Now the workflow is: tell it your intention, add the baseline guardrails ("do no
 
 This is not a new pattern. It is the prompt engineering story, rerun.
 
-In 2023, prompt engineering was going to be the career of the future. Courses, certifications, entire job listings. Then the models crossed the same threshold, [the standalone job title effectively disappeared at companies running frontier models](https://www.solidaitech.com/2026/04/prompt-engineer-job-dead-ai-careers.html), and the craft got [absorbed into broader roles](https://dev.to/gabrielanhaia/prompt-engineering-is-mostly-dead-in-2026-heres-what-replaced-it-433b) — context engineering, evals, agent loops. The skill that remained real (production context engineering) is not what the courses sold.
+In 2023, prompt engineering was going to be the career of the future. Courses, certifications, entire job listings.
+
+Then the models crossed the same threshold, [the standalone job title effectively disappeared at companies running frontier models](https://www.solidaitech.com/2026/04/prompt-engineer-job-dead-ai-careers.html), and the craft got [absorbed into broader roles](https://dev.to/gabrielanhaia/prompt-engineering-is-mostly-dead-in-2026-heres-what-replaced-it-433b) — context engineering, evals, agent loops.
+
+The skill that remained real (production context engineering) is not what the courses sold.
 
 The lesson is the same twice over: **when the interface between human intention and model output is a temporary gap, the elaborate bridge built across it is also temporary.** The bridge gets shorter every time the models improve. The discipline of building the bridge is real — for a while.
 

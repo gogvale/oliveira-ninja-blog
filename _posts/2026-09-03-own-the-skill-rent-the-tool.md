@@ -17,7 +17,9 @@ image: /assets/img/posts/2026-09-03-own-the-skill-rent-the-tool.png
 
 ## He automated himself out of the skill
 
-In 2016 a Reddit user going by FiletOfFish1066 confessed what he had done for six years: automated his own job as a fresh CS grad, played games during office hours, collected about $95,000 a year for it. [The post got around](https://www.reddit.com/r/antiwork/comments/ptmruv/programmer_fired_for_automating_job_playing_games/). He was fired. He had forgotten how to code — he had spent the six years on chemistry instead.
+In 2016 a Reddit user going by FiletOfFish1066 confessed what he had done for six years: automated his own job as a fresh CS grad, played games during office hours, collected about $95,000 a year for it. [The post got around](https://www.reddit.com/r/antiwork/comments/ptmruv/programmer_fired_for_automating_job_playing_games/).
+
+He was fired. He had forgotten how to code — he had spent the six years on chemistry instead.
 
 The story gets retold as a slacking cautionary tale. Read it again as a skill story: the automation was so good it replaced him, and he had nothing left to sell afterward. The script belonged to the company. The skill had evaporated.
 
@@ -25,15 +27,23 @@ The story gets retold as a slacking cautionary tale. Read it again as a skill st
 
 The FiletOfFish story took six years because he wrote the automation himself. Vibe coding collapses the timeline: you describe the work, the model does it, you review it like a manager who never learned the trade. You ship code you cannot explain, cannot debug under pressure, cannot defend in a code review.
 
-The dangerous part is not that the code is wrong. The dangerous part is that it is often right enough — for months, for years — while the skill quietly evaporates underneath you. Then one day the tool cannot do your exact domain, or the subscription lapses mid-sprint, and the difference between you and FiletOfFish is that he still had his six years of paychecks.
+The dangerous part is not that the code is wrong. The dangerous part is that it is often right enough — for months, for years — while the skill quietly evaporates underneath you.
 
-The most public test of that arc ran in the open. ThePrimeagen — ex-Netflix, [a streamer whose reach in the developer world is hard to overstate](https://www.youtube.com/@ThePrimeagen) — spent three months heavy on vibe coding and [quit in February 2026](https://x.com/i/trending/2026795234840162434): the output felt subtly off, and it was robbing him of the craft. He went back to writing code by hand.
+Then one day the tool cannot do your exact domain, or the subscription lapses mid-sprint, and the difference between you and FiletOfFish is that he still had his six years of paychecks.
+
+The most public test of that arc ran in the open.
+
+ThePrimeagen — ex-Netflix, [a streamer whose reach in the developer world is hard to overstate](https://www.youtube.com/@ThePrimeagen) — spent three months heavy on vibe coding and [quit in February 2026](https://x.com/i/trending/2026795234840162434): the output felt subtly off, and it was robbing him of the craft.
+
+He went back to writing code by hand.
 
 ## The market still pays for the skill
 
 The vibe coding discourse assumes every buyer wants shippable speed. A lot of them do. The ones paying the most do not.
 
-The signal split is public now. **Stripe and Jane Street still ban AI in their interview loops.** Google's standard rounds do too, even while it pilots Gemini inside CoderPad; Meta added an AI-allowed round and measures candidates on it. Two philosophies, live in 2026 — [the firms paying senior money test what you can do with no tool in the browser](https://www.interviewcoder.co/blog/using-ai-for-coding-interviews).
+The signal split is public now. **Stripe and Jane Street still ban AI in their interview loops.** Google's standard rounds do too, even while it pilots Gemini inside CoderPad; Meta added an AI-allowed round and measures candidates on it.
+
+Two philosophies, live in 2026 — [the firms paying senior money test what you can do with no tool in the browser](https://www.interviewcoder.co/blog/using-ai-for-coding-interviews).
 
 The data side explains why. [GitClear's maintainability research](https://www.gitclear.com/the_ai_code_quality_maintainability_gap) tracks hundreds of millions of changed lines: code reuse is down 35%, duplicate blocks are up, short-term churn is up. AI-assisted codebases rot faster.
 
@@ -58,7 +68,11 @@ Here is the part nobody puts in the vibe coding pitch: the moment your skill atr
 
 > "When your skill atrophies, AI stops being free leverage. It becomes a toll booth between you and the work."
 
-Think like a freelancer, because that is where this shows up first. Every task now carries a metered cost. The tool owns the margin — the provider can raise the price, throttle the API, deprecate the model that knew your stack, and you cannot push back, because you no longer have the option of doing the work without it. You used to own the work. Now you rent it.
+Think like a freelancer, because that is where this shows up first. Every task now carries a metered cost.
+
+The tool owns the margin — the provider can raise the price, throttle the API, deprecate the model that knew your stack, and you cannot push back, because you no longer have the option of doing the work without it.
+
+You used to own the work. Now you rent it.
 
 I wrote before about why [skills suck and scripts don't](https://blog.oliveira.ninja/posts/skills-suck-scripts-dont/). Scripts are deterministic: they run the same way every day, and when they fail you can read their code. A subscription is not that. A subscription is a lease on a mind — and the leaseholder sets the terms.
 

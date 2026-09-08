@@ -27,7 +27,9 @@ The caveat was in the same tweet: *"It's not too bad for throwaway weekend proje
 
 ## The dashboard that ate my week
 
-An executive dashboard. The cold data is easy — Monday and Airtable, structured, boring in the best way. The problem is the subjective layer: what is going well, what needs attention, what the numbers do not say. I handed that to the AI with a very detailed set of rules. The thing AI is supposed to be good at.
+An executive dashboard. The cold data is easy — Monday and Airtable, structured, boring in the best way. The problem is the subjective layer: what is going well, what needs attention, what the numbers do not say.
+
+I handed that to the AI with a very detailed set of rules. The thing AI is supposed to be good at.
 
 It was not.
 
@@ -52,7 +54,13 @@ This has a name — [comprehension debt](https://diptendud.medium.com/comprehens
 
 The executives see a tool that writes code at conversation speed and expect results at that speed — with the same quality as the slow, human-written way. [Wharton calls it the AI efficiency trap](https://knowledge.wharton.upenn.edu/article/the-ai-efficiency-trap-when-productivity-tools-create-perpetual-pressure/): if technology delivers more in less time, the rational response is to demand more.
 
-The speed they see is the *generation* speed. The quality they demand is the *maintenance* quality. Those run on different clocks. [METR's randomized trial](https://letsdatascience.com/blog/developers-thought-ai-made-them-faster-the-data-said-otherwise) found developers were 19% slower with AI tools on real tasks — while believing they were 20% faster. The gap gets absorbed by the developer: feel fast, get told to go faster, carry higher cognitive load, deliver quality in a system nobody comprehends. [67% of workers who adopted AI in 2025 reported working more hours, not fewer](https://www.aimagicx.com/blog/ai-productivity-paradox-exhaustion-burnout-2026). The human becomes the buffer between the AI's promises and the organization's demands. The buffer wears out.
+The speed they see is the *generation* speed. The quality they demand is the *maintenance* quality.
+
+Those run on different clocks. [METR's randomized trial](https://letsdatascience.com/blog/developers-thought-ai-made-them-faster-the-data-said-otherwise) found developers were 19% slower with AI tools on real tasks — while believing they were 20% faster.
+
+The gap gets absorbed by the developer: feel fast, get told to go faster, carry higher cognitive load, deliver quality in a system nobody comprehends. [67% of workers who adopted AI in 2025 reported working more hours, not fewer](https://www.aimagicx.com/blog/ai-productivity-paradox-exhaustion-burnout-2026).
+
+The human becomes the buffer between the AI's promises and the organization's demands. The buffer wears out.
 
 ## The line: lifecycle, not tool
 

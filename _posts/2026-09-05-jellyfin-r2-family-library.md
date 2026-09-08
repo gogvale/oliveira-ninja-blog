@@ -17,7 +17,11 @@ image: /assets/img/posts/2026-09-05-jellyfin-r2-family-library.png
 
 The NAS that was supposed to run the family's movie library crashes before it boots. Four households are waiting on this box — three in Mexico, one in Europe — and it will not even start.
 
-The box is a NAS at a relative's house, and it fails twice. Its ARM chip cannot run a modern Jellyfin: the last 32-bit builds died in 2021, and the newest one that still exists crashes on that kernel before boot. Its internet plan throttles sustained transfers. On the busiest night, two households press play at once — and most "home media server" guides never account for that.
+The box is a NAS at a relative's house, and it fails twice.
+
+Its ARM chip cannot run a modern Jellyfin: the last 32-bit builds died in 2021, and the newest one that still exists crashes on that kernel before boot. Its internet plan throttles sustained transfers.
+
+On the busiest night, two households press play at once — and most "home media server" guides never account for that.
 
 A server at my own house would work, but my upload is the bottleneck for everyone else, and I did not want an always-on machine to babysit.
 
@@ -57,7 +61,11 @@ Two operational details earned their place in the notes:
 
 ## One codec to rule every screen
 
-A distributed family means an unpredictable device mix: smart TVs, phones, tablets, a Chromecast or three. The cheapest way to avoid transcoding on a two-core server is to never need it. I encode everything to the lowest common denominator: h264 video, AAC audio, MP4 container. Every device made in the last fifteen years plays it natively. A DVD-era movie at 480p lands around 500 MB to 1 GB; the whole digitized shelf fits comfortably and direct-plays everywhere.
+A distributed family means an unpredictable device mix: smart TVs, phones, tablets, a Chromecast or three. The cheapest way to avoid transcoding on a two-core server is to never need it.
+
+I encode everything to the lowest common denominator: h264 video, AAC audio, MP4 container. Every device made in the last fifteen years plays it natively.
+
+A DVD-era movie at 480p lands around 500 MB to 1 GB; the whole digitized shelf fits comfortably and direct-plays everywhere.
 
 Transcoding is then a word that never appears in the server logs.
 
@@ -76,8 +84,14 @@ The kids' user account is locked to the two kids' libraries, no admin rights, no
 
 ## What it costs, honestly
 
-Today the library sits at roughly 30 GB: a few movies, a complete series, the kids' cartoons. That is about $0.45 a month — less than eight pesos. When the DVD digitization project fills it to 300 GB, the bill becomes about $4.50. The droplet was already paid for. The NAS at the relative's house, reachable through the [reverse tunnel from the previous post](https://blog.oliveira.ninja/posts/cgnat-meet-ssh-nas-tunnel/), now serves as the offsite mirror instead of a struggling server.
+Today the library sits at roughly 30 GB: a few movies, a complete series, the kids' cartoons. That is about $0.45 a month — less than eight pesos.
 
-The European household streams across the Atlantic from the droplet and never notices. Playback does not care about latency — it cares about throughput, and there is plenty. Seeking cares a little: with the VFS cache off, a jump forward re-fetches from R2 and lands a beat slower than a local disk. That is the trade for keeping the 77 GB disk empty, and nobody has complained yet.
+When the DVD digitization project fills it to 300 GB, the bill becomes about $4.50. The droplet was already paid for.
+
+The NAS at the relative's house, reachable through the [reverse tunnel from the previous post](https://blog.oliveira.ninja/posts/cgnat-meet-ssh-nas-tunnel/), now serves as the offsite mirror instead of a struggling server.
+
+The European household streams across the Atlantic from the droplet and never notices. Playback does not care about latency — it cares about throughput, and there is plenty.
+
+Seeking cares a little: with the VFS cache off, a jump forward re-fetches from R2 and lands a beat slower than a local disk. That is the trade for keeping the 77 GB disk empty, and nobody has complained yet.
 
 Four households, two countries, one library, single-digit dollars. That is a subscription I am happy to pay — the catalog is mine, and it never rotates.

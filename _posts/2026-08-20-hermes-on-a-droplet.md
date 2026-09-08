@@ -19,7 +19,11 @@ This week I did something I had been meaning to do for a while: gave my AI assis
 
 Not in the sense of installing another chatbot. I mean an agent that lives on a server, answers me from anywhere, and does things — reads my repositories, touches my playlists, keeps notes between conversations, and can even help write posts for this blog. A coworker, not a search box.
 
-The tool is called Hermes. It is an open-source AI agent framework from Nous Research: it runs in a terminal or on a messaging platform, has tools for the filesystem, the web, GitHub, Spotify, and a bunch of other things, and keeps a persistent memory across sessions. It is the kind of project where the README says "autonomous agent" and you start thinking of things you want it to do.
+The tool is called Hermes.
+
+It is an open-source AI agent framework from Nous Research: it runs in a terminal or on a messaging platform, has tools for the filesystem, the web, GitHub, Spotify, and a bunch of other things, and keeps a persistent memory across sessions.
+
+It is the kind of project where the README says "autonomous agent" and you start thinking of things you want it to do.
 
 This post is the story of that setup. The smooth parts, the weird parts, and the one that made me roll my eyes.
 
@@ -47,13 +51,19 @@ No dependency hell, no compiling from source, no "well actually you need Node 22
 
 For access, I did the slightly unusual thing: generated a fresh SSH key, stored it in Bitwarden, and used the SSH agent to authenticate from my PC.
 
-The point of that flow is you never have to manually create or copy keys on each machine you use. The key lives in your password manager, the agent loads it when needed, and your laptop is not holding on to another secret it should not be holding. This deserves its own post later, because it is a nicer workflow than the classic `ssh-keygen` + `ssh-copy-id` dance — and it is one of those habits that is hard to unlearn once you try it.
+The point of that flow is you never have to manually create or copy keys on each machine you use.
+
+The key lives in your password manager, the agent loads it when needed, and your laptop is not holding on to another secret it should not be holding.
+
+This deserves its own post later, because it is a nicer workflow than the classic `ssh-keygen` + `ssh-copy-id` dance — and it is one of those habits that is hard to unlearn once you try it.
 
 ### DeepSeek API
 
 For the model provider, I went with DeepSeek. The API setup itself was painless: create an account, grab a key, paste it into the config, done.
 
-The annoying part is their payment model. DeepSeek is prepaid — you buy credits first, then use them. When you run out of tokens (or whatever unit they measure consumption in), you stop working until you pay again. There is no invoice, no "we will bill you next month," no graceful credit line. Just a balance that drains and a wall at the end of it.
+The annoying part is their payment model. DeepSeek is prepaid — you buy credits first, then use them. When you run out of tokens (or whatever unit they measure consumption in), you stop working until you pay again.
+
+There is no invoice, no "we will bill you next month," no graceful credit line. Just a balance that drains and a wall at the end of it.
 
 It is not a huge deal, and the prices are good. But the first time the agent stopped mid-task because the balance hit zero, I had a "seriously?" moment. It is a small operational tax you do not pay with postpaid providers, and worth knowing about before you build anything on top of it.
 
@@ -65,7 +75,9 @@ Hermes supports profiles, so I set up two: my own and one for my wife. Separate 
 
 Then I connected my Spotify account, which means the agent can look at my playlists, check what is playing, and control playback. A small thing, but the kind of small thing that makes the agent feel like it is actually mine.
 
-And then there is this blog. The blog repository has its own agent guide, so when I ask for help with posts, the agent knows the tone, the structure, and the tags without me explaining it every time. I can say "write a post about X" and get something that sounds like me instead of like a press release. That is the feature that keeps surprising me.
+And then there is this blog. The blog repository has its own agent guide, so when I ask for help with posts, the agent knows the tone, the structure, and the tags without me explaining it every time.
+
+I can say "write a post about X" and get something that sounds like me instead of like a press release. That is the feature that keeps surprising me.
 
 ## What Worked
 
