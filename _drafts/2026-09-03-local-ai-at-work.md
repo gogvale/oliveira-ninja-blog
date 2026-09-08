@@ -1,80 +1,74 @@
 ---
-title: "Your Boss Won't Let You Run Local AI"
+title: "The Reasonable No That Creates Shadow AI"
 date: 2030-01-01 00:00:00 -0600
 categories: [AI]
 tags: [ai-lab, opinion, security]
-description: "Why enterprises say no to local AI — the real reason is control, not velocity."
+description: "Security said no to a client MCP. We almost built our own AI for the demo. That is how shadow AI starts."
 draft: true
 ---
 
 <!--
 PROVENANCE (strip at publish):
-- Seeded from an anonymous imageboard thread (no. 109677087): "my boss said no local AI → had to get the $100/month Claude sub" (self-funded).
-- Never cite the thread as a source. Re-ground any borrowed claim in a legit source before publishing.
-- Gabriel's lived trigger is not known yet — the hook below is the thread, not his story. Confirm a real trigger before publishing.
-- Parked 2026-09-03: revisit when there is a concrete hook (a real local-AI rollout story or a governance document to cite).
+- Lived anchor (2026-09-08): Gabriel's team wanted to use a client vendor's MCP to serve the client better. Rejected for lack of an MCP policy — a fair call. The team briefly considered running their own AI for the demo; they did not, because it is not the right thing. The shadow-IT reflex is the story.
+- Older seed (2026-09-03): anonymous forum thread (no. 109677087) "boss said no local AI -> self-funded Claude sub" — kept only as the idea-level local-AI pattern.
+- Never cite the thread. Re-ground any borrowed claim in a legit source before publishing.
+- Never name the employer or the client. "A client's vendor" stays generic.
 -->
 
 > **TL;DR**
-> - Bosses keep saying no to local AI because "everything is changing too fast."
-> - That is a governance answer, not a technology answer — it is about control, audit, and having someone to blame.
-> - The economics favor one GPU box over per-seat cloud subs at scale — but finance never sees that math, because governance makes the call.
-> - Read every "no" from security and IT through this lens, and the reasoning stops looking mysterious.
+> - Security said no to a client's MCP server — no policy for it yet. The call was fair.
+> - The no came with no alternative path, and the team briefly considered running their own AI for the demo.
+> - That reflex is the birth of shadow AI: rules block intentions, and people take the least-friction path.
+> - The problem with shadow AI is not the tool. It is that governance never sees the data.
 
-A developer on a forum posted the conversation we have all had — or heard — at work. Their boss said no to running a local model, so the developer paid for the **$100/month** Claude subscription out of their own pocket.
+A few months ago, our team wanted to use an MCP server from one of our clients' vendors. The client would get better service, faster — the tool was built for exactly that. Security said no. The company had no policy for MCPs yet: no review path, no approved list, no precedent.
 
-The pushback came fast: make the company pay. Get the enterprise seat. The employer cares about output quality, so let them fund the tool that produces it.
+They were right. An unreviewed third-party tool gets access to whatever context you feed it. Saying yes without a policy is how client data leaves the building through a chat window. The call was correct, and I would defend it.
 
-The boss's stated reason was simple: *"everything's changing too fast, it's not worth investing in local yet."*
+The part I keep thinking about is what happened next. We wanted the tool. The approved path did not exist, and nobody offered an alternative. For a moment — one honest moment — the shortest path looked like running our own AI for the demo. No approval. No policy. No governance. Just a model and a task.
 
-It sounds reasonable. It is also, mostly, not the real reason. The real reason has nothing to do with how fast models change.
+We did not do it. It is not the right thing, and we knew it. But that moment is the story. It is the exact moment shadow AI is born: a reasonable no, a blocked intention, and a team looking for the least-friction path instead of the governed one.
 
-## The real reason is control
+## The no was right
 
-"Too fast" is what an enterprise says when the actual objection is harder to say out loud. Run a model on your own hardware and four things happen that make an organization uncomfortable.
+This is not a post about a bad security team. This is the part that makes the whole thing uncomfortable: the security team was correct.
 
-**No data governance story.** A cloud vendor can tell you what leaves the building and what stays. An on-prem model can not — not without building that story yourself.
+An MCP server is a standing channel into your context. The vendor's tooling, the client's data, your prompts, your code — everything flows through it. Approving one without a policy means approving it without review, and review exists because vendors differ. Some are careful. Some are not. You can not tell from the marketing page.
 
-**No audit trail.** The vendor's cloud gives you prompt logs and access controls as part of the price. Local means you own the logs, which means you own the responsibility for keeping them.
+The absence of an MCP policy is not a reason to reject MCPs forever. It is a reason to reject them until the review exists. That distinction matters, because the employees on the receiving end of the no rarely hear it.
 
-**No one to blame.** When a cloud model gives a wrong answer, the vendor shares the liability. When your in-house GPU box is wrong, the liability stays inside the building — and lands on someone with a name and a manager.
+## A no without a path is a friction machine
 
-**No security review of the weights.** AppSec can not produce a software bill of materials for a **40 GB** model — no way to list what is inside, who trained it, or which supply chain it came through. The cloud vendor answers those questions for you.
+The pattern is older than AI. Security blocks something to protect the company, and the block lands on an employee with a job to do. The employee does not fight the policy — policies are hard to fight. They find the shortest path around it.
 
-> "Too fast" is what an enterprise says when the actual objection is: we can not manage it.
+Shadow IT was born this way: rules created for security, blocking the intentions they never meant to block. Every IT team knows the list — the spreadsheet that lives on a personal drive, the VPN nobody approved, the tool paid for with a personal card.
 
-None of this is about speed. It is about governance.
+Shadow AI is shadow IT with a data problem. The ungoverned tool is not a spreadsheet. It is a model that reads the conversation.
 
-## The math nobody runs
-
-At scale, the economics point the other way.
-
-A **$100/month** seat, multiplied across a team of developers, adds up fast. One good GPU box — bought once — serves that same team for years. The per-seat model wins only while headcount is small.
-
-Finance never sees that comparison. Not because it is hidden. Because the decision is not a cost decision at all — it is a governance decision, and governance made up its mind before the spreadsheet existed.
+> The problem with shadow AI is not the tool. It is that governance never sees the data.
 
 ## The counterpoints that hold up
 
-None of this means the "too fast" crowd is wrong about everything. Three of their arguments hold up.
+The reasonable no has real weight behind it. Three arguments survive the scrutiny.
 
-**Velocity is real.** Models go obsolete quarterly. Hardware you buy today looks stale in **18 months**. Betting capital on a moving target is a legitimate reason to wait.
+**The policy gap is real.** You can not review what you have no process for. "Until we have an MCP policy, we do not approve MCPs" is a legitimate position — the alternative is approving tools one by one with no standard to hold them against.
 
-**There is no one to run it.** A GPU stack needs someone on staff to build it, patch it, and keep it alive. A zero-ops SaaS seat needs nothing. That trade is real, and for a small team it is usually decisive.
+**The downside is not symmetric.** A rejected MCP costs us a better demo. A leaked client conversation costs the client relationship, and the legal exposure that follows. Security is paid to weigh the second outcome, not the first. When the downside of being wrong is that large, the conservative call is not cowardice — it is arithmetic.
 
-**Local is not automatically private.** Telemetry still phones home. Weight provenance is murky. The patch burden does not disappear — it moves from the vendor to you.
-
-These do not kill the argument for local AI. They just mean the "no" is not always wrong.
+**Rolling your own is not automatically safe.** The shadow path we considered — our own AI for the demo — would still ship with telemetry, still need patching, still have no audit trail unless someone built it. The governance problem does not disappear because the tool is yours. It moves from the vendor to you, and nobody had signed up to own it.
 
 ## What the "no" actually means
 
-Security teams have seen this pattern before. A new framework shows up, gets banned before anyone reviews it, and the ban is dressed up as "we are being careful."
+The team heard a rejection. What was actually said was a status report.
 
-| What they say | What it means |
+| What the team hears | What is actually said |
 |---|---|
-| "Everything is changing too fast" | "We can not manage it yet" |
-| "Not worth investing in local yet" | "No governance story for on-prem models" |
-| "The vendor handles compliance" | "We need someone to blame" |
+| "There is no MCP policy" | "We have no way to review it safely yet" |
+| "Do not roll your own AI" | "Ungoverned models scare us more than the vendor" |
+| "Why do you need this?" | "Nobody here wants to own the risk" |
 
-That is the whole picture. Not a technology call — a management call.
+Every "no" needs a door. The teams that build shadow AI are not the ones with rebellious employees — they are the ones where the shortest path to a useful tool is the ungoverned one.
 
-The developer who paid for Claude out of pocket was not fighting a technology decision. They were fighting a governance decision made without them — and that is a different fight entirely.
+We did not build the shadow demo. Most teams do not. Most people want to do the right thing, and the margin in our case was a conversation away from going the other way. The fix for shadow AI is not a louder no. It is a path: a review process with an answer attached, a sandbox where a team can prove a tool against real data without real risk, a policy that says yes-with-controls instead of no-for-now.
+
+Governance that only blocks teaches people to route around it. Governance that provides a route does not need to block as often.
