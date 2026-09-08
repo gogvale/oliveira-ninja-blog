@@ -1,25 +1,27 @@
 ---
-title: "The Reasonable No That Creates Shadow AI"
+title: "The Door Is a Local Model"
 date: 2030-01-01 00:00:00 -0600
 categories: [AI]
 tags: [ai-lab, opinion, security]
-description: "Security said no to a client MCP. We almost built our own AI for the demo. That is how shadow AI starts."
+description: "Security said no to a client MCP. Every no needs a door — and the door nobody talks about is the offline model: zero egress by construction, no IP story, good enough."
 draft: true
 ---
 
 <!--
 PROVENANCE (strip at publish):
-- Lived anchor (2026-09-08): Gabriel's team wanted to use a client vendor's MCP to serve the client better. Rejected for lack of an MCP policy — a fair call. The team briefly considered running their own AI for the demo; they did not, because it is not the right thing. The shadow-IT reflex is the story.
-- Older seed (2026-09-03): anonymous forum thread (no. 109677087) "boss said no local AI -> self-funded Claude sub" — kept only as the idea-level local-AI pattern.
-- Gabriel's direction (2026-09-08): tools keep getting more robust, simpler, cheaper. Even what gets approved for internal use will be worse than the outside alternative. Shadow AI is not a "yes" question — it is a "when". Integrate the arms-race thesis: the market improves faster than governance can review; approvals arrive late; the door gets built before or after the first incident.
-- Never cite the thread. Re-ground any borrowed claim in a legit source before publishing.
+- Lived anchor (2026-09-08): Gabriel's team wanted to use a client vendor's MCP to serve the client better. Rejected for lack of an MCP policy — a fair call. The team briefly considered running their own AI for the demo; they did not, because it is not the right thing.
+- Pivot v3 (2026-09-08): the constructive answer to "every no needs a door" — the door is the offline/local model. Permissive policy for zero-egress PoCs with a security checklist.
+- Older seed (2026-09-03): anonymous forum thread (no. 109677087) — idea-level local-AI pattern only. Never cite.
+- Do NOT mention any future lab/comparison post in this piece.
 - Never name the employer or the client. "A client's vendor" stays generic.
+- Research digest: ~/shadow-ai-research-digest.md (2026-09-08) — background only.
 -->
 
 > **TL;DR**
-> - Security said no to a client's MCP server — no policy for it yet. The call was fair.
-> - The no came with no path, and for a moment the team considered running their own AI for the demo.
-> - That reflex is shadow AI, and it is getting harder to outrun — tools improve faster than governance can review. It is not a "yes". It is a "when".
+> - Security said no to a client's MCP server — no policy for it yet. The call was fair; an unreviewed channel into our context is a real risk.
+> - The no had no door, and for a moment the team considered running their own AI for the demo. That reflex is how shadow AI is born.
+> - Every essay about shadow AI ends at "give employees secure alternatives." Nobody says what the alternative is.
+> - It is the model that can not leave: offline, zero egress, no IP story, good enough. A permissive policy for local-model PoCs is the door.
 
 A few months ago, our team wanted to use an MCP server from one of our clients' vendors. The client would get better service, faster — the tool was built for exactly that. Security said no. The company had no policy for MCPs yet: no review path, no approved list, no precedent.
 
@@ -29,58 +31,61 @@ The part I keep thinking about is what happened next. We wanted the tool. The ap
 
 We did not do it. It is not the right thing, and we knew it. But that moment is the story — the exact moment shadow AI is born: a reasonable no, a blocked intention, and a team reaching for the least-friction path.
 
-The same reflex plays out smaller every day. A developer asks to run a local model. The boss says no. The developer self-funds a subscription, because it is cheap and the answer is now. Only the budget changed.
+The same reflex plays out smaller every day. A developer asks to run a local model. The answer is no. The developer self-funds a subscription, because it is cheap and the answer is now. Only the budget changed.
 
 ## The no was right
 
-This is not a post about a bad security team. This is the part that makes the whole thing uncomfortable: the security team was correct.
+This is not a post about a bad security team. The security team was correct, and the whole argument only works if we keep that on the table.
 
-An MCP server is a standing channel into your context. The vendor's tooling, the client's data, your prompts, your code — everything flows through it. Approving one without a policy means approving it without review, and review exists because vendors differ. Some are careful. Some are not. You can not tell from the marketing page.
+An MCP server is a standing channel into your context — the vendor's tooling, the client's data, your prompts, your code. Approving one without a policy means approving it without review, and review exists because vendors differ. Some are careful. Some are not. You can not tell from the marketing page.
 
-The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The employees on the receiving end of the no rarely hear that distinction.
+The absence of an MCP policy is not a reason to reject MCPs forever — only until the review exists. The problem is that the employees on the receiving end of the no never hear that distinction.
 
 ## A no without a path is a friction machine
 
 The pattern is older than AI. Security blocks something to protect the company, and the block lands on an employee with a job to do. The employee does not fight the policy — policies are hard to fight. They find the shortest path around it.
 
-Shadow IT was born this way: rules created for security, blocking the intentions they never meant to block. Every IT team knows the list — the spreadsheet on a personal drive, the VPN nobody approved, the tool paid for with a personal card.
-
-Shadow AI is shadow IT with a data problem. The ungoverned tool is not a spreadsheet. It is a model that reads the conversation.
+Shadow IT was born this way: rules created for security, blocking the intentions they never meant to block. Shadow AI is shadow IT with a data problem. The ungoverned tool is not a spreadsheet. It is a model that reads the conversation.
 
 **The problem is not the tool. It is that governance never sees the data.**
 
-## The market does not wait for the review
+## Every "no" needs a door — nobody says what the door is
 
-The no has an expiration date. The market improves faster than any review can keep up. Capability-per-dollar climbs every release: a model that once needed a rented GPU cluster now runs on a laptop, and a personal subscription does work that demanded an enterprise GPU not long ago. The tools get more robust, simpler, cheaper. The policy does not.
+The shadow AI literature stops at the same place every time: do not ban, give employees secure tools they actually want to use. Fair. Now name the tool. Nobody does, because the honest answer is uncomfortable.
 
-Even the yes, when it comes, is late. The tool that clears review today was measured against a version already one release behind. The outside alternative is better the day the approval lands, and the employee does the math in seconds.
+A cloud tool needs the slow review — data flows, vendor audit, contractual liability. And the market does not wait for it: capability climbs every release while the policy does not, so even an approved cloud tool arrives already one release behind.
 
-The no does not prevent shadow AI. It delays it, and every delay widens the gap between what the company allows and what the market offers. A wider gap means more frustration, more people on the least-friction path.
+The only category that clears review without a data-flow analysis is the one with no data flow.
 
-## The counterpoints that hold up
+## The door is the model that can not leave
 
-None of that makes the no wrong. It makes it temporary — correct this quarter, obsolete next. Three arguments survive the scrutiny.
+The local-model threads keep proving the same thing: usable quality keeps landing on smaller hardware. A model that needed a rented GPU not long ago runs on a developer's laptop. No server. No per-seat cost. No vendor in the path. For our demo, it would have been enough — and the demo was the whole point.
 
-**The policy gap is real.** You can not review what you have no process for. "Until we have an MCP policy, we do not approve MCPs" is a legitimate position.
+Watch the governance math flip:
 
-**The downside is not symmetric.** A rejected MCP costs us a better demo. A leaked client conversation costs the client relationship, and the legal exposure that follows. Security is paid to weigh the second outcome, not the first. When the downside of being wrong is that large, the conservative call is not cowardice — it is arithmetic.
+| | Cloud AI | Offline model |
+|---|---|---|
+| Where the data goes | leaves the building | stays on the machine |
+| IP story | depends on the vendor | nothing to write |
+| Audit | vendor logs | you own the silence |
+| Cost | per seat, monthly | near zero, existing hardware |
+| Review depth | deep, ongoing | a one-time checklist |
+| Capability | frontier | good enough, closing fast |
 
-**Rolling your own is not automatically safe.** The shadow path we considered — our own AI for the demo — would still ship with telemetry, still need patching, still have no audit trail unless someone built it. The governance problem does not disappear because the tool is yours. It moves from the vendor to you, and nobody had signed up to own it.
+A cloud tool is an approval. An offline model is a category you can approve once. The policy writes itself: local-model PoCs are permitted by default, with a security checklist — egress defined at the operating-system level, tool access constrained (no shell the model can invoke with your credentials), no secrets in context, and a data class it may see. Cloud tools keep the slow review, because they earn it. Offline tools get the fast lane, because physics earned it: the data can not leave unless someone makes it.
 
-## What the "no" actually means
+## The honest edges
 
-The team heard a rejection. What was actually said was a status report.
+The checklist exists because the model is not the boundary — the tools are. A local model with agentic tool access can still exfiltrate through the terminal it is allowed to invoke, prompt injection or not. Zero network does not matter if the model can ask the shell to do the reaching. That is why the policy constrains tools, not just ports.
 
-| What the team hears | What is actually said |
-|---|---|
-| "There is no MCP policy" | "We have no way to review it safely yet" |
-| "Do not roll your own AI" | "Ungoverned models scare us more than the vendor" |
-| "Why do you need this?" | "Nobody here wants to own the risk" |
+The audit silence is real. A cloud vendor gives you logs as part of the price; an offline model gives you nothing unless you build the logging yourself. That is a fair trade for a PoC with non-sensitive data, and a bad trade for production workloads with client data. Scope the fast lane accordingly.
 
-Every "no" needs a door. The teams that build shadow AI are not the ones with rebellious employees — they are the ones where the shortest path to a useful tool is the ungoverned one.
+And "good enough" is task-dependent. For a demo, for a script, for a contained experiment — yes. For a large refactor against a ten-year codebase, sometimes not. A policy that names the tier instead of promising the world is a policy people trust.
 
-We did not build the shadow demo. Most teams do not. Most people want to do the right thing; the margin in our case was a conversation away. The fix for shadow AI is not a louder no. It is a path: a review process with an answer attached, a sandbox where a team can prove a tool against real data without real risk, a policy that says yes-with-controls instead of no-for-now.
+## The no becomes a yes
 
-Governance that only blocks teaches people to route around it. Governance that provides a route does not need to block as often.
+We did not build the shadow demo. Nobody has to. The policy that says yes to the model that can not leave turns a reasonable no into a governed yes in a week — and keeps the data in the building.
 
-> It is not a "yes". It is a "when" — shadow AI is inevitable. The only question is whether governance builds the door before the first incident, or after it.
+> The safest AI tool is the one that can not leave the building.
+
+Governance that only blocks teaches people to route around it. Governance that provides a route does not need to block as often — and the route can be a laptop with the network turned off.
