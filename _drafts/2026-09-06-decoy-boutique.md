@@ -59,22 +59,21 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 
 ## The noise, in numbers
 
-Nineteen hours in, the commodity noise had a shape: 1,523 SSH connections from 125 IPs, 3,427 web requests from 189. Day-1 preview numbers — the full 30-day run replaces them at publish.
+Three days in, the commodity noise has a shape: 5,695 SSH connections and 28,986 web requests from 508 IPs. Mid-run preview numbers — the full 30-day run replaces them at publish.
 
-The SSH noise was not a crowd — it was six clusters with six different goals, from mass host-triage to a miner planting its persistence key:
+The SSH noise was not a crowd — it was clusters with different goals, from mass host-triage to a miner planting its persistence key:
 
 ```mermaid
 pie showData
-    title SSH sessions by attacker cluster — Day 1
-    "screener — Go uname triage" : 1200
-    "scanners / other" : 153
-    "mdrfckr miner — key plant" : 63
-    "dictionary + shell verify" : 48
-    "loader / exec-test" : 43
-    "tunnel / proxy hunter" : 15
+    title SSH sessions by attacker cluster — days 1-3
+    "xsec beacon family" : 2872
+    "screener — uname triage" : 2636
+    "scanners / other" : 134
+    "tunnel / proxy hunter" : 35
+    "mdrfckr miner — key plant" : 18
 ```
 
-*The miner's key has been unchanged since 2018.*
+*The largest cluster is a botnet that re-checks its victims with a beacon; the miner's key has been unchanged since 2018.*
 
 The volume arrived in waves, not as a tide — launch burst, botnet sweeps, then a credential-stuffing run:
 
@@ -82,20 +81,30 @@ The volume arrived in waves, not as a tide — launch burst, botnet sweeps, then
 
 *Static render — mermaid has no time-series charts, so the timeline stays as an image (Chart.js interactive alternative exists if we want it live).*
 
-## What happens next
+Most of those web requests were not for the store at all. Break them down by target and the picture is lopsided in a way that makes the bet look very safe:
 
-The store opens. It waits thirty days. I expect the commodity noise — thousands of attempts, default credentials, the usual uname-spam — and I expect it to look indistinguishable from what any random public IP receives. That is claim 1, confirmed or denied with my own controlled lure instead of industry proxies.
+```mermaid
+pie showData
+    title Web requests by target — days 1-3
+    "XML-RPC (automation endpoint)" : 18625
+    "storefront pages + assets" : 7217
+    "other / misc" : 1629
+    "wp-login (admin login)" : 839
+    "wp-admin (dashboard)" : 273
+    "REST API" : 246
+    "author enumeration" : 157
+```
 
-And if, in the tail of those thirty days, one session shows up that read the store first — browsed the catalog, tried a password that fits the business, ran the check for whether I am lying about being a shop — then the tail hypothesis has its first datapoint. That is what "if we are lucky" means in this experiment, and it is the part I am building the trap for.
+Almost two-thirds of everything that hit the box went to XML-RPC — the automation endpoint WordPress exposes for tooling and pingbacks. Not the catalog, not the products, not the boutique. The admin login, the dashboard, and the API took most of the rest. The part of the box that looks like a shop drew barely a quarter of the noise.
 
-## Still to do
+## Three days in
 
-The build is not finished. What remains before the store truly opens:
+The run is live — day three of thirty. The commodity noise arrived on schedule: waves of SSH triage, XML-RPC floods from infrastructure that rotates every pass, login stuffing that pauses and resumes like a tide. The machines change; the tricks do not.
 
-- **Fill the database with fake customers.** Faker-style generated customers, orders, and reviews — enough to read as a real shop's history, so anyone who enumerates or dumps it reveals their tooling instead of stealing anyone.
-- **Cowrie on port 22.** A fake SSH shell to catch the credential brute-force that every public IP receives.
-- **Egress lockdown.** The box should not be able to reach outward — every attempt gets logged, none succeeds.
-- **A real domain.** The dynamic-DNS placeholder disappears once the card works; a real boutique lives on a real domain.
-- **Thirty days of watching.**
+And the interesting tail? Still no datapoint. Nobody has read the store first — no catalog-aware password, no staged recon, no session that behaved like it knew what the shop was for. Every credential tried against the login has been a variation of the domain name or a leaked-list username. The honest expectation is holding: thirty days of data, probably zero "smart" attackers. That null result is the finding.
+
+## Built, and running
+
+Everything on the launch checklist is done — the fake customers sit in the database, the fake SSH shell answers on port 22, outbound traffic is blocked and logged, and the store lives on its proper boutique domain. What remains is the slowest step: the rest of the thirty days, then the writeup with the full numbers.
 
 *Draft note: THE single honeypot post — one start-to-finish story. NON-technical (keep MySQL/PHP-FPM/Caddy/Falco/auditd internals OUT unless Gabriel changes his mind). The pre-registered protocol + hypotheses + metrics live in the honeypot-ops skill (`references/honeypot-protocol.md`), not in this post. Hold until the 30-day run completes.*
