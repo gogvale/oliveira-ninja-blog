@@ -57,29 +57,31 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 
 <!-- DRAFT NOTE (Gabriel, 2026-09-07): charts in this section are native mermaid pies (theme-rendered, no CDN — Chirpy renders ```mermaid blocks automatically). A full interactive Chart.js version of the same data was built and validated (sources: assets/img/posts/chart1..4 .png; the .html sources were moved out of the repo 2026-09-08 because their local file:// lib refs broke the CI HTML-Proofer — backup at ~/honeypot-evidence/chart-html-backup/, libs in ~/.hermes/scripts/honeypot-charts, regenerable). BEFORE publishing, compare mermaid vs Chart.js rendering on the live post and pick the final one; that choice also affects the LinkedIn card if we screenshot a ChartJS chart. Replace the Day-1 preview numbers with the full 30-day run at publish. -->
 
+<!-- DRAFT NOTE (Gabriel, 2026-09-09): IDEA — abrir el desglose con un "cast de atacantes" (perfil breve de los actores ya identificados, NO exhaustivo), al estilo de la presentacion de personajes de una pelicula de heist: cada uno con nombre-vivo + que hace + su firma. Material disponible en references/attacker-profiles.md (P1-P8): p.ej. "The Screener" (corre uname contra todo, 8,140 sesiones), "The Miner" (planta su key — sin cambios desde 2018), "The Tunnel Hunters" (proban usar la caja como salto hacia su relay), "The XML-RPC Flood" (ola tras ola desde VPS frescos), "The Login Stuffer" (gotea contra el login, se esconde tras Cloudflare), "The Backdoor Artist" (hex-ofuscado, verifica shell real, planta un sshd falso). El cast se presenta ANTES del desglose numerico para darle cara al ruido. -->
+
 ## The noise, in numbers
 
-Three days in, the commodity noise has a shape: 5,695 SSH connections and 28,986 web requests from 508 IPs. Mid-run preview numbers — the full 30-day run replaces them at publish.
+Three days in, the commodity noise has a shape: 13,130 SSH connections and 28,986 web requests from 508 IPs. Mid-run preview numbers — the full 30-day run replaces them at publish.
 
 The SSH noise was not a crowd — it was clusters with different goals, from mass host-triage to a miner planting its persistence key:
 
 ```mermaid
 pie showData
     title SSH sessions by attacker cluster — days 1-3
-    "xsec beacon family" : 2872
-    "screener — uname triage" : 2636
-    "scanners / other" : 134
-    "tunnel / proxy hunter" : 35
-    "mdrfckr miner — key plant" : 18
+    "screener — uname triage" : 8140
+    "xsec beacon family" : 3927
+    "scanners / other" : 800
+    "mdrfckr miner — key plant" : 134
+    "tunnel / proxy hunter" : 129
 ```
 
-*The largest cluster is a botnet that re-checks its victims with a beacon; the miner's key has been unchanged since 2018.*
+*The screener triages every host it finds; the miner's key has been unchanged since 2018.*
 
 The volume arrived in waves, not as a tide — launch burst, botnet sweeps, then a credential-stuffing run:
 
-![Web and SSH traffic, hour by hour (UTC) — first 19 hours after launch](/assets/img/posts/chart1-volume-timeline.png)
+![Web and SSH traffic, hour by hour (UTC) — first three days](/assets/img/posts/chart1-volume-timeline.png)
 
-*Static render — mermaid has no time-series charts, so the timeline stays as an image (Chart.js interactive alternative exists if we want it live).*
+*Static render of the first three days (double axis: web left, SSH right) — mermaid has no time-series charts, so the timeline stays as an image (Chart.js interactive alternative exists if we want it live).*
 
 Most of those web requests were not for the store at all. Break them down by target and the picture is lopsided in a way that makes the bet look very safe:
 
