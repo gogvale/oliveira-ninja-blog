@@ -19,7 +19,7 @@ PROVENANCE (strip at publish):
 
 > **TL;DR**
 > - Security said no to a client's MCP server — no policy for it yet. The call was fair; an unreviewed channel into our context is a real risk.
-> - The no had no door, and for a moment the team considered running their own AI for the demo. That reflex is how shadow AI is born.
+> - The no had no door, and for a moment we considered running our own AI for the demo. That reflex is how shadow AI is born.
 > - Every essay about shadow AI ends at "give employees secure alternatives." Nobody says what the alternative is.
 > - It is the model that can not leave: offline, zero egress, no IP story, good enough. A permissive policy for local-model PoCs is the door.
 
@@ -53,7 +53,7 @@ Shadow IT was born this way: rules created for security, blocking the intentions
 
 The shadow AI literature stops at the same place every time: do not ban, give employees secure tools they actually want to use. Fair. Now name the tool. Nobody does, because the honest answer is uncomfortable.
 
-A cloud tool needs the slow review — data flows, vendor audit, contractual liability. And the market does not wait for it: capability climbs every release while the policy does not, so even an approved cloud tool arrives already one release behind.
+A cloud tool needs the slow review — data flows, vendor audit, contractual liability. And the market does not wait: capability climbs every release while the policy sits still, so even an approved cloud tool arrives already one release behind.
 
 The only category that clears review without a data-flow analysis is the one with no data flow.
 
@@ -76,7 +76,7 @@ A cloud tool is an approval. An offline model is a category you can approve once
 
 The policy writes itself: **local-model PoCs are permitted by default**, with a security checklist — egress defined at the operating-system level, tool access constrained (no shell the model can invoke with your credentials), no secrets in context, and a data class it may see.
 
-Cloud tools keep the slow review, because they earn it. Offline tools get the fast lane, because physics earned it: the data can not leave unless someone makes it.
+Cloud tools keep the slow review, because they earn it. Offline tools get the fast lane, because physics earned it: the data does not leave unless someone makes it.
 
 ## The honest edges
 
