@@ -1,19 +1,13 @@
 ---
 title: "The Second Half of \"Move Fast and Break Things\""
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-09 06:00:00 -0600
 categories: [AI]
 tags: [ai-lab, opinion, devops]
 description: "Move fast and break things only worked because the person breaking understood what they broke. AI kept the speed and removed the understanding."
-draft: true
+image: /assets/img/posts/2026-09-09-move-fast-second-half.png
 ---
 
-<!--
-PROVENANCE (strip at publish):
-- Idea + stance (Gabriel, 2026-09-09): the mantra had an unspoken second half — move fast only works while fixing stays cheap, and the breaker understands the break. Facebook retired it in 2014 (scale); AI retired it for everyone (comprehension).
-- Research: ~/mfab/investigacion_move_fast.md + delegation summaries 2026-09-09 (quotes verbatim verified: Zuck 2009/2012/2014, Bosworth 2020, Osmani, Charity Majors, DORA, GitClear, arXiv burnout study, LeadDev).
-- Never name the employer. Personal beats stay generic. No invented scenes.
-- Seed: idea-level only.
--->
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-09-move-fast-second-half.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 > - "Move fast and break things" had a second half nobody said out loud: it only works while the person breaking understands what they broke.
@@ -21,7 +15,7 @@ PROVENANCE (strip at publish):
 > - AI kept the speed and removed the understanding. The breaker is now a generator with no memory of the break.
 > - The bill arrives as comprehension debt, review bottlenecks, and burnout.
 
-In 2009, Mark Zuckerberg called it his prime directive: *"Unless you are breaking stuff, you are not moving fast enough."*
+In 2009, Mark Zuckerberg called it [his prime directive](https://en.wikipedia.org/wiki/Move_fast_and_break_things): *"Unless you are breaking stuff, you are not moving fast enough."*
 
 The mantra was aimed at bureaucracy, and before it, software moved through waterfalls of approvals — sign-offs, meetings, confirmations. Against that, the hacker way was a promise: build it, ship it, ask forgiveness later. Asking what people wanted never got a straight answer; shipping and breaking did.
 
@@ -31,7 +25,7 @@ The people who coined the mantra killed it themselves.
 
 ## The second half
 
-In 2014, Facebook changed the slogan to "move fast with stable infrastructure." Zuckerberg, at the developer conference, explained why:
+In 2014, Facebook [changed the slogan](https://www.businessinsider.com/mark-zuckerberg-on-facebooks-new-motto-2014-5) to "move fast with stable infrastructure." Zuckerberg, at the developer conference, explained why:
 
 > "When you build something that you don't have to fix 10 times, you can move forward on top of what you've built."
 
@@ -43,7 +37,7 @@ The clause was always there. It just took five years and a public infrastructure
 
 The second half of the deal was that the breaker understood the break. That is the part that does not survive contact with AI.
 
-Google's Addy Osmani named the mechanism: **comprehension debt** — the growing gap between how much code exists in a system and how much of it any human genuinely understands. His version of the flip, in one sentence:
+Google's [Addy Osmani](https://addyosmani.com/blog/comprehension-debt/) named the mechanism: **comprehension debt** — the growing gap between how much code exists in a system and how much of it any human genuinely understands. His version of the flip, in one sentence:
 
 > "A junior engineer can now generate code faster than a senior engineer can critically audit it."
 
@@ -75,4 +69,4 @@ Facebook learned the clause at scale and retired the slogan in 2014. The rest of
 
 > "Move fast and break things only works if the person breaking can fix what they broke. AI removed the fixer. We kept the speed."
 
-The fix is not to slow down. It is to put the understanding back in the loop: review with real attention, cap the batch sizes, make the generator explain itself. The second half of the deal is the part worth keeping — and it is the part nobody automated.
+Slowing down would help — I think we should — but it is not the solution. The solution is to put the understanding back in the loop: review with real attention, cap the batch sizes, make the generator explain itself. The second half of the deal is the part worth keeping — and it is the part nobody automated.

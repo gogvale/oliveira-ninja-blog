@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+  <rect y="560" width="1200" height="70" fill="#111111"/>
+  <text x="80" y="80" font-family="DejaVu Sans" font-size="22" font-weight="bold" fill="#a9ff5b" letter-spacing="6">MOVE FAST AND BREAK THINGS</text>
+  <text x="80" y="300" font-family="DejaVu Sans" font-size="96" font-weight="bold" fill="#f5f5f5">had a</text>
+  <text x="80" y="400" font-family="DejaVu Sans" font-size="96" font-weight="bold" fill="#f5f5f5">second half.</text>
+  <text x="80" y="485" font-family="DejaVu Sans" font-size="30" fill="#b8b8b8">Breaking only worked because the breaker understood the break.</text>
+  <text x="80" y="530" font-family="DejaVu Sans" font-size="30" fill="#a9ff5b">AI kept the speed. It removed the understanding.</text>
+  <text x="80" y="610" font-family="DejaVu Sans" font-size="24" fill="#666666">blog.oliveira.ninja</text>
+</svg>
