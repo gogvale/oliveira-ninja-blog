@@ -7,13 +7,13 @@ description: "Building a fake WordPress boutique to test a simple bet: bots atta
 draft: true
 ---
 
-<!-- DRAFT-ONLY NOTES (delete before publish): publish AFTER the 30-day run + analysis. Never name the live lure host/IP/domain while the experiment runs — refer to it generically ("a fresh boutique domain"). Project post: publish + banner only (no audio, no LinkedIn). -->
+<!-- DRAFT-ONLY NOTES (delete before publish): publish AFTER the run completes. Never name the live lure host/IP/domain while the experiment runs — refer to it generically ("a fresh boutique domain"). Project post: publish + banner only (no audio, no LinkedIn). NUMBERS CURRENT AS OF 2026-09-11 (Day 5 of the run); the final write-up replaces every count below with the full-run totals. -->
 
 > **TL;DR**
 > - The bet: opportunistic attack bots are blind to who the target is. They attack services, not storefronts — a fake boutique domain should get the same pre-auth traffic as any public IP.
 > - The archetype: the believable 2026 victim runs a current WordPress core with neglected plugins and a weak admin password. Not a 2019 core. The guides are wrong.
-> - What I built: a decoy home-textiles store (real WordPress, real WooCommerce, ten products) on a disposable droplet, wrapped in watchers, with one deliberate vulnerability as the bait.
-> - Honest expectation: thirty days of data, probably zero "smart" attackers, and that null result is itself the finding.
+> - What I built: a decoy home-textiles store (real WordPress, real WooCommerce, ten products) on a disposable droplet, wrapped in watchers, with one deliberate weak point as the bait.
+> - Honest expectation: a month of data, probably zero "smart" attackers, and that null result is itself the finding.
 
 ## Eleven thousand holes, six in the core
 
@@ -29,7 +29,7 @@ That last sentence is doing a lot of work, so let me separate the claims:
 
 1. Bots are **lure-blind**: they hit login pages and plugin paths on every IP, regardless of what the site sells, what it looks like, or what domain it wears. Credential-stuffing runs at the scale of "41% of successful logins use leaked passwords, 95% of those attempts come from bots" ([Cloudflare](https://blog.cloudflare.com/password-reuse-rampant-half-user-logins-compromised/)) — that is not targeted behavior. Verizon's own SMB section calls the actors "opportunistic wide nets," not shoppers ([DBIR 2026](https://www.verizon.com/business/resources/Td15/reports/2026-dbir-data-breach-investigations-report.pdf)).
 
-2. The interesting tail — context-aware credentials, staged recon, AI-era behavior — if it exists at all, it is rare. The prior is low. Zero targeted sessions in thirty days would not surprise me; it would confirm claim 1.
+2. The interesting tail — context-aware credentials, staged recon, AI-era behavior — if it exists at all, it is rare. The prior is low. Zero targeted sessions in a month would not surprise me; it would confirm claim 1.
 
 Here is the honest part: **no controlled 2024-2026 experiment varies a WordPress lure's version or content and measures what the attackers do.** Industry data is consistent with lure-blindness; nobody has run the A/B. Which means the interesting experiment is also the boring one to run: point one fresh, zero-reputation boutique domain at the internet and watch.
 
@@ -55,58 +55,74 @@ The storefront is the bait; it is not the honeypot. The honeypot is the environm
 - Outbound connections are blocked — an attacker who gets in can attempt downloads and persistence, and every attempt is recorded, but the box cannot be used to attack anyone else.
 - Evidence ships off the box daily. The box is disposable; the data is not.
 
-<!-- DRAFT NOTE (Gabriel, 2026-09-07): charts in this section are native mermaid pies (theme-rendered, no CDN — Chirpy renders ```mermaid blocks automatically). A full interactive Chart.js version of the same data was built and validated (sources: assets/img/posts/chart1..4 .png; the .html sources were moved out of the repo 2026-09-08 because their local file:// lib refs broke the CI HTML-Proofer — backup at ~/honeypot-evidence/chart-html-backup/, libs in ~/.hermes/scripts/honeypot-charts, regenerable). BEFORE publishing, compare mermaid vs Chart.js rendering on the live post and pick the final one; that choice also affects the LinkedIn card if we screenshot a ChartJS chart. Replace the Day-1 preview numbers with the full 30-day run at publish. -->
+<!-- DRAFT NOTE (Gabriel, 2026-09-07): charts in the next section are native mermaid pies (theme-rendered, no CDN — Chirpy renders ```mermaid blocks automatically). A full interactive Chart.js version of the same data exists alongside (sources: assets/img/posts/chart1..4 .png + .html, CDN refs, validated in headless Chromium 2026-09-11). BEFORE publishing, compare mermaid vs Chart.js rendering on the live post and pick the final one; that choice also affects the LinkedIn card if we screenshot a ChartJS chart. Numbers refreshed 2026-09-11 (Day 5); the final run replaces them at publish. -->
 
-<!-- DRAFT NOTE (Gabriel, 2026-09-09): IDEA — abrir el desglose con un "cast de atacantes" (perfil breve de los actores ya identificados, NO exhaustivo), al estilo de la presentacion de personajes de una pelicula de heist: cada uno con nombre-vivo + que hace + su firma. Material disponible en references/attacker-profiles.md (P1-P8): p.ej. "The Screener" (corre uname contra todo, 8,140 sesiones), "The Miner" (planta su key — sin cambios desde 2018), "The Tunnel Hunters" (proban usar la caja como salto hacia su relay), "The XML-RPC Flood" (ola tras ola desde VPS frescos), "The Login Stuffer" (gotea contra el login, se esconde tras Cloudflare), "The Backdoor Artist" (hex-ofuscado, verifica shell real, planta un sshd falso). El cast se presenta ANTES del desglose numerico para darle cara al ruido. -->
+## The cast
+
+Somewhere in the noise, faces appear. Not because anyone targeted the shop — nobody did — but because the machines attacking it carry habits, and after five days the habits sort into characters.
+
+- **The Screener.** Runs one command — `uname`, the Linux equivalent of "what are you?" — against every host it can reach, then leaves. 11,544 of the connections on port 22 were this machine taking inventory. It is the census taker of the internet.
+- **The Beacon.** Logs in and types `echo xsec` — a heartbeat, checking that the shell works and phoning home. 7,090 visits. It never looked at the shop.
+- **The Miner.** The most interesting one, because it is a real, documented criminal operation. It plants an SSH key so it can come back, and leaves a CPU check behind. Its key has not changed since 2018. Eight years, same trick, no arrests.
+- **The Tunnel Hunters.** They want neither data nor money. They want the box as a relay — a hop that hides where their traffic really comes from. That is how an innocent server becomes an accessory.
+- **The XML-RPC Flood.** Wave after wave against WordPress's automation endpoint, each burst from a freshly rented server, gone before the invoice arrives.
+- **The Login Stuffer.** Drips usernames against the login page for hours, rotating browsers to look human, sitting behind a proxy so the real origin never shows. It tried over a thousand times and never read a single product page.
+- **The Backdoor Artist.** The only one with craft: it checks whether the shell it landed in is real before installing a fake one of its own. On a real host that would matter. Here, it verified a shell that does not exist.
+- **The Shopper.** The one I cannot fully explain. It browsed the catalog like a customer — products, cart, checkout, even "forgot my password." Every other visitor hammered the plumbing; this one behaved like it wanted to buy something. Best guess: an automated agent pacing itself like a human. I cannot prove it yet. It is the closest anything came to noticing what the shop was for.
+
+Nobody read the store. Every credential tried against the login was built from the domain name or lifted from a leaked list — never from the boutique's own story. The interesting tail stayed empty.
 
 ## The noise, in numbers
 
-Three days in, the commodity noise has a shape: 13,130 SSH connections and 28,986 web requests from 508 IPs. Mid-run preview numbers — the full 30-day run replaces them at publish.
+Five days in, the commodity noise has a shape: 23,561 SSH connections and 45,023 web requests from 711 IPs. Mid-run preview numbers — the full run replaces them at publish.
 
 The SSH noise was not a crowd — it was clusters with different goals, from mass host-triage to a miner planting its persistence key:
 
 ```mermaid
 pie showData
-    title SSH sessions by attacker cluster — days 1-3
-    "screener — uname triage" : 8140
-    "xsec beacon family" : 3927
-    "scanners / other" : 800
-    "mdrfckr miner — key plant" : 134
-    "tunnel / proxy hunter" : 129
+    title SSH sessions by attacker cluster — first five days
+    "screener — uname triage" : 11544
+    "heartbeat beacon family" : 7090
+    "scanners / other" : 3963
+    "tunnel / proxy hunter" : 453
+    "payload dropper" : 426
+    "mdrfckr miner — key plant" : 85
 ```
 
 *The screener triages every host it finds; the miner's key has been unchanged since 2018.*
 
-The volume arrived in waves, not as a tide — launch burst, botnet sweeps, then a credential-stuffing run:
+The volume arrived in waves, not as a tide — a launch burst, botnet sweeps, then a credential-stuffing run that never quite stopped:
 
-![Web and SSH traffic, hour by hour (UTC) — first three days](/assets/img/posts/chart1-volume-timeline.png)
+![Web and SSH traffic, hour by hour (UTC) — first five days](/assets/img/posts/chart1-volume-timeline.png)
 
-*Static render of the first three days (double axis: web left, SSH right) — mermaid has no time-series charts, so the timeline stays as an image (Chart.js interactive alternative exists if we want it live).*
+*Static render of the first five days (double axis: web left, SSH right) — mermaid has no time-series charts, so the timeline stays as an image (a Chart.js interactive version exists if we want it live).*
 
 Most of those web requests were not for the store at all. Break them down by target and the picture is lopsided in a way that makes the bet look very safe:
 
 ```mermaid
 pie showData
-    title Web requests by target — days 1-3
-    "XML-RPC (automation endpoint)" : 18625
-    "storefront pages + assets" : 7217
-    "other / misc" : 1629
-    "wp-login (admin login)" : 839
-    "wp-admin (dashboard)" : 273
-    "REST API" : 246
-    "author enumeration" : 157
+    title Web requests by target — first five days
+    "XML-RPC (automation endpoint)" : 32826
+    "storefront pages + assets" : 6448
+    "other / misc" : 3559
+    "wp-login (admin login)" : 1482
+    "wp-admin (dashboard)" : 391
+    "REST API" : 255
+    "author enumeration" : 62
 ```
 
-Almost two-thirds of everything that hit the box went to XML-RPC — the automation endpoint WordPress exposes for tooling and pingbacks. Not the catalog, not the products, not the boutique. The admin login, the dashboard, and the API took most of the rest. The part of the box that looks like a shop drew barely a quarter of the noise.
+Nearly three-quarters of everything that hit the box went to XML-RPC — the automation endpoint WordPress exposes for tooling and pingbacks. Not the catalog, not the products, not the boutique. The admin login, the dashboard, and the API took most of the rest. The part of the box that looks like a shop drew around one in seven requests.
 
-## Three days in
+## Five days in
 
-The run is live — day three of thirty. The commodity noise arrived on schedule: waves of SSH triage, XML-RPC floods from infrastructure that rotates every pass, login stuffing that pauses and resumes like a tide. The machines change; the tricks do not.
+The run is live — day five. The commodity noise arrived on schedule: waves of SSH triage, XML-RPC floods from infrastructure that rotates every pass, login stuffing that pauses and resumes like a tide. The machines change; the tricks do not.
 
-And the interesting tail? Still no datapoint. Nobody has read the store first — no catalog-aware password, no staged recon, no session that behaved like it knew what the shop was for. Every credential tried against the login has been a variation of the domain name or a leaked-list username. The honest expectation is holding: thirty days of data, probably zero "smart" attackers. That null result is the finding.
+And the interesting tail? Still no datapoint. Over thirteen hundred credentials have been tried against the login. The most-tried username is the one WordPress leaks by default (1,057 attempts); the owner's name follows (195). The account I deliberately made guessable — a plain `admin` with a password derived from the store's own About page — was tried **ten times in five days, and never with the right password.** The closest anyone got was the right idea, the wrong casing: a password in the brand-and-year family, lowercase, no `!`. Three keystrokes short.
+
+The honest expectation is holding: a month of data, probably zero "smart" attackers. That null result is the finding.
 
 ## Built, and running
 
-Everything on the launch checklist is done — the fake customers sit in the database, the fake SSH shell answers on port 22, outbound traffic is blocked and logged, and the store lives on its proper boutique domain. What remains is the slowest step: the rest of the thirty days, then the writeup with the full numbers.
+Everything on the launch checklist is done — the fake customers sit in the database, the fake SSH shell answers on port 22, outbound traffic is blocked and logged, and the store lives on its proper boutique domain. What remains is the slowest step: the rest of the run, then the writeup with the full numbers.
 
-*Draft note: THE single honeypot post — one start-to-finish story. NON-technical (keep MySQL/PHP-FPM/Caddy/Falco/auditd internals OUT unless Gabriel changes his mind). The pre-registered protocol + hypotheses + metrics live in the honeypot-ops skill (`references/honeypot-protocol.md`), not in this post. Hold until the 30-day run completes.*
+*Draft note: THE single honeypot post — one start-to-finish story. NON-technical (keep MySQL/PHP-FPM/Caddy/Falco/auditd internals OUT unless Gabriel changes his mind). The pre-registered protocol + hypotheses + metrics live in the honeypot-ops skill (`references/honeypot-protocol.md`), not in this post. Hold until the run completes.*

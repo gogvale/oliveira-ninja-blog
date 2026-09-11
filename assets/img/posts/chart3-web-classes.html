@@ -5,13 +5,12 @@
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
   <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">WHAT THE WEB ATTACKERS DID</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Requests by dominant class — ~3,155 organic</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Requests by target — 45,023 total</div>
 </div>
-<canvas id="c" width="1200" height="432"></canvas>
-<script>
+<canvas id="c" width="1200" height="432"></canvas><script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'doughnut',data:{labels:["storefront / upload recon \u2014 1,900 (60%)", "crawlers / benign (CT, oembed) \u2014 750 (24%)", "wp-login credential stuffer \u2014 254 (8%)", "xmlrpc brute force \u2014 201 (6%)", "secret-file scan (.env) \u2014 50 (2%)"],datasets:[{data:[1900, 750, 254, 201, 50],backgroundColor:["#a9ff5b", "#5a5a5a", "#ff7878", "#ffc857", "#7dd3fc"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=7?p.toFixed(0)+'%':'';}}}}};
+const cfg = {type:'doughnut',data:{labels:["XML-RPC (automation endpoint) \u2014 32,826 (73%)", "storefront pages + assets \u2014 6,448 (14%)", "other / misc \u2014 3,559 (8%)", "wp-login (admin login) \u2014 1,482 (3%)", "wp-admin (dashboard) \u2014 391 (1%)", "REST API \u2014 255 (1%)", "author enumeration \u2014 62 (0%)"],datasets:[{data:[32826, 6448, 3559, 1482, 391, 255, 62],backgroundColor:["#ffc857", "#a9ff5b", "#8c8c8c", "#ff7878", "#7dd3fc", "#5a5a5a", "#b388ff"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=6?p.toFixed(0)+'%':'';}}}}};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>

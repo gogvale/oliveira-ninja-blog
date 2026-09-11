@@ -5,13 +5,12 @@
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
   <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">WHO HAMMERED PORT 22</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">SSH sessions by attacker cluster — 1,523 conns</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">SSH sessions by attacker cluster — 23,561 conns</div>
 </div>
-<canvas id="c" width="1200" height="432"></canvas>
-<script>
+<canvas id="c" width="1200" height="432"></canvas><script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'doughnut',data:{labels:["screener \u2014 Go uname triage \u2014 1,200 (79%)", "scanners / other \u2014 153 (10%)", "mdrfckr miner \u2014 key plant \u2014 63 (4%)", "dictionary + shell verify \u2014 48 (3%)", "loader / exec-test \u2014 43 (3%)", "tunnel / proxy hunter \u2014 15 (1%)"],datasets:[{data:[1200, 153, 63, 48, 43, 15],backgroundColor:["#a9ff5b", "#5a5a5a", "#ffc857", "#7dd3fc", "#ff7878", "#8c8c8c"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=7?p.toFixed(0)+'%':'';}}}}};
+const cfg = {type:'doughnut',data:{labels:["screener \u2014 Go uname triage \u2014 11,544 (49%)", "xsec heartbeat beacon \u2014 7,090 (30%)", "scanners / other \u2014 3,963 (17%)", "tunnel / proxy hunter \u2014 453 (2%)", "loader / payload drop \u2014 426 (2%)", "mdrfckr miner \u2014 key plant \u2014 85 (0%)"],datasets:[{data:[11544, 7090, 3963, 453, 426, 85],backgroundColor:["#a9ff5b", "#5a5a5a", "#8c8c8c", "#7dd3fc", "#ff7878", "#ffc857"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=6?p.toFixed(0)+'%':'';}}}}};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>

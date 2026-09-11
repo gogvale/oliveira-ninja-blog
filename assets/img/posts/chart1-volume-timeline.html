@@ -4,14 +4,26 @@
 <style>body{margin:0;background:#0d0d0d}canvas{display:block}</style></head>
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
-  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">THE VOLUME WAVES · UTC HOURS</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Web and SSH traffic, hour by hour</div>
+  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">THE VOLUME WAVES · 101 HOURS</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Web and SSH traffic, hour by hour — first five days</div>
 </div>
 <canvas id="c" width="1200" height="432"></canvas>
 <script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'line',data:{labels:["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"],datasets:[{label:'web req/hr',data:[52, 658, 189, 146, 137, 3, 51, 100, 228, 44, 508, 161, 103, 168, 87, 263, 186, 97, 55],borderColor:'#7dd3fc',backgroundColor:'rgba(125,211,252,0.12)',fill:true,tension:0.25,pointRadius:3,pointBackgroundColor:'#7dd3fc',borderWidth:3},{label:'ssh conns/hr',data:[30, 27, 13, 17, 14, 184, 378, 208, 17, 133, 394, 25, 11, 8, 17, 17, 18, 11, 7],borderColor:'#a9ff5b',backgroundColor:'rgba(169,255,91,0.10)',fill:true,tension:0.25,pointRadius:3,pointBackgroundColor:'#a9ff5b',borderWidth:3}]},options:{layout:{padding:{top:6,right:30}},plugins:{legend:{position:'top',align:'end',labels:{boxWidth:18,font:{size:15}}}},scales:{x:{title:{display:true,text:'hour (UTC) — launch 23:44 previous day',color:'#8c8c8c',font:{size:14}}},y:{min:0,max:700,ticks:{stepSize:100}}}},plugins:[{id:'events',afterDraw(chart){const y=chart.scales.y,x=chart.scales.x,ctx=chart.ctx;const note=(i,txt,col,ds)=>{const v=chart.data.datasets[ds].data[i];ctx.save();ctx.fillStyle=col;ctx.font='bold 15px DejaVu Sans';ctx.textAlign='center';ctx.fillText(txt,x.getPixelForValue(i),y.getPixelForValue(v)-14);ctx.restore();};note(1,'launch burst','#7dd3fc',0);note(6,'Go sweep','#a9ff5b',1);note(10,'xmlrpc attack','#ffc857',0);note(15,'stuffer','#ff7878',0);}}]};
+const cfg = {type:'line',data:{labels:["7\u00b700h", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "8\u00b700h", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "9\u00b700h", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "10\u00b700h", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "11\u00b700h", "", "", "", ""],datasets:[
+{label:'web requests/hr',data:[0, 50, 658, 189, 146, 137, 3, 51, 100, 228, 44, 508, 161, 103, 168, 87, 263, 186, 97, 56, 1067, 54, 86, 37, 9, 17, 54, 167, 8171, 509, 33, 2181, 467, 5904, 1536, 45, 57, 116, 68, 47, 26, 63, 105, 13, 15, 75, 21, 1052, 108, 353, 119, 35, 94, 64, 251, 981, 217, 14, 151, 84, 124, 2634, 6, 48, 1045, 43, 89, 115, 45, 243, 7, 7, 1122, 94, 113, 76, 127, 222, 181, 339, 901, 12, 659, 103, 87, 6186, 879, 58, 17, 24, 54, 8, 1089, 174, 17, 88, 50, 43, 33, 154, 6],borderColor:'#7dd3fc',backgroundColor:'rgba(125,211,252,0.12)',fill:true,tension:0.25,pointRadius:0,borderWidth:2},
+{label:'SSH connections/hr',data:[0, 30, 27, 13, 17, 14, 184, 378, 208, 17, 133, 394, 25, 11, 8, 17, 17, 18, 11, 7, 598, 211, 18, 8, 19, 47, 21, 79, 621, 73, 22, 24, 1148, 411, 10, 17, 33, 18, 382, 473, 476, 32, 15, 168, 272, 247, 211, 218, 232, 507, 488, 253, 255, 280, 319, 309, 764, 358, 934, 442, 687, 267, 570, 488, 281, 261, 202, 172, 179, 402, 190, 308, 590, 249, 188, 188, 158, 158, 142, 508, 154, 88, 139, 850, 128, 98, 91, 328, 379, 478, 752, 128, 116, 117, 98, 60, 44, 62, 355, 295, 71],borderColor:'#a9ff5b',backgroundColor:'rgba(169,255,91,0.10)',fill:true,tension:0.25,pointRadius:0,borderWidth:2,yAxisID:'y1'}]},
+options:{layout:{padding:{top:6,right:40}},
+plugins:{legend:{position:'top',align:'end',labels:{boxWidth:18,font:{size:15}}}},
+scales:{x:{ticks:{autoSkip:false,maxRotation:0,font:{size:13}},grid:{color:'rgba(255,255,255,0.05)'}},
+y:{position:'left',min:0,max:9000,ticks:{stepSize:1000,color:'#7dd3fc'},title:{display:true,text:'web req/hr',color:'#7dd3fc'}},
+y1:{position:'right',min:0,max:1200,ticks:{stepSize:200,color:'#a9ff5b'},grid:{drawOnChartArea:false},title:{display:true,text:'SSH conns/hr',color:'#a9ff5b'}}}},
+plugins:[{id:'events',afterDraw(chart){const ctx=chart.ctx,xs=chart.scales.x;
+const note=(i,txt,col,ax)=>{const sc=chart.scales[ax];const v=ax==='y1'?chart.data.datasets[1].data[i]:chart.data.datasets[0].data[i];
+ctx.save();ctx.fillStyle=col;ctx.font='bold 14px DejaVu Sans';ctx.textAlign='center';
+ctx.fillText(txt,xs.getPixelForValue(i),sc.getPixelForValue(v)-12);ctx.restore();};
+note(2,'launch burst','#7dd3fc','y');note(28,'xmlrpc flood','#ffc857','y');note(32,'SSH sweep','#a9ff5b','y1');}}]};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>

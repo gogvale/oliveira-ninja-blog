@@ -4,14 +4,13 @@
 <style>body{margin:0;background:#0d0d0d}canvas{display:block}</style></head>
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
-  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">THE PASSWORDS THEY GUESSED</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Top usernames tried on SSH</div>
+  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">THE USERNAMES THEY GUESSED</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Top logins tried on SSH</div>
 </div>
-<canvas id="c" width="1200" height="432"></canvas>
-<script>
+<canvas id="c" width="1200" height="432"></canvas><script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'doughnut',data:{labels:["root \u2014 1,087 (90%)", "admin \u2014 69 (6%)", "345gs5662d34 \u2014 random string \u2014 20 (2%)", "centos \u2014 17 (1%)", "nobody \u2014 13 (1%)"],datasets:[{data:[1087, 69, 20, 17, 13],backgroundColor:["#ff7878", "#ffc857", "#7dd3fc", "#a9ff5b", "#8c8c8c"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=7?p.toFixed(0)+'%':'';}}}}};
+const cfg = {type:'doughnut',data:{labels:["root \u2014 12,066 (57%)", "ubuntu \u2014 1,655 (8%)", "admin \u2014 1,035 (5%)", "postgres \u2014 281 (1%)", "barsha \u2014 251 (1%)", "all other usernames \u2014 5,942 (28%)"],datasets:[{data:[12066, 1655, 1035, 281, 251, 5942],backgroundColor:["#ff7878", "#ffc857", "#7dd3fc", "#b388ff", "#a9ff5b", "#8c8c8c"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]},options:{cutout:'56%',layout:{padding:{top:8,right:8,bottom:8,left:8}},plugins:{legend:{position:'top',align:'start',labels:{boxWidth:13,padding:8,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:13,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=5?p.toFixed(0)+'%':'';}}}}};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>
