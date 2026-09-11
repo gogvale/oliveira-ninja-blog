@@ -1,12 +1,13 @@
-<!-- PROVENANCE (strip at publish): seeded 2026-09-11 from the live Hermes cost audit (~/hermes-cost-audit.md) at Gabriel's request. All third-party claims re-verified against primary docs the same day. -->
 ---
 title: "You Are Paying for Prompts You Never Wrote"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-11 15:15:00 -0600
 categories: [ai-lab]
 tags: [ai-lab, tokens, prompt-engineering, cost, hermes, deepseek]
 description: "Every AI turn re-sends the whole conversation plus a system prompt you never wrote. That overhead is why the old prompt habits still save the most money."
-draft: true
+image: /assets/img/posts/2026-09-11-token-cost-per-turn.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-11-token-cost-per-turn.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
@@ -22,7 +23,7 @@ It was where the money goes. Most of every request is not my question. It is sca
 
 ## The API does not remember anything
 
-Here is the part people miss when they complain that AI forgets.
+People complain that AI forgets.
 
 It does not forget. It has no memory at all. An LLM API is stateless: every time you hit send, your client re-sends the whole conversation — every message, every reply, every tool result — as fresh input tokens. The model reads the entire thing again ([Oriveo](https://oriveoai.com/blog/ai-api-cost-comparison)).
 
@@ -42,7 +43,7 @@ Models got better at reading intent. That part is real — you can be sloppy now
 
 The old prompt habits did not expire. Anthropic's current docs still prescribe the same list from 2023: be clear and direct, explain *why* the instruction matters, use examples (their word is [few-shot or multishot](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-prompting-best-practices)), structure the prompt with explicit tags, give the model a role, put long documents at the top.
 
-A smarter model compresses the gap between a lazy prompt and a good one. It does not close it. And one giant prompt covering everything is the expensive way to close nothing — you re-read the giant prompt on every turn, while [long contexts degrade output quality](https://www.trychroma.com/research/context-rot) well before they run out of room.
+A smarter model compresses the gap between a lazy prompt and a good one. It does not close it. And one giant prompt covering everything is the expensive way to change nothing — you re-read it on every turn, while [long contexts degrade output quality](https://www.trychroma.com/research/context-rot) well before they run out of room.
 
 Cheap beats clever. That has been true for three years.
 
