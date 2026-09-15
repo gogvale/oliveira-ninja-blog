@@ -1,11 +1,13 @@
 ---
 title: "Never Trust an Unwatched Agent"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-15 14:55:26 -0600
 categories: [AI, Self-Hosting]
 tags: [ai-lab, self-hosting, agents, devops, project-writeup, linux]
 description: "The agent that rebuilt my server after a disk-killing outage restored everything I asked for — then put my media server on the public internet."
-draft: true
+image: /assets/img/posts/2026-09-15-never-trust-an-unwatched-agent.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/2026-09-15-never-trust-an-unwatched-agent.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
