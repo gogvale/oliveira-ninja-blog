@@ -23,7 +23,7 @@ That was the theory.
 
 The vault came back in one clone: notes, architecture, the map of where every credential and script lived. The agent read it and got to work. Most of it worked.
 
-The notes pointed at things that weren't on disk anymore — credentials, cron scripts, the cost audit, the honeypot evidence, every bespoke skill I'd built that summer. The agent, being agreeable, filled in the gaps itself. It knew the shape of the work and none of the reasons behind it, and it never asked.
+The notes pointed at things that weren't on disk anymore — credentials, cron scripts, the cost audit, the ongoing lab files, every bespoke skill I'd built that summer. The agent, being agreeable, filled in the gaps itself. It knew the shape of the work and none of the reasons behind it, and it never asked.
 
 I pasted the old Telegram thread into the session — prompts, corrections, all of it — so it could see how we got here. With that, it rebuilt the media stack, the watchdogs, the TLS front door. I was feeling good about the vault.
 
@@ -37,28 +37,36 @@ The logic is defensible, and that's what makes it dangerous. The agent optimized
 
 ## What a URL costs
 
-A public subdomain is a public fact. It gets crawled, and the paths the internet tries against it are boring and constant: `/.env`, `/api/config`, `/wp-admin/`, `/manager/html`, `/geoserver/web/`.
+A public subdomain is a public fact. It gets crawled, and the paths the internet tries against it are boring and constant.
 
-When I read the log — 2,599 requests in — the scans had already started. One address walked `/.env`. Another asked for `/api/config` 37 times. Jellyfin had refused 29 requests with a 403.
+When I read the log — 2,599 requests in — the scans had already started. One address walked `/.env`. Another asked for `/api/config` 37 times. The media server had refused 29 requests with a 403.
 
 No breach. But a queue was forming at a door I never installed.
 
+## Two near-misses already this year
+
+This wasn't even the first time. Twice this year, an agent did something irreversible while nobody was watching. Once it sent emails I never meant to send. Once it deleted a repo — and there was no undo button.
+
+Both times I caught it because I happened to look. Both times the damage was recoverable, but a few hours more and I'd have been walking back a message I didn't write, or rebuilding a project from backups I hoped still existed.
+
+So when I found a public subdomain on the rebuilt box, I didn't shrug. I'd been here before. The only variable is whether you catch it.
+
 ## Closing the door
 
-I had a hardening playbook from the honeypot box, so this cost an evening instead of a weekend:
+I had a hardening playbook from my lab, so closing it cost an evening, not a weekend. Rate limits on the login, a blocklist for the obvious scanners, a few other rules. The fun part was the allowlist — the first version banned my own box from its own front door during the self-test.
 
-- Rate limiting on the auth paths only — 15 requests per minute per IP, media paths exempt so playback never throttles. Verified with a 429 on request 14 of a 20-request burst.
-- Probe paths return 403: `/.env`, `/.git`, `/wp-*`, `/manager*`, `/geoserver*`, `/cgi-bin*`, `/actuator*`, plus the crypto-lure paths my honeypot sees the internet hunting.
-- A ban list seeded from my honeypot and my own logs, refreshed every five minutes by a cron watcher with no model in the loop. Silence means healthy.
-- An allowlist — the first version banned my own box from its own front door during the self-test.
-- Query strings dropped from the access log. Media clients put tokens in the URL, and 23 lines had already hit disk verbatim.
+The door is closed now. But closing it was the easy half.
+
+## The part the agent can't do
 
 The agent did good work. The result was fine. The only reason it stayed fine was that I read the logs and noticed a DNS record that shouldn't have been there.
 
 That's the failure mode that wasn't on my list: an agent that does more than you asked, without asking. A restore that never asks a question is a restore whose judgment stays invisible until you read what it changed.
 
-I liked the result. It could have been a catastrophe. The margin between those two was one person paying attention.
+The human in the loop opens the diff, reads the log, and asks "why did you do this?" — then checks the answer against what they wanted. An agent will mark its own work as done. It can't audit its own judgment.
+
+I liked the result. It could have been a catastrophe. The margin between those two was me looking — not at the green checkmark, but at what changed.
 
 The disk script runs every 15 minutes now — warns at 90%, and at 95% stops the download client and the media server and purges the cache. Plain cron, no model in the loop, silent when healthy.
 
-The watcher shouldn't live inside the thing it's watching. And an agent you aren't watching is an agent you can't trust.
+The watcher shouldn't live inside the thing it's watching. And an agent you aren't watching — reading what it did, asking why — is an agent you can't trust.
