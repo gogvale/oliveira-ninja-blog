@@ -1,10 +1,9 @@
 ---
 title: "The Craft Is Not Writing Code"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-18 18:30:00 -0600
 categories: [AI]
 tags: [ai-lab, tokens, code-quality, craft, opinion]
 description: "Paying an AI per token is the lines-of-code mistake all over again — the real point is what the craft of engineering pays for."
-draft: true
 ---
 
 > **TL;DR**
@@ -19,7 +18,13 @@ The comment is right, and it stops one step early. It treats the token invoice a
 
 A good programmer is not someone who writes code. A good programmer invents more efficient ways to do the thing — modular, clever, maintainable — and when something breaks, they know where to look, because they can hold the design in their head. That is the asset being paid for, and it is the asset AI-generated code dissolves. The more complex the output, the harder it is for anyone to repair, including the agent that wrote it.
 
-There is a meme for this, and I keep applying it to Claude. A [2016 tweet by @jlevicoy](https://x.com/jlevicoy/status/685624118436347905), in Spanish: "Cuando escribí este código, solo Dios y yo sabíamos cómo funcionaba. Ahora solo Dios lo sabe." Only God knows. The joke is old — an English version has circulated since the 1990s — but the agent made it literal. An assistant optimizes for producing code. The craft is about not producing it.
+There is a meme for this, and I keep applying it to Claude:
+
+![The classic programmer meme: when I wrote this code, only God and I knew how it worked — now only God knows.](https://i.programmerhumor.io/2022/01/programmerhumor-io-programming-memes-76e423fd15e5112.jpg)
+
+*[only God and I knew](https://programmerhumor.io/programming-memes/only-god-and-i-knew/) — via ProgrammerHumor.*
+
+The joke is old — an English version has circulated since the 1990s — but the agent made it literal. An assistant optimizes for producing code. The craft is about not producing it.
 
 [Dijkstra made the same point in 1988](https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html). If we must count lines of code, count them as lines *spent*, not lines *produced*, and book them on the wrong side of the ledger at your peril. Measuring productivity by lines produced per month, he wrote, is "a very costly measuring unit, because it encourages the writing of insipid code."
 
@@ -35,7 +40,7 @@ There is already a counter-example worth naming. [Ponytail](https://github.com/D
 4. Native platform feature? Use it.
 5. Installed dependency? Use it.
 6. One line? One line.
-7. Only then: the minimum that works.
+7. only then: the minimum that works.
 
 Its framing fixes Dijkstra's direction: lazy about the solution, never about reading. Validation, data-loss handling, security and accessibility never get cut. Run against the same agent with no skill, on a twelve-ticket FastAPI template, it reports 54% fewer lines, 22% fewer tokens, 20% lower cost, 27% less time, and the same safety score. The repo also documents that an earlier "80–94% less code" figure was a single-shot artifact, and corrects it in public. That correction is the honest part.
 
