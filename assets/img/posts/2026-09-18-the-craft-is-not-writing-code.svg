@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <defs>
+    <style>
+      .kicker { font-family: "DejaVu Sans Mono", monospace; font-size: 24px; fill: #a9ff5b; }
+      .title  { font-family: "DejaVu Sans", sans-serif; font-weight: bold; font-size: 52px; }
+      .twhite { fill: #ffffff; }
+      .tgreen { fill: #a9ff5b; }
+      .code-w { font-family: "DejaVu Sans Mono", monospace; font-size: 28px; fill: #e0e0e0; }
+      .code-g { font-family: "DejaVu Sans Mono", monospace; font-size: 28px; fill: #a9ff5b; }
+      .tag    { font-family: "DejaVu Sans Mono", monospace; font-weight: bold; font-size: 20px; }
+      .caption{ font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #7dd3fc; }
+      .foot   { font-family: "DejaVu Sans Mono", monospace; font-size: 18px; fill: #5a5a5a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="627" fill="#0d0d0d"/>
+  <g stroke="#181818" stroke-width="1">
+    <line x1="0" y1="40" x2="1200" y2="40"/>
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="440" x2="1200" y2="440"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="520" x2="1200" y2="520"/>
+    <line x1="0" y1="560" x2="1200" y2="560"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+
+  <text x="80" y="90" class="kicker">PAYING PER TOKEN IS THE LINES-OF-CODE MISTAKE</text>
+
+  <text x="78" y="160" class="title twhite">THE CRAFT IS NOT</text>
+  <text x="78" y="220" class="title tgreen">WRITING CODE</text>
+
+  <!-- code editor panel -->
+  <rect x="280" y="280" width="640" height="190" fill="#151515"/>
+
+  <!-- the line the agent wrote, now deleted -->
+  <text x="320" y="372" class="code-w">def feature():  # 27 lines</text>
+  <line x1="320" y1="362" x2="740" y2="362" stroke="#ff5a5a" stroke-width="5"/>
+  <text x="790" y="372" class="tag" fill="#ff5a5a">DELETED</text>
+
+  <!-- the line the craft kept -->
+  <text x="320" y="442" class="code-g">return reuse_what_exists()</text>
+  <text x="790" y="442" class="tag" fill="#a9ff5b">KEPT</text>
+
+  <text x="80" y="538" class="caption">the strongest evidence of craft is the line you deleted</text>
+
+  <text x="80" y="596" class="foot">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
+</svg>

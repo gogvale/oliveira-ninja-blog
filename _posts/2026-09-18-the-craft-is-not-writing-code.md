@@ -4,7 +4,10 @@ date: 2026-09-18 18:00:00 -0600
 categories: [AI]
 tags: [ai-lab, tokens, code-quality, craft, opinion]
 description: "Paying an AI per token is the lines-of-code mistake all over again — the real point is what the craft of engineering pays for."
+image: /assets/img/posts/2026-09-18-the-craft-is-not-writing-code.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/the-craft-is-not-writing-code.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
