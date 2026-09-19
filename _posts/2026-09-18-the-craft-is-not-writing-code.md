@@ -1,6 +1,6 @@
 ---
 title: "The Craft Is Not Writing Code"
-date: 2026-09-18 18:30:00 -0600
+date: 2026-09-18 18:00:00 -0600
 categories: [AI]
 tags: [ai-lab, tokens, code-quality, craft, opinion]
 description: "Paying an AI per token is the lines-of-code mistake all over again — the real point is what the craft of engineering pays for."
