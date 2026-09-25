@@ -1,20 +1,23 @@
-<!-- Hand-authored source of the decoy-boutique part 1 banner.
-     The PNG of record is rendered by ~/.hermes/scripts/banner_render_decoy_boutique.py
-     (Pillow, 4x supersample -> LANCZOS; this box has no Chromium/rsvg/cairosvg).
-     Data: hourly web/SSH series of the first five days (101 points from the post's chart1),
-     closing-cut split from chart3 (XML-RPC 69% / everything else 31%). -->
+<!-- Schematic of the decoy-boutique part 1 banner.
+     The PNG of record is produced by ~/.hermes/scripts/banner_render_decoy_boutique.py
+     (Pillow, 4x supersample -> LANCZOS; this box has no Chromium/rsvg/cairosvg), so this
+     file documents the composition and is not a render source. Scene: the fake storefront
+     with its sign, striped awning, lit window ($96 / $28) and OPEN door; the cast's seven
+     dashed trails converging on that door with an icon each; the bricked, padlocked way out
+     on the far side; and the bottom strip: everything in, nothing out. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
   <defs>
     <style>
-      .kicker { font-family: "DejaVu Sans Mono", monospace; font-size: 24px; fill: #a9ff5b; }
-      .title  { font-family: "DejaVu Sans", sans-serif; font-weight: bold; font-size: 52px; }
+      .kicker { font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #a9ff5b; }
+      .title  { font-family: "DejaVu Sans", sans-serif; font-weight: bold; font-size: 46px; }
       .twhite { fill: #ffffff; }
       .tgreen { fill: #a9ff5b; }
-      .hdr    { font-family: "DejaVu Sans Mono", monospace; font-size: 20px; fill: #8c8c8c; }
-      .leg    { font-family: "DejaVu Sans Mono", monospace; font-size: 20px; fill: #e0e0e0; }
-      .barlab { font-family: "DejaVu Sans Mono", monospace; font-weight: bold; font-size: 20px; }
-      .caption{ font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #7dd3fc; }
+      .sign   { font-family: "DejaVu Sans Mono", monospace; font-weight: bold; font-size: 20px; fill: #a9ff5b; }
+      .small  { font-family: "DejaVu Sans Mono", monospace; font-size: 15px; fill: #6e6e6e; }
+      .row    { font-family: "DejaVu Sans Mono", monospace; font-size: 17px; fill: #dedede; }
+      .strip  { font-family: "DejaVu Sans Mono", monospace; font-weight: bold; font-size: 19px; }
       .foot   { font-family: "DejaVu Sans Mono", monospace; font-size: 18px; fill: #5a5a5a; }
+      .trail  { stroke-dasharray: 9 8; stroke-width: 2; fill: none; }
     </style>
     <pattern id="grid" width="1200" height="40" patternUnits="userSpaceOnUse">
       <line x1="0" y1="0.5" x2="1200" y2="0.5" stroke="#181818" stroke-width="1"/>
@@ -24,29 +27,56 @@
   <rect width="1200" height="627" fill="#0d0d0d"/>
   <rect width="1200" height="627" fill="url(#grid)"/>
 
-  <text x="80" y="88" class="kicker">RUN ONE · SEVEN DAYS · 51,561 WEB REQUESTS · 0 COMPROMISES</text>
+  <text x="80" y="84" class="kicker">RUN ONE · SEVEN DAYS · 51,561 WEB REQUESTS · 0 COMPROMISES</text>
+  <text x="78" y="124" class="title twhite">THE STORE THAT</text>
+  <text x="78" y="172" class="title tgreen">DOESN'T EXIST</text>
 
-  <text x="78" y="152" class="title twhite">THE STORE THAT</text>
-  <text x="78" y="212" class="title tgreen">DOESN'T EXIST</text>
-
-  <text x="80" y="280" class="hdr">WEB REQUESTS PER HOUR · FIRST FIVE DAYS</text>
-  <rect x="838" y="284" width="12" height="12" fill="#a9ff5b"/>
-  <text x="858" y="280" class="leg">51,561 web</text>
-  <rect x="1010" y="284" width="12" height="12" fill="#4fb3a5"/>
-  <text x="1030" y="280" class="leg">29,481 ssh</text>
-
-  <!-- paired hourly bars, 101 hours, shared power(0.35) scale; see the renderer for data -->
-  <g id="sparkline">
-    <line x1="80" y1="418" x2="1120" y2="418" stroke="#464646" stroke-width="1"/>
-    <!-- placeholder geometry: the renderer draws the real 101x2 series -->
+  <!-- the shop -->
+  <rect x="80" y="232" width="320" height="58" fill="#121a12" stroke="#a9ff5b" stroke-width="2"/>
+  <text x="240" y="262" class="sign" text-anchor="middle">HOME TEXTILES</text>
+  <text x="240" y="284" class="small" text-anchor="middle">est. 2019 · 20 fake customers</text>
+  <rect x="80" y="296" width="320" height="36" fill="#1a3328"/>
+  <rect x="80" y="296" width="320" height="36" fill="none" stroke="#2e482e" stroke-width="2"/>
+  <rect x="80" y="338" width="320" height="174" fill="#131313" stroke="#262626" stroke-width="2"/>
+  <rect x="100" y="358" width="132" height="120" fill="#0f1510" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="116" y="396" width="36" height="30" fill="#284632" stroke="#a9ff5b" stroke-width="2"/>
+  <rect x="176" y="396" width="36" height="30" fill="#283c46" stroke="#4fb3a5" stroke-width="2"/>
+  <text x="134" y="456" class="small" text-anchor="middle" fill="#a9ff5b">$96</text>
+  <text x="194" y="456" class="small" text-anchor="middle" fill="#4fb3a5">$28</text>
+  <rect x="256" y="358" width="128" height="138" fill="#131313" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="276" y="376" width="88" height="30" fill="#a9ff5b"/>
+  <text x="320" y="398" class="sign" text-anchor="middle" fill="#0d0d0d">OPEN</text>
+  <rect x="58" y="338" width="22" height="174" fill="#101010" stroke="#303030" stroke-width="2"/>
+  <g stroke="#ff6b6b" stroke-width="2" fill="none">
+    <rect x="59" y="411" width="18" height="16"/>
+    <path d="M62 411 a6 6 0 0 1 12 0"/>
   </g>
 
-  <text x="80" y="438" class="hdr">WHERE THEY WENT</text>
-  <rect x="80" y="462" width="717" height="26" fill="#a9ff5b"/>
-  <rect x="797" y="462" width="323" height="26" fill="#464646"/>
-  <text x="92" y="466" class="barlab" fill="#0d0d0d">XML-RPC 69%</text>
-  <text x="809" y="466" class="barlab" fill="#e0e0e0">everything else 31%</text>
+  <!-- who knocked: trails into the door -->
+  <g class="trail">
+    <path stroke="#a9ff5b" d="M852 330 L288 414"/>
+    <path stroke="#4fb3a5" d="M852 357 L288 415"/>
+    <path stroke="#a9ff5b" d="M852 384 L288 416"/>
+    <path stroke="#4fb3a5" d="M852 411 L288 418"/>
+    <path stroke="#a9ff5b" d="M852 438 L288 419"/>
+    <path stroke="#4fb3a5" d="M852 465 L288 420"/>
+    <path stroke="#a9ff5b" d="M852 492 L288 421"/>
+  </g>
+  <text x="852" y="306" class="small">EVERYONE CAME TO ONE DOOR</text>
+  <g class="row" text-anchor="end">
+    <text x="1112" y="336">screener</text>
+    <text x="1112" y="363">beacon</text>
+    <text x="1112" y="390">miner</text>
+    <text x="1112" y="417">tunnel hunters</text>
+    <text x="1112" y="444">xml-rpc flood</text>
+    <text x="1112" y="471">login stuffer</text>
+    <text x="1112" y="498">the shopper</text>
+  </g>
 
-  <text x="80" y="545" class="caption">a week of watching bots try the front door</text>
-  <text x="80" y="596" class="foot">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
+  <!-- the only two numbers that matter -->
+  <line x1="80" y1="540" x2="1120" y2="540" stroke="#2c2c2c" stroke-width="2"/>
+  <text x="80" y="571" class="strip" fill="#a9ff5b">IN   51,561 WEB · 29,481 SSH · 805 ADDRESSES · 913 CREDENTIAL PAIRS</text>
+  <text x="1120" y="571" class="strip" text-anchor="end" fill="#ff6b6b">OUT   0</text>
+
+  <text x="80" y="614" class="foot">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
 </svg>
