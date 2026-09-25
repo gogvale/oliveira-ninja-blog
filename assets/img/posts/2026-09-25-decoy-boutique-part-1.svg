@@ -1,3 +1,8 @@
+<!-- Hand-authored source of the decoy-boutique part 1 banner.
+     The PNG of record is rendered by ~/.hermes/scripts/banner_render_decoy_boutique.py
+     (Pillow, 4x supersample -> LANCZOS; this box has no Chromium/rsvg/cairosvg).
+     Data: hourly web/SSH series of the first five days (101 points from the post's chart1),
+     closing-cut split from chart3 (XML-RPC 69% / everything else 31%). -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
   <defs>
     <style>
@@ -5,43 +10,43 @@
       .title  { font-family: "DejaVu Sans", sans-serif; font-weight: bold; font-size: 52px; }
       .twhite { fill: #ffffff; }
       .tgreen { fill: #a9ff5b; }
-      .term   { font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #8c8c8c; }
-      .termg  { font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #a9ff5b; }
+      .hdr    { font-family: "DejaVu Sans Mono", monospace; font-size: 20px; fill: #8c8c8c; }
+      .leg    { font-family: "DejaVu Sans Mono", monospace; font-size: 20px; fill: #e0e0e0; }
+      .barlab { font-family: "DejaVu Sans Mono", monospace; font-weight: bold; font-size: 20px; }
       .caption{ font-family: "DejaVu Sans Mono", monospace; font-size: 22px; fill: #7dd3fc; }
       .foot   { font-family: "DejaVu Sans Mono", monospace; font-size: 18px; fill: #5a5a5a; }
     </style>
+    <pattern id="grid" width="1200" height="40" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0.5" x2="1200" y2="0.5" stroke="#181818" stroke-width="1"/>
+    </pattern>
   </defs>
 
   <rect width="1200" height="627" fill="#0d0d0d"/>
-  <g stroke="#181818" stroke-width="1">
-    <line x1="0" y1="40" x2="1200" y2="40"/>
-    <line x1="0" y1="80" x2="1200" y2="80"/>
-    <line x1="0" y1="120" x2="1200" y2="120"/>
-    <line x1="0" y1="160" x2="1200" y2="160"/>
-    <line x1="0" y1="200" x2="1200" y2="200"/>
-    <line x1="0" y1="240" x2="1200" y2="240"/>
-    <line x1="0" y1="280" x2="1200" y2="280"/>
-    <line x1="0" y1="320" x2="1200" y2="320"/>
-    <line x1="0" y1="360" x2="1200" y2="360"/>
-    <line x1="0" y1="400" x2="1200" y2="400"/>
-    <line x1="0" y1="440" x2="1200" y2="440"/>
-    <line x1="0" y1="480" x2="1200" y2="480"/>
-    <line x1="0" y1="520" x2="1200" y2="520"/>
-    <line x1="0" y1="560" x2="1200" y2="560"/>
-    <line x1="0" y1="600" x2="1200" y2="600"/>
+  <rect width="1200" height="627" fill="url(#grid)"/>
+
+  <text x="80" y="88" class="kicker">RUN ONE · SEVEN DAYS · 51,561 WEB REQUESTS · 0 COMPROMISES</text>
+
+  <text x="78" y="152" class="title twhite">THE STORE THAT</text>
+  <text x="78" y="212" class="title tgreen">DOESN'T EXIST</text>
+
+  <text x="80" y="280" class="hdr">WEB REQUESTS PER HOUR · FIRST FIVE DAYS</text>
+  <rect x="838" y="284" width="12" height="12" fill="#a9ff5b"/>
+  <text x="858" y="280" class="leg">51,561 web</text>
+  <rect x="1010" y="284" width="12" height="12" fill="#4fb3a5"/>
+  <text x="1030" y="280" class="leg">29,481 ssh</text>
+
+  <!-- paired hourly bars, 101 hours, shared power(0.35) scale; see the renderer for data -->
+  <g id="sparkline">
+    <line x1="80" y1="418" x2="1120" y2="418" stroke="#464646" stroke-width="1"/>
+    <!-- placeholder geometry: the renderer draws the real 101x2 series -->
   </g>
 
-  <text x="80" y="90" class="kicker">SEVEN DAYS. 51,561 REQUESTS. 0 COMPROMISES.</text>
+  <text x="80" y="438" class="hdr">WHERE THEY WENT</text>
+  <rect x="80" y="462" width="717" height="26" fill="#a9ff5b"/>
+  <rect x="797" y="462" width="323" height="26" fill="#464646"/>
+  <text x="92" y="466" class="barlab" fill="#0d0d0d">XML-RPC 69%</text>
+  <text x="809" y="466" class="barlab" fill="#e0e0e0">everything else 31%</text>
 
-  <text x="78" y="160" class="title twhite">THE STORE THAT</text>
-  <text x="78" y="220" class="title tgreen">DOESN'T EXIST</text>
-
-  <text x="80" y="306" class="term">sshd: Failed password for root</text>
-  <text x="80" y="342" class="term">sshd: Failed password for admin</text>
-  <text x="80" y="378" class="termg">$ uname -a</text>
-  <text x="80" y="414" class="termg">$ echo xsec</text>
-
-  <text x="80" y="538" class="caption">a week of watching bots try the front door</text>
-
+  <text x="80" y="545" class="caption">a week of watching bots try the front door</text>
   <text x="80" y="596" class="foot">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
 </svg>
