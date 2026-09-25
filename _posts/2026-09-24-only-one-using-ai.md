@@ -1,11 +1,13 @@
 ---
 title: "You're the Only One Using AI"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-24 18:00:00 -0600
 categories: [Opinion, AI]
 tags: [ai-lab, opinion, culture, homogenization]
 description: "Most people use AI for memes and homework. The half that uses it to work faster produces the same work as everyone else. The panic is the loudest part, and the numbers do not back it."
-draft: true
+image: /assets/img/posts/2026-09-24-only-one-using-ai.png
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/only-one-using-ai.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
