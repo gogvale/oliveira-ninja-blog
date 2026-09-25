@@ -1,20 +1,13 @@
 ---
 title: "I Spent a Week Watching Bots Try the Front Door of a Store That Doesn't Exist"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-25 12:00:00 -0600
 categories: [Security, Homelab]
 tags: [security, honeypot, wordpress, self-hosting, project-writeup]
 description: "I built a fake WordPress store, pointed it at the internet with no ads and no audience, and logged everything that came through the door: 51,561 web requests, 29,481 SSH connections, 805 addresses, and zero attackers who read the shop."
-draft: true
+image: /assets/img/posts/2026-09-25-decoy-boutique-part-1.png
 ---
 
-<!-- DRAFT-ONLY NOTES (delete before publish):
-PART 1 of 2. Covers run one only: the fake WordPress boutique, Sep 7-13, 2026, seven days. Part 2 (the crypto run) lives in 2026-09-06-decoy-boutique-part-2.md and does not publish until that operation closes. Never name the live lure's domain or host in either part.
-TITLE: Gabriel's pick, Sep 25, 2026 (confirmed again in the rewrite pass).
-TONE: war-tale ride-along — threat-hunting feel, less technical. Trimmed the Patchstack/Wordfence stat block and the VirusTotal detections detail into plain sentences.
-NUMBERS: run-1 closing cut (Sep 12, 15:53 UTC) — the last report before the box was snapshotted and destroyed. Chart1 is a five-day mid-run timeline; extending it needs hourly logs that died with the box.
-BANNER: pending — needs a social card and the `image:` front-matter line before publish.
-Charts in play: chart1 (volume, 101 h) · chart2 (SSH, final 48 h) · chart3 (web requests by target) · chart4 (login attempts, 913 pairs, 0 hits).
--->
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/decoy-boutique-part-1.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
