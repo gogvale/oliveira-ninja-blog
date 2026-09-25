@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>body{margin:0;background:#0d0d0d}canvas{display:block}</style></head>
+<body>
+<div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
+  <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">WHERE AI USERS SIT</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Skill, and what the workplace allows — all AI users</div>
+</div>
+<canvas id="c" width="1200" height="432"></canvas><script>
+Chart.defaults.font.family = 'DejaVu Sans';
+Chart.defaults.color = '#8c8c8c';
+Chart.register(ChartDataLabels);
+const cfg = {type:'bar',data:{labels:["The Frontier", "The Power Users", "Stalled", "Blocked", "Unclaimed"],datasets:[{data:[19, 50, 16, 10, 5],backgroundColor:["#a9ff5b", "#4fb3a5", "#8c8c8c", "#5a5a5a", "#3f3f3f"],borderWidth:0,barPercentage:0.6}]}},options:{layout:{padding:{top:24,right:24,bottom:8,left:8}},scales:{x:{grid:{display:false},ticks:{color:'#e5e5e5',font:{size:14}}},y:{display:false,beginAtZero:true,grace:'25%'}},plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#e5e5e5',font:{size:17,weight:'bold'},formatter:v=>v+'%'}}}};
+new Chart(document.getElementById('c'), cfg);
+</script></body></html>

@@ -1,0 +1,33 @@
+{
+  "_note": "Charts for _drafts/2026-09-24-only-one-using-ai.md. Two charts: a histogram of where AI users sit and a centered donut on how people read the pace. Render PNGs with the blog-authoring skill's doughnut-charts.py + bar-charts.py, HTML twins with charts-html.py, all from this one spec. Sources: Microsoft Work Trend Index 2026 (10 markets, ~17,000 workers, self-reported); Pew Research Center, Americans and AI 2026 (June 2026, fielded Feb 2026, n=5,119). The Pew 'what do you use it for' breakdown is multi-select (~196% total) and is deliberately NOT charted.",
+  "charts": [
+    {
+      "file": "2026-09-24-only-one-using-ai-groups.png",
+      "type": "bar",
+      "kicker": "WHERE AI USERS SIT",
+      "headline": "Skill, and what the workplace allows \u2014 all AI users",
+      "source": "Data: Microsoft Work Trend Index 2026 \u2014 10 markets, about 17,000 workers, self-reported",
+      "bars": [
+        {"label": "The Frontier", "value": 19, "color": "#a9ff5b"},
+        {"label": "The Power Users", "value": 50, "color": "#4fb3a5"},
+        {"label": "Stalled", "value": 16, "color": "#8c8c8c"},
+        {"label": "Blocked", "value": 10, "color": "#5a5a5a"},
+        {"label": "Unclaimed", "value": 5, "color": "#3f3f3f"}
+      ]
+    },
+    {
+      "file": "2026-09-24-only-one-using-ai-pace.png",
+      "type": "doughnut",
+      "layout": "centered",
+      "kicker": "HOW PEOPLE SEE THE SPEED",
+      "headline": "Is AI advancing too quickly? \u2014 all U.S. adults",
+      "source": "Data: Pew Research Center, Americans and AI 2026 (June 2026)",
+      "slices": [
+        {"label": "too quickly \u2014 63%", "value": 63, "color": "#ff7878"},
+        {"label": "the right pace \u2014 19%", "value": 19, "color": "#a9ff5b"},
+        {"label": "not sure \u2014 16%", "value": 16, "color": "#8c8c8c"},
+        {"label": "too slowly \u2014 2%", "value": 2, "color": "#3f3f3f"}
+      ]
+    }
+  ]
+}
