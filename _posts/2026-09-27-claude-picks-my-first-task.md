@@ -1,12 +1,14 @@
 ---
 title: "Claude Picks My First Task of the Day"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-27 12:00:00 -0600
 categories: [AI, Workflow]
 tags: [ai-lab, workflow, productivity, weekend-project]
 mermaid: true
-description: "I always liked a day list — the dopamine does the work. Claude now reads monday live and hands me the queue, and asks before it writes anything."
-draft: true
+image: /assets/img/posts/claude-picks-my-first-task.png
+description: "Five of my seventeen tasks were the same job. I liked day lists before Claude — the dopamine does the work — so now it reads monday and hands me the queue."
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/claude-picks-my-first-task.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
