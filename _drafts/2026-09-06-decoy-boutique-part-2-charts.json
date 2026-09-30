@@ -1,0 +1,261 @@
+{
+  "_note": "Corte INTERINO de la corrida 2 (15-30 sep 2026, 16 dias, run vivo). Regenerar con el corte de cierre. Intervalo declarado en cada headine.",
+  "charts": [
+    {
+      "file": "honeypot-v2-sinkhole-classes.png",
+      "type": "doughnut",
+      "kicker": "WHAT THE PLANTED PORTS WERE ASKED FOR",
+      "headline": "Fake-C2 traffic by class — 3,965 requests",
+      "slices": [
+        {
+          "label": "treats the port as a plain web server — 1,309 (33%)",
+          "value": 1309,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "other path probes — 764 (19%)",
+          "value": 764,
+          "color": "#4fb3a5"
+        },
+        {
+          "label": "hunts config, secrets, admin panels — 641 (16%)",
+          "value": 641,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "TLS ClientHello on a non-TLS port — 466 (12%)",
+          "value": 466,
+          "color": "#ffc857"
+        },
+        {
+          "label": "silent connections — 325 (8%)",
+          "value": 325,
+          "color": "#b07dd6"
+        },
+        {
+          "label": "looks for an AI agent (/mcp, /sse, /v1/messages) — 201 (5%)",
+          "value": 201,
+          "color": "#ff7878"
+        },
+        {
+          "label": "raw protocol pings — 180 (5%)",
+          "value": 180,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "embedded-device exploits (router, camera) — 79 (2%)",
+          "value": 79,
+          "color": "#5a5a5a"
+        }
+      ],
+      "source": "Data: fake-C2 sinkhole, run 2, first sixteen days (open run)"
+    },
+    {
+      "file": "honeypot-v2-value-surface.png",
+      "type": "doughnut",
+      "kicker": "WHAT THEY ASKED THE FAKE EXCHANGE FOR",
+      "headline": "Value-surface requests from 4 addresses — 27 hits",
+      "slices": [
+        {
+          "label": "/api/v1/balance — 10 (37%)",
+          "value": 10,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "/api/v1/withdraw — 9 (33%)",
+          "value": 9,
+          "color": "#ff7878"
+        },
+        {
+          "label": "/api/v1/keys — 5 (19%)",
+          "value": 5,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "/api/v1/export-seed (honeytoken) — 3 (11%)",
+          "value": 3,
+          "color": "#ffc857"
+        }
+      ],
+      "source": "Data: lure capture log, run 2, first sixteen days (open run)"
+    },
+    {
+      "file": "honeypot-v2-ssh-attempts-per-day.png",
+      "type": "bar",
+      "kicker": "PORT 22, DAY BY DAY",
+      "headline": "SSH login attempts per day — 94,404 in 16 days",
+      "bars": [
+        {
+          "label": "15",
+          "value": 2718,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "16",
+          "value": 7619,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "17",
+          "value": 2828,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "18",
+          "value": 3221,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "19",
+          "value": 7831,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "20",
+          "value": 6629,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "21",
+          "value": 11948,
+          "color": "#ff7878"
+        },
+        {
+          "label": "22",
+          "value": 6855,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "23",
+          "value": 5131,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "24",
+          "value": 5333,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "25",
+          "value": 9957,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "26",
+          "value": 5225,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "27",
+          "value": 4033,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "28",
+          "value": 4638,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "29",
+          "value": 6453,
+          "color": "#8c8c8c"
+        },
+        {
+          "label": "30",
+          "value": 3985,
+          "color": "#ffc857"
+        }
+      ],
+      "source": "Data: Cowrie, run 2, 15–30 September 2026 (16 days, open run)"
+    },
+    {
+      "file": "honeypot-v2-distinct-ips-per-day.png",
+      "type": "bar",
+      "kicker": "THE CROWD, NOT THE NOISE",
+      "headline": "Distinct source addresses per day",
+      "bars": [
+        {
+          "label": "15",
+          "value": 17,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "16",
+          "value": 22,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "17",
+          "value": 31,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "18",
+          "value": 46,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "19",
+          "value": 35,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "20",
+          "value": 77,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "21",
+          "value": 107,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "22",
+          "value": 83,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "23",
+          "value": 79,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "24",
+          "value": 106,
+          "color": "#7dd3fc"
+        },
+        {
+          "label": "25",
+          "value": 197,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "26",
+          "value": 284,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "27",
+          "value": 267,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "28",
+          "value": 253,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "29",
+          "value": 241,
+          "color": "#a9ff5b"
+        },
+        {
+          "label": "30",
+          "value": 232,
+          "color": "#ffc857"
+        }
+      ],
+      "source": "Data: Cowrie, run 2 — 17 addresses on day one, 232 on day sixteen"
+    }
+  ]
+}
