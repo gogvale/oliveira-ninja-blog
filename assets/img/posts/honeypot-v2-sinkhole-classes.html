@@ -5,12 +5,12 @@
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
   <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">WHAT THE PLANTED PORTS WERE ASKED FOR</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Fake-C2 traffic by class — 3,965 requests</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">Fake-C2 traffic by class — 4,006 requests</div>
 </div>
 <canvas id="c" width="1200" height="432"></canvas><script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'doughnut',data:{labels:["treats the port as a plain web server \u2014 1,309 (33%)", "other path probes \u2014 764 (19%)", "hunts config, secrets, admin panels \u2014 641 (16%)", "TLS ClientHello on a non-TLS port \u2014 466 (12%)", "silent connections \u2014 325 (8%)", "looks for an AI agent (/mcp, /sse, /v1/messages) \u2014 201 (5%)", "raw protocol pings \u2014 180 (5%)", "embedded-device exploits (router, camera) \u2014 79 (2%)"],datasets:[{data:[1309, 764, 641, 466, 325, 201, 180, 79],backgroundColor:["#a9ff5b", "#4fb3a5", "#7dd3fc", "#ffc857", "#b07dd6", "#ff7878", "#8c8c8c", "#5a5a5a"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]}},options:{cutout:'56%',layout:{padding:12},plugins:{legend:{position:'top',align:'center',labels:{boxWidth:13,padding:10,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:15,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=6?p.toFixed(0)+'%':'';}}}}};
+const cfg = {type:'doughnut',data:{labels:["treats the port as a plain web server \u2014 1,320 (33%)", "other path probes \u2014 767 (19%)", "hunts config, secrets, admin panels \u2014 647 (16%)", "TLS ClientHello on a non-TLS port \u2014 478 (12%)", "silent connections \u2014 329 (8%)", "looks for an AI agent (/mcp, /sse, /v1/messages) \u2014 201 (5%)", "raw protocol pings \u2014 182 (5%)", "embedded-device exploits (router, camera) \u2014 82 (2%)"],datasets:[{data:[1320, 767, 647, 478, 329, 201, 182, 82],backgroundColor:["#a9ff5b", "#4fb3a5", "#7dd3fc", "#ffc857", "#b07dd6", "#ff7878", "#8c8c8c", "#5a5a5a"],borderColor:'#0d0d0d',borderWidth:3,hoverOffset:6}]}},options:{cutout:'56%',layout:{padding:12},plugins:{legend:{position:'top',align:'center',labels:{boxWidth:13,padding:10,font:{size:13},color:'#e5e5e5'}},datalabels:{color:'#0d0d0d',font:{size:15,weight:'bold'},formatter:function(v,ctx){const t=ctx.chart.data.datasets[0].data.reduce((a,b)=>a+b,0);const p=v/t*100;return p>=6?p.toFixed(0)+'%':'';}}}}};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>

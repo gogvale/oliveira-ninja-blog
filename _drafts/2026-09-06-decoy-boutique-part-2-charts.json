@@ -5,31 +5,31 @@
       "file": "honeypot-v2-sinkhole-classes.png",
       "type": "doughnut",
       "kicker": "WHAT THE PLANTED PORTS WERE ASKED FOR",
-      "headline": "Fake-C2 traffic by class — 3,965 requests",
+      "headline": "Fake-C2 traffic by class — 4,006 requests",
       "slices": [
         {
-          "label": "treats the port as a plain web server — 1,309 (33%)",
-          "value": 1309,
+          "label": "treats the port as a plain web server — 1,320 (33%)",
+          "value": 1320,
           "color": "#a9ff5b"
         },
         {
-          "label": "other path probes — 764 (19%)",
-          "value": 764,
+          "label": "other path probes — 767 (19%)",
+          "value": 767,
           "color": "#4fb3a5"
         },
         {
-          "label": "hunts config, secrets, admin panels — 641 (16%)",
-          "value": 641,
+          "label": "hunts config, secrets, admin panels — 647 (16%)",
+          "value": 647,
           "color": "#7dd3fc"
         },
         {
-          "label": "TLS ClientHello on a non-TLS port — 466 (12%)",
-          "value": 466,
+          "label": "TLS ClientHello on a non-TLS port — 478 (12%)",
+          "value": 478,
           "color": "#ffc857"
         },
         {
-          "label": "silent connections — 325 (8%)",
-          "value": 325,
+          "label": "silent connections — 329 (8%)",
+          "value": 329,
           "color": "#b07dd6"
         },
         {
@@ -38,23 +38,23 @@
           "color": "#ff7878"
         },
         {
-          "label": "raw protocol pings — 180 (5%)",
-          "value": 180,
+          "label": "raw protocol pings — 182 (5%)",
+          "value": 182,
           "color": "#8c8c8c"
         },
         {
-          "label": "embedded-device exploits (router, camera) — 79 (2%)",
-          "value": 79,
+          "label": "embedded-device exploits (router, camera) — 82 (2%)",
+          "value": 82,
           "color": "#5a5a5a"
         }
       ],
-      "source": "Data: fake-C2 sinkhole, run 2, first sixteen days (open run)"
+      "source": "Data: fake-C2 sinkhole, run two, 15–30 September 2026 (full run)"
     },
     {
       "file": "honeypot-v2-value-surface.png",
       "type": "doughnut",
       "kicker": "WHAT THEY ASKED THE FAKE EXCHANGE FOR",
-      "headline": "Value-surface requests from 4 addresses — 27 hits",
+      "headline": "Value-surface requests, 4 addresses — 27 hits",
       "slices": [
         {
           "label": "/api/v1/balance — 10 (37%)",
@@ -77,13 +77,13 @@
           "color": "#ffc857"
         }
       ],
-      "source": "Data: lure capture log, run 2, first sixteen days (open run)"
+      "source": "Data: lure capture log, run two, full run"
     },
     {
       "file": "honeypot-v2-ssh-attempts-per-day.png",
       "type": "bar",
       "kicker": "PORT 22, DAY BY DAY",
-      "headline": "SSH login attempts per day — 94,404 in 16 days",
+      "headline": "SSH login attempts per day — 95,231 in 16 days",
       "bars": [
         {
           "label": "15",
@@ -162,11 +162,11 @@
         },
         {
           "label": "30",
-          "value": 3985,
+          "value": 4812,
           "color": "#ffc857"
         }
       ],
-      "source": "Data: Cowrie, run 2, 15–30 September 2026 (16 days, open run)"
+      "source": "Data: Cowrie, run two, 15–30 September 2026 (full run)"
     },
     {
       "file": "honeypot-v2-distinct-ips-per-day.png",
@@ -177,85 +177,85 @@
         {
           "label": "15",
           "value": 17,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "16",
           "value": 22,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "17",
           "value": 31,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "18",
           "value": 46,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "19",
           "value": 35,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "20",
           "value": 77,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "21",
           "value": 107,
-          "color": "#7dd3fc"
+          "color": "#ff7878"
         },
         {
           "label": "22",
           "value": 83,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "23",
           "value": 79,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "24",
           "value": 106,
-          "color": "#7dd3fc"
+          "color": "#a9ff5b"
         },
         {
           "label": "25",
           "value": 197,
-          "color": "#a9ff5b"
+          "color": "#7dd3fc"
         },
         {
           "label": "26",
           "value": 284,
-          "color": "#a9ff5b"
+          "color": "#7dd3fc"
         },
         {
           "label": "27",
           "value": 267,
-          "color": "#a9ff5b"
+          "color": "#7dd3fc"
         },
         {
           "label": "28",
           "value": 253,
-          "color": "#a9ff5b"
+          "color": "#7dd3fc"
         },
         {
           "label": "29",
           "value": 241,
-          "color": "#a9ff5b"
+          "color": "#7dd3fc"
         },
         {
           "label": "30",
-          "value": 232,
+          "value": 257,
           "color": "#ffc857"
         }
       ],
-      "source": "Data: Cowrie, run 2 — 17 addresses on day one, 232 on day sixteen"
+      "source": "Data: Cowrie, run two — 17 addresses on day one, 257 on the last day"
     }
   ]
 }

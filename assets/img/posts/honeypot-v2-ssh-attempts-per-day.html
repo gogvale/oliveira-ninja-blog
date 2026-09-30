@@ -5,12 +5,12 @@
 <body>
 <div style="height:128px;padding:24px 60px 0 60px;background:#0d0d0d;box-sizing:border-box">
   <div style="color:#a9ff5b;font:700 20px 'DejaVu Sans'">PORT 22, DAY BY DAY</div>
-  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">SSH login attempts per day — 94,404 in 16 days</div>
+  <div style="color:#e5e5e5;font:700 30px 'DejaVu Sans';margin-top:6px">SSH login attempts per day — 95,231 in 16 days</div>
 </div>
 <canvas id="c" width="1200" height="432"></canvas><script>
 Chart.defaults.font.family = 'DejaVu Sans';
 Chart.defaults.color = '#8c8c8c';
 Chart.register(ChartDataLabels);
-const cfg = {type:'bar',data:{labels:["15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"],datasets:[{data:[2718, 7619, 2828, 3221, 7831, 6629, 11948, 6855, 5131, 5333, 9957, 5225, 4033, 4638, 6453, 3985],backgroundColor:["#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#ff7878", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#ffc857"],borderWidth:0,barPercentage:0.6}]}},options:{layout:{padding:{top:24,right:24,bottom:8,left:8}},scales:{x:{grid:{display:false},ticks:{color:'#e5e5e5',font:{size:14}}},y:{display:false,beginAtZero:true,grace:'25%'}},plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#e5e5e5',font:{size:17,weight:'bold'},formatter:v=>v+'%'}}}};
+const cfg = {type:'bar',data:{labels:["15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"],datasets:[{data:[2718, 7619, 2828, 3221, 7831, 6629, 11948, 6855, 5131, 5333, 9957, 5225, 4033, 4638, 6453, 4812],backgroundColor:["#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#ff7878", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#8c8c8c", "#ffc857"],borderWidth:0,barPercentage:0.6}]}},options:{layout:{padding:{top:24,right:24,bottom:8,left:8}},scales:{x:{grid:{display:false},ticks:{color:'#e5e5e5',font:{size:14}}},y:{display:false,beginAtZero:true,grace:'25%'}},plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#e5e5e5',font:{size:17,weight:'bold'},formatter:v=>v+'%'}}}};
 new Chart(document.getElementById('c'), cfg);
 </script></body></html>
