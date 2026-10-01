@@ -1,28 +1,13 @@
 ---
 title: "🍯 Honeypot v2: Crypto Boogaloo"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-09-30 12:00:00 -0600
 categories: [Security, Homelab]
 tags: [security, honeypot, crypto, threat-intel, self-hosting, project-writeup]
 description: "Sixteen days of a fake crypto-finance startup: 95,231 SSH attempts from 4,641 addresses, a handful of guests who read the wallet seed page, and nobody who took the bait."
-draft: true
+image: /assets/img/posts/2026-09-30-decoy-boutique-part-2.png
 ---
 
-<!-- DRAFT-ONLY NOTES (delete before publish):
-STATUS: run two CLOSED 2026-09-30 23:44 UTC (16 days, 15–30 September). Every number here is the closing
-cut, measured in the closing pass. Domain and host stay out of the prose (Gabriel, 2026-09-30: addresses
-and hostnames live in the internal note, never in the post).
-TITLE: Gabriel's pick — "🍯 Honeypot v2: Crypto Boogaloo".
-CHARTS: honeypot-v2-sinkhole-classes (donut, 4,006) · honeypot-v2-value-surface (donut, 27) ·
-honeypot-v2-ssh-attempts-per-day (bar, 95,231) · honeypot-v2-distinct-ips-per-day (bar, 17 → 257).
-PNG + Chart.js twin + spec (`2026-09-06-decoy-boutique-part-2-charts.json`), all from the closing cut,
-all labelled "run two … (full run)". Regenerate all three representations in one pass if the cut moves.
-EVIDENCE: exported and verified before the box went away — r2:private/fluvia/run2/final-2026-09-30
-(245 MB bundle, sha256 0b2fa62f925b35b4e941579ef5e182f078b4b290f4670d8236358a1839b9a057, 33 files).
-Snapshot `fluvia-run2-final-2026-09-30` (9.64 GB) kept; droplet destroyed, DNS released, watchers paused.
-BANNER + audio: still pending — the banner needs a real data visual (sparkline of addresses per day),
-not text only, and the narration runs last.
-SPLIT: part one shipped 2026-09-25. The old combined `_drafts/2026-09-06-decoy-boutique.md` is superseded.
--->
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/decoy-boutique-part-2.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
