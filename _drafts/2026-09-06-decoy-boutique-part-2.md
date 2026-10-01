@@ -106,3 +106,11 @@ What it was not is a model reasoning its way through my site. Nobody confirmed t
 I closed it at sixteen days. The evidence is exported, verified by re-downloading it and comparing hashes, and snapshotted as a backup; the box is gone, the DNS went with it, and the watchers are off.
 
 What two runs and seven weeks of a fake business bought me: not a single attacker who read the shop. A small site gets commodity noise, a crypto site gets commodity noise plus a few readers, and the difference is whether somebody believes there is money on the other side. The bait that worked was not a vulnerability. It was a balance.
+
+## Use it yourself
+
+The whole operation sits in a public repository: the fake startup, the SSH layer, the fake-C2 responder, the agent bait, and the classification scripts that scored every session. It is at [github.com/gogvale/fluvia](https://github.com/gogvale/fluvia), MIT, and it is built to be reused — read the design docs, swap the brand, run your own.
+
+Three rules come with it. Point it at nothing you do not own. Keep the egress lock on, because a lure that can call out is a launchpad. And keep the addresses of whoever knocks in your private notes; publish the behaviour, not the people.
+
+If you run your own, I want to hear what walked in.
