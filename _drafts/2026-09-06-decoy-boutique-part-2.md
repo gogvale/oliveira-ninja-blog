@@ -109,8 +109,5 @@ What two runs and seven weeks of a fake business bought me: not a single attacke
 
 ## Use it yourself
 
-The whole operation sits in a public repository: the fake startup, the SSH layer, the fake-C2 responder, the agent bait, and the classification scripts that scored every session. It is at [github.com/gogvale/fluvia](https://github.com/gogvale/fluvia), MIT, and it is built to be reused — read the design docs, swap the brand, run your own.
+The whole operation sits in a public repository: the fake startup, the SSH layer, the fake-C2 responder, the agent bait, and the classification scripts that scored every session. It is at [github.com/gogvale/fluvia](https://github.com/gogvale/fluvia), MIT, and it is built to be reused — read the design docs, swap the brand, run your own, just don't forget to have fun.
 
-Three rules come with it. Point it at nothing you do not own. Keep the egress lock on, because a lure that can call out is a launchpad. And keep the addresses of whoever knocks in your private notes; publish the behaviour, not the people.
-
-If you run your own, I want to hear what walked in.
