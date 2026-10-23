@@ -13,7 +13,7 @@ description: "A certificate policy broke my proxy the week PHP2Shell shipped. Sa
 > - I stopped fixing the proxy and saved the Network tab as a HAR. A script over that file answered questions faster than clicking through Burp's history.
 > - The week PHP2Shell landed I used the same file to turn a console with no export button into a name-to-email table, in under five minutes.
 
-A policy change on my laptop required certificates for anything that inspects traffic. Burp Suite stopped working against the browser's proxy. Not routing, not TLS, not the certificate itself: layer 8. A rule that somebody wrote, applied to my machine, on a Tuesday.
+A policy change landed on my laptop: a certificate for anything that inspects traffic. Burp Suite stopped working against the browser's proxy. Not routing, not TLS, not the certificate. Layer 8.
 
 I could have spent the afternoon on it. I had work to do, so I opened the Network tab instead.
 
