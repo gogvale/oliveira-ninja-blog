@@ -1,11 +1,13 @@
 ---
 title: "I Turned a HAR File Into a Coworker"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-10-23 09:30:00 -0600
 categories: [AI, Security]
 tags: [ai-lab, security, automation, har, burp]
-draft: true
+image: /assets/img/posts/har-file-coworker.png
 description: "A certificate policy broke my proxy the week PHP2Shell shipped. Saving the Network tab as a HAR and handing it to Claude did the work in five minutes."
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/har-file-coworker.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
