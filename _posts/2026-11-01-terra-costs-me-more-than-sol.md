@@ -1,11 +1,13 @@
 ---
 title: "Terra Costs Me More Than Sol"
-date: 2030-01-01 00:00:00 -0600
-draft: true
+date: 2026-11-01 09:30:00 -0600
 categories: [AI]
 tags: [ai-lab, codex, models, deepseek, cost]
+image: /assets/img/posts/terra-costs-me-more-than-sol.png
 description: "I moved the small edits at work from Sol to Terra and Luna. The invoice went down 50% and my afternoons got longer, because the savings come back as supervision."
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/terra-costs-me-more-than-sol.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
