@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable source for the "I Let the Cheap Model Drive" banner.
+  The PNG of record is rendered by ~/.hermes/scripts/banner_render_cheap_model.py
+  (Pillow, 4x supersample) — edit that script for layout changes and keep this
+  file in sync so the composition is readable and tweakable. The only numbers
+  used come from the post itself: $0.17 and under one hour.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <defs>
+    <style>
+      .mono { font-family: "DejaVu Sans Mono", monospace; }
+      .sans { font-family: "DejaVu Sans", sans-serif; font-weight: bold; }
+      .kicker { fill: #a9ff5b; font-size: 21px; letter-spacing: .06em; }
+      .cap { fill: #7dd3fc; font-size: 17px; }
+      .h { fill: #ffffff; font-size: 46px; }
+      .hg { fill: #a9ff5b; font-size: 46px; }
+      .head { fill: #a9ff5b; font-size: 13px; font-weight: bold; }
+      .row { fill: #a0a0a0; font-size: 14px; }
+      .val { fill: #6e6e6e; font-size: 14px; text-anchor: end; }
+      .dim { fill: #6e6e6e; font-size: 12px; }
+      .total { fill: #a9ff5b; font-size: 34px; font-weight: bold; text-anchor: end; }
+      .strip { font-size: 19px; font-weight: bold; }
+      .foot { fill: #5a5a5a; font-size: 18px; }
+    </style>
+    <pattern id="grid" width="1200" height="40" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="40" fill="#0d0d0d"/>
+      <line x1="0" y1="40" x2="1200" y2="40" stroke="#181818" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="627" fill="url(#grid)"/>
+
+  <text class="mono kicker" x="60" y="82">CLAUDE CODE · DEEPSEEK FLASH · ONE SESSION</text>
+  <text class="sans h" x="58" y="140">I LET THE CHEAP</text>
+  <text class="sans hg" x="58" y="188">MODEL DRIVE</text>
+  <text class="mono cap" x="60" y="212">a week of CVE hunting became a prototype</text>
+
+  <!-- terminal panel -->
+  <rect x="56" y="236" width="644" height="276" fill="#131313" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="56" y="236" width="644" height="28" fill="#1a1a1a"/>
+  <circle cx="70" cy="250" r="4" fill="#ff5f56"/>
+  <circle cx="86" cy="250" r="4" fill="#ffbd2e"/>
+  <circle cx="102" cy="250" r="4" fill="#27c93f"/>
+  <text class="mono" x="130" y="254" fill="#a0a0a0" font-size="13" font-weight="bold">claude code — deepseek-flash</text>
+  <text class="mono" x="72" y="294" fill="#a9ff5b" font-size="15">&gt; build the first slice of the CVE hunter</text>
+  <text class="mono" x="88" y="314" fill="#6e6e6e" font-size="15">in the order I like to work</text>
+  <g font-family="DejaVu Sans Mono" font-size="15" fill="#a0a0a0">
+    <g stroke="#a9ff5b" stroke-width="1.6" fill="none">
+      <rect x="74" y="336" width="12" height="12"/><path d="M77 342 l2.5 3 l5 -7"/>
+      <rect x="74" y="363" width="12" height="12"/><path d="M77 369 l2.5 3 l5 -7"/>
+      <rect x="74" y="390" width="12" height="12"/><path d="M77 396 l2.5 3 l5 -7"/>
+      <rect x="74" y="417" width="12" height="12"/><path d="M77 423 l2.5 3 l5 -7"/>
+      <rect x="74" y="444" width="12" height="12"/><path d="M77 450 l2.5 3 l5 -7"/>
+    </g>
+    <text x="96" y="347">private repo + project board</text>
+    <text x="96" y="374">tasks: scripts, tests, schema, UI</text>
+    <text x="96" y="401">SvelteKit + IndexedDB, audited</text>
+    <text x="96" y="428">MIT license, docs, boilerplate</text>
+    <text x="96" y="455">compiled in a dummy project</text>
+  </g>
+  <text class="mono dim" x="72" y="492">I asked once. No handholding on every step.</text>
+
+  <!-- receipt panel -->
+  <rect x="730" y="236" width="414" height="276" fill="#131313" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="730" y="236" width="414" height="28" fill="#1a1a1a"/>
+  <text class="mono head" x="744" y="254">RECEIPT · SESSION 001</text>
+  <text class="mono dim" x="1130" y="254" text-anchor="end">USD</text>
+  <g class="mono">
+    <text class="row" x="746" y="310">repo, private</text><text class="val" x="1128" y="310">included</text>
+    <text class="row" x="746" y="337">project board</text><text class="val" x="1128" y="337">included</text>
+    <text class="row" x="746" y="364">sveltekit + schema</text><text class="val" x="1128" y="364">included</text>
+    <text class="row" x="746" y="391">license + docs</text><text class="val" x="1128" y="391">included</text>
+    <text class="row" x="746" y="418">audited libraries</text><text class="val" x="1128" y="418">included</text>
+  </g>
+  <line x1="746" y1="437" x2="1128" y2="437" stroke="#343434" stroke-width="2"/>
+  <text class="mono" x="746" y="456" fill="#a0a0a0" font-size="13" font-weight="bold">TOTAL, UNDER AN HOUR</text>
+  <text class="mono total" x="1128" y="482">$0.17</text>
+  <text class="mono" x="746" y="488" fill="#ffc46e" font-size="12">billed key, not a free tier</text>
+
+  <line x1="56" y1="538" x2="1144" y2="538" stroke="#2c2c2c" stroke-width="2"/>
+  <text class="mono strip" x="58" y="569" fill="#a9ff5b">IN   ONE PROMPT LIST</text>
+  <text class="mono strip" x="1144" y="569" fill="#7dd3fc" text-anchor="end">OUT   A REPO I CAN REOPEN</text>
+  <text class="mono foot" x="58" y="604">www.oliveira.ninja · blog.oliveira.ninja · github.com/gogvale</text>
+</svg>

@@ -1,11 +1,13 @@
 ---
 title: "I Let the Cheap Model Drive"
-date: 2030-01-01 00:00:00 -0600
+date: 2026-11-07 00:30:00 -0600
 categories: [AI]
 tags: [ai-lab, claude-code, deepseek, svelte, cost]
+image: /assets/img/posts/cheap-model-drive.png
 description: "A week of PHP2Shell asset hunting left me wanting to automate it. I handed the first slice to DeepSeek Flash through Claude Code: one hour, $0.17, no handholding."
-draft: true
 ---
+
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/cheap-model-drive.mp3">Your browser does not support the audio element.</audio>
 
 > **TL;DR**
 >
@@ -35,7 +37,7 @@ I decided to dust off my old PC and install the Claude Code CLI with a new DeepS
 
 ## The hour
 
-Then came the coding: SvelteKit, IndexedDB libraries, and investigating for token saving, programmer happiness, maintainability, UX, UI speed, minimal footprint, and maintained libraries. It found everything, and tested locally with a dummy project to make sure it compiled. I asked, but I didn't have to handhold. Very similar to frontier models.
+Then came the coding: SvelteKit, IndexedDB libraries, and investigating available libraries for token saving, programmer happiness, maintainability, UX, UI speed, minimal footprint, and maintained libraries. It found everything, and tested locally with a dummy project to make sure it compiled. I didn't have to handhold it on every step, so it was very similar to my experience with frontier models.
 
 MIT license, project task updated, dates fixed, markdown files updated, boilerplate created. All of that in under an hour, for $0.17.
 
