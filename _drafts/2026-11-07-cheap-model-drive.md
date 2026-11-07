@@ -1,52 +1,52 @@
 ---
-title: "I Let the Cheap Model Drive"
+title: "The Model Wrote the Code. I Kept the Wheel."
 date: 2030-01-01 00:00:00 -0600
 categories: [AI]
 tags: [ai-lab, claude-code, deepseek, svelte, cost]
-description: "After 800 million tokens fighting Terra and Luna, I pointed Claude Code at DeepSeek Flash. One hour, one repo, and a $0.17 invoice."
+description: "One hour on a billed DeepSeek Flash key through Claude Code: a repo, a project board, dated stories, a handoff note, and a $0.17 invoice. I spent the hour deciding."
 draft: true
 ---
 
 > **TL;DR**
 >
-> - Six days ago I closed a post with a test I had not run: let the cheap tier program without me narrating every step. I ran it.
-> - Claude Code with a billed DeepSeek Flash key, on a Fedora laptop that had been closed for months. Caveman and ponytail went in before the first prompt.
-> - One hour later: a scaffolded repo, stories with dates, a handoff note, and a $0.17 invoice.
+> - The last attempt cost more than 800 million tokens and a week of Terra and Luna returning half a job with a full report attached.
+> - This morning I put DeepSeek Flash on a billed key through Claude Code, added two skills, and wrote the rules before the first prompt.
+> - One hour later: a repo, a GitHub project, dated stories, pushed code, a handoff note, and a $0.17 invoice. I spent that hour deciding.
 
-Six days ago I [ended a post](https://blog.oliveira.ninja/posts/terra-costs-me-more-than-sol/) with a test I had not run: let the cheap tier program without me narrating every step. This morning I ran it.
+The Fedora laptop had been closed for months. I opened it, installed Claude Code, configured a billed key for DeepSeek Flash, and put two skills in place before typing a prompt: caveman for terse replies, and [ponytail](https://github.com/DietrichGebert/ponytail) so the agent asks whether the code needs to exist before it writes any.
 
-## A smaller test
+The install took minutes. The list of rules took longer.
 
-The last attempt was 800 million tokens and a week of arguing with Terra and Luna before I got something I could keep. Part of that was the shape of the request: I asked for a whole application in one breath. Part of it was the models returning half a job with a full report. I wanted a smaller test this time: one project, one repo, and enough constraints that the model could see the whole job.
+I kept comparing it to the last attempt. More than 800 million tokens, a week of fighting Terra and Luna, correcting half-finished work. I wanted an hour on the other side of that loop, deciding instead of correcting.
 
-At work I already use Claude Sonnet with `gh` to automate reports. That is scripting, not development. For development I reach for Bob, though I have not touched it in months. Claude Code as a build tool was new to me, and the Fedora laptop had been closed since the last time I needed a Linux machine.
+For development I reach for Bob, though I have not opened it in months. At work I run Claude Sonnet with `gh` to automate reports, which is scripting. Claude Code as a build tool was new to me.
 
-Installing the CLI and the keys took minutes. Before the first prompt I installed caveman and [ponytail](https://github.com/DietrichGebert/ponytail). Caveman cuts the agent's prose to the bone. Ponytail makes it walk down a ladder before writing code: does this need to exist, is it already in the repo, does the standard library do it. I wanted fewer tokens spent explaining and fewer lines spent on code that only exists because the assistant felt helpful: the kind of code that arrives with an extra layer of abstraction and a comment explaining it.
+## Rules before prompts
 
-## The list
+The list came first. I wrote what I would hand a senior dev on a Rails team: tests before features, schemas at the edges, convention over configuration, types everywhere with no `any`, a small dependency tree, libraries with recent releases and no open advisories, memory that stays flat, and a few rules for how a session should run.
 
-Then I gave it the list I would give a senior dev on a Rails team: tests first, schemas at the edges, convention over configuration, types everywhere and no `any`, a small dependency tree, libraries with recent releases and no open advisories, memory that stays flat, and a few rules for how I want sessions to run. One rule sat above the rest: a change should cost one line, or none.
+The line that shaped the rest: a change should cost one line, or none. That one is about me as much as the model. A framework that spreads every feature across five files makes the diff unreadable, and an unreadable diff is where I lose the thread and start trusting the report instead of the code.
 
-The useful part of Rails is the conventions: decide once, reuse it. I wanted that for a TypeScript project, which is a harder ask. Most of the ecosystem answers a missing convention with another dependency.
+Rails earns its keep with conventions you decide once and reuse. I wanted that in TypeScript, where the usual answer to a missing convention is another dependency. I also did not want a framework that bills me for every file it touches. Svelte compiles most of itself away, so I suspected it. The agent came back with SvelteKit, which adds the routing and build conventions I was asking for.
 
-I did not want a framework that charges tokens for every file it touches. I suspected Svelte because it compiles most of itself away. It came back with SvelteKit, which is Svelte plus the routing and build conventions I was asking for.
+## The audits settled it
 
-We spent the next while arguing about libraries. While we argued, it installed the candidates in a local demo repo and ran the audits. Compatibility and advisories stopped being opinions. A library had to survive the demo repo before it made it into the real one.
+We argued about libraries for a while. It proposed, I pushed back, and it installed each candidate in a local demo repo and ran the audits there. Compatibility and advisories stopped being opinions I had to take on faith; the demo repo had a verdict before I put anything in the real project.
 
-The session was setup, not a feature. It set up the repo and the GitHub project, updated the stories and their dates, and pushed the first code. Then it left a note for the next session: what was decided, what was still open, where to start. That note is the part I did not expect to value. A repo you can reopen without reconstructing the argument is a different asset than a folder of code.
+That is the piece I was missing last time: a way to settle a disagreement with output instead of a paragraph of confidence.
 
-## The invoice
+## What the hour left behind
 
-One hour. The invoice: $0.17. Billed, not a free tier, so the number is real.
+By the end, there was a repo, a GitHub project, dated stories, pushed code, and a note for the next session: what we decided, what stayed open, where to start. Setup, not a feature.
 
-I am not going to put the two numbers side by side. The old number bought a different job, and I did not measure the same thing. What I can compare is the shape of the hour. I spent it deciding what the project should be, not correcting a model that would not read the file it was editing.
+The note is the part I did not expect to care about. A repo I can reopen without rebuilding the argument in my head is a different asset than a folder of code.
 
-The cheap model did not need a babysitter. It read the files, argued about a couple of choices, and left the repo in a state I could pick up. I am not going to claim it is smarter than Sol. That is not the test. The test was whether I could leave it alone for an hour with a job small enough to hold.
+The invoice ran $0.17. Billed endpoint, not a free tier, so that is the real price of the hour.
 
-The difference was the frame. Two skills, one repo, a list of libraries to audit, and a rule for what a change may cost. When the job has edges, a cheaper model can see all of them. When the job is "build me an app," it fills the empty space with code and the invoice follows.
+The hour did not feel like supervision. I spent it deciding what the project should be, then watching those decisions turn into files. I stayed in control. When the job has edges I can hold the whole thing in my head, and so can the model. When the job is "build me an app," the empty space fills with code and the invoice follows.
 
-## The other key
+## The second key
 
-While I write this, a second key is doing the same thing from my phone: researching comparable products and drafting a wireframe I will edit. Same setup, different job. Six days ago I had one frustrated week and a large bill. Today I have a repo I can reopen and a second session running from my phone.
+A second key has been running from my phone while I wrote this: reading up on comparable products and drafting a wireframe I will edit. Same setup, different job, and I am still the one deciding when it is done.
 
-The project is still complex. The session was small: one repo, two skills, a list of rules, and a place to stop. The bill was $0.17.
+The project is bigger than one hour, and I will write about it when there is more to show. What I have today is a repo I can pick up again, a second session already running, and the feeling of having driven the whole hour.
