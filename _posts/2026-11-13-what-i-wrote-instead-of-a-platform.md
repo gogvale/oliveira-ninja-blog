@@ -1,22 +1,14 @@
 ---
-title: "Two Skills and a Task"
-date: 2030-01-01 00:00:00 -0600
+title: "What I Wrote Instead of a Platform"
+date: 2026-11-13 00:30:00 -0600
+permalink: /posts/what-i-wrote-instead-of-a-platform/
 categories: [AI]
 tags: [ai-lab, agents, skills, vulnerabilities, opinion]
-description: "Thousands of open findings and a five-minute fix target. I skipped the platform and wrote two skills and a task."
-draft: true
+image: /assets/img/posts/what-i-wrote-instead-of-a-platform.png
+description: "Thousands of open findings, a five-minute target, and the year-long build I did not do. Two skills and one task closed the queue."
 ---
 
-<!--
-PROVENANCE (strip at publish):
-- Gabriel's account in chat, 2026-11-13. His words are the source for the whole piece.
-- Working title; he picks the final one.
-- No employer, no internal app names, no ticket content (repo rule).
-- Numbers and tool names he can confirm or cut: the guide target is his ("under 5 minutes"),
-  the scanners and the ticket console stay unnamed.
-- Correction he made the same day: the VMs are how testing works at his job, applied to
-  producing solutions — not a curiosity test of the runbook.
--->
+<audio controls preload="metadata" style="width:100%;max-width:520px;display:block;margin:0 auto 1.2rem" src="/assets/audio/what-i-wrote-instead-of-a-platform.mp3">Your browser does not support the audio element.</audio>
 
 The vulnerability queue does not move on its own. At work we had thousands of open findings across a stack of applications, and the teams were not closing them at the speed they arrived. My team pulled the numbers apart and split the tickets by application and by owner, because a shared queue hides which team is behind. Then we set a target that fit in one sentence: a guide that lets a developer fix any of those findings in under five minutes. We scoped it to upgrades, since an upgrade is the part that automates clean.
 
@@ -32,7 +24,7 @@ With the research in hand, I asked for a runbook that remediates the findings. T
 
 The second agent brought up VMs and ran the runbooks against them. Testing at my job happens on those VMs; the agent was doing the verification we already do, at a speed we do not. It came back with comments. I asked for a V2, we bounced it once more, and moved to the next application.
 
-The last piece was a skill that runs the flow locally in podman, so the next person can use it without me.
+The last piece was a skill that runs the flow in podman, so the next person can use it without me.
 
 Two skills and a task. No service, no roadmap, nobody waiting for a release.
 
@@ -42,7 +34,7 @@ My first year with these tools was the wrong decade with a faster engine. I kept
 
 The gap between people who use this and people who do not is wide right now, and it closes from the bottom. The assistant that today needs a good prompt will, in a couple of years, need a sentence. The phone did that to computing: at some point it stopped being a device you had to learn and became the thing in everyone's hand. The assistant is on that road, and most of the people who will use it are not reading this blog.
 
-One model carries almost all of my work, Sonnet, and the weekly credits last. That is the boring part of the story, and it is the part that decides whether any of this fits in a real job.
+One model carries almost all of my work, Sonnet, and the credits for the week last. That is the boring part of the story, and it is the part that decides whether any of this fits in a real job.
 
 ## Second order
 
